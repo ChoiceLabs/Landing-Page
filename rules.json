@@ -4,12 +4,12 @@
     ".write": true,
 
     "workers": {
-      ".validate": "newData.isString()",
-      "firstName": { ".validate": "newData.length() <= 20" },
-      "lastName": { ".validate": "newData.length() <= 20" },
-      "phone": { ".validate": "newData.length() <= 12 && newData.matches(/\d+/)" },
-      "city": { ".validate": "newData.length() <= 20" },
-      "email": { ".validate": "newData.length() <= 20 && newData.matches(/[\w\.\-\+\_]+@[\w\.\-\+\_]+\.\w+/)" },
+      ".validate": "newData.isString() && root.child('workers/' + $uid + '/phone').val() != newData.child('phone').val()",
+      "firstName": { ".validate": "newData.val().length <= 20" },
+      "lastName": { ".validate": "newData.val().length <= 20" },
+      "phone": { ".validate": "newData.val().length <= 12 && newData.val().matches(/^\\d+$/)" },
+      "city": { ".validate": "newData.val().length <= 20" },
+      "email": { ".validate": "newData.val().length <= 20 && newData.val().matches(/^[\\w\\.\\-\\+\\_]+@[\\w\\.\\-\\+\\_]+\\.\\w+$/)" },
       "$other": { ".validate": false }
     }
 
