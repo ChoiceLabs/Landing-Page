@@ -1,0 +1,17 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+
+    "workers": {
+      ".validate": "newData.isString()",
+      "firstName": { ".validate": "newData.length() <= 20" },
+      "lastName": { ".validate": "newData.length() <= 20" },
+      "phone": { ".validate": "newData.length() <= 12 && newData.matches(/\d+/)" },
+      "city": { ".validate": "newData.length() <= 20" },
+      "email": { ".validate": "newData.length() <= 20 && newData.matches(/[\w\.\-\+\_]+@[\w\.\-\+\_]+\.\w+/)" },
+      "$other": { ".validate": false }
+    }
+
+  }
+}
