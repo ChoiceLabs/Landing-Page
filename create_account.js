@@ -18,7 +18,7 @@ function createAccount(firstName, lastName, phone, city, email) {
 
 function testRead() {
   var prospectsRef = ref.child("prospects");
-  prospectsRef.orderByChild('phone').on("child_added", function(snapshot) {
-    console.log(snapshot.child('phone').val() == "0448378745");
+  prospectsRef.orderByChild('phone').equalTo("0448378745").once("value", function(snapshot) {
+    console.log(snapshot.exists());
   });
 }
