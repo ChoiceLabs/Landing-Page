@@ -4,14 +4,24 @@
     ".write": true,
 
     "workers": {
-      ".validate": "newData.isString() && root.child('workers/' + $uid + '/phone').val() != newData.child('phone').val()",
-      "firstName": { ".validate": "newData.val().length <= 20" },
-      "lastName": { ".validate": "newData.val().length <= 20" },
-      "phone": { ".validate": "newData.val().length <= 12 && newData.val().matches(/^\\d+$/)" },
-      "city": { ".validate": "newData.val().length <= 20" },
-      "email": { ".validate": "newData.val().length <= 20 && newData.val().matches(/^[\\w\\.\\-\\+\\_]+@[\\w\\.\\-\\+\\_]+\\.\\w+$/)" },
-      "$other": { ".validate": false }
-    }
+      "timeCreated": { ".validate": true },
+      "firstName": { ".validate": "newData.isString() && newData.val().length <= 20" },
+      "lastName": { ".validate": "newData.isString() && newData.val().length <= 20" },
+      "phone": { ".validate": "newData.isString() && newData.val().length <= 12 && newData.val().matches(/^\\d+$/)" },
+      "city": { ".validate": "newData.isString() && newData.val().length <= 20" },
+      "email": { ".validate": "newData.isString() && newData.val().length <= 20 && newData.val().matches(/^[\\w\\.\\-\\+\\_]+@[\\w\\.\\-\\+\\_]+\\.\\w+$/)" },
+      "verified": { ".validate": true },
+      "reputation": { ".validate": true }
+    },
 
+    "prospects": {
+      "timeCreated": { ".validate": true },
+      "firstName": { ".validate": "newData.isString() && newData.val().length <= 20" },
+      "lastName": { ".validate": "newData.isString() && newData.val().length <= 20" },
+      "phone": { ".validate": "newData.isString() && newData.val().length <= 12 && newData.val().matches(/^\\d+$/)" },
+      "city": { ".validate": "newData.isString() && newData.val().length <= 20" },
+      "email": { ".validate": "newData.isString() && newData.val().length <= 20 && newData.val().matches(/^[\\w\\.\\-\\+\\_]+@[\\w\\.\\-\\+\\_]+\\.\\w+$/)" },
+      "workerId": { ".validate": "newData.isString() && newData.val().length <= 20" }
+    }
   }
 }
