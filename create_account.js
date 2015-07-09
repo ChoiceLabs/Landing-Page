@@ -3,22 +3,25 @@ var ref = new Firebase("https://choice-dev.firebaseio.com/");
 
 function createAccount(firstName, lastName, phone, city, email) {
   var prospectsRef = ref.child("prospects");
-
   checkUniquePhone(phone, prospectsRef, function (isUnique) {
     checkUniqueEmail(email, prospectsRef, function (isUnique) {
-      var uidRef = prospectsRef.push({
-        timeCreated     :   (new Date()).getTime(),
-        firstName       :   firstName,
-        lastName        :   lastName,
-        phone           :   phone,
-        city            :   city,
-        email           :   email,
-        verified        :   false,
-        reputation      :   null,
-      });
-      console.log('user added with UID:', uidRef.key());
+      pushToProspects(prospectsRef, firstName, lastName, phone, city, email);
     });
   });
+}
+
+function pushToProspects(prospectsRef, firstName, lastName, phone, city, email) {
+  var uidRef = prospectsRef.push({
+    timeCreated     :   (new Date()).getTime(),
+    firstName       :   firstName,
+    lastName        :   lastName,
+    phone           :   phone,
+    city            :   city,
+    email           :   email,
+    verified        :   false,
+    reputation      :   null,
+  });
+  console.log('user added with UID:', uidRef.key());
 }
 
 function checkUniquePhone(phone, ref, callback) {
