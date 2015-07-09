@@ -4,6 +4,7 @@
     ".write": true,
 
     "workers": {
+      ".indexOn": ["phone", "email"],
       "timeCreated": { ".validate": true },
       "firstName": { ".validate": "newData.isString() && newData.val().length <= 20" },
       "lastName": { ".validate": "newData.isString() && newData.val().length <= 20" },
@@ -15,6 +16,7 @@
     },
 
     "prospects": {
+      ".indexOn": ["phone", "email"],
       "timeCreated": { ".validate": true },
       "firstName": { ".validate": "newData.isString() && newData.val().length <= 20" },
       "lastName": { ".validate": "newData.isString() && newData.val().length <= 20" },
