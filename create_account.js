@@ -2,8 +2,8 @@
 var ref = new Firebase("https://choice-dev.firebaseio.com/");
 
 function createAccount(firstName, lastName, phone, city, email) {
-  var workersRef = ref.child("prospects");
-  var uidRef = workersRef.push({
+  var prospectsRef = ref.child("prospects");
+  var uidRef = prospectsRef.push({
     timeCreated     :   (new Date()).getTime(),
     firstName       :   firstName,
     lastName        :   lastName,
@@ -16,10 +16,9 @@ function createAccount(firstName, lastName, phone, city, email) {
   console.log(uidRef.key());
 }
 
-function test() {
-  var workersRef = ref.child("test");
-  var uidRef = workersRef.push({
-    name        :   "hello"
+function testRead() {
+  var prospectsRef = ref.child("prospects");
+  prospectsRef.orderByChild('phone').equalTo('0443378745').on("value", function(snapshot) {
+    console.log(snapshot.key());
   });
-  console.log(uidRef.key());
 }
