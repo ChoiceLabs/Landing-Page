@@ -1,12 +1,46 @@
-
 var ref = new Firebase("https://choice-dev.firebaseio.com/");
 
 function createAccount(firstName, lastName, phone, city, email) {
   var prospectsRef = ref.child("prospects");
-  checkUniquePhone(phone, prospectsRef, function (isUnique) {
-    checkUniqueEmail(email, prospectsRef, function (isUnique) {
+  uniqueAccount(prospectsRef, phone, email, function (isUnique) {
+    if (isUnique) {
       pushToProspects(prospectsRef, firstName, lastName, phone, city, email);
-    });
+    } else {
+      console.log('account not created.');
+    }
+  });
+}
+
+function uniqueAccount(prospectsRef, phone, email, completionCallback) {
+  var uniquePhone;
+  var uniqueEmail;
+  var phoneRequestComplete = false;
+  var emailRequestComplete = false;
+
+  fetchProspectWithPhone(phone, prospectsRef, function (prospectsRef) {
+    phoneRequestComplete = true;
+    if (prospectsRef !== null) {
+      uniquePhone = false;
+      console.log("phone already exists!");
+    } else {
+      uniquePhone = true;
+    }
+    if (emailRequestComplete) {
+      completionCallback(uniqueEmail && uniquePhone);
+    }
+  });
+
+  fetchProspectWithEmail(email, prospectsRef, function (prospectsRef) {
+    emailRequestComplete = true;
+    if (prospectsRef !== null) {
+      uniqueEmail = false;
+      console.log("email already exists!");
+    } else {
+      uniqueEmail = true;
+    }
+    if (phoneRequestComplete) {
+      completionCallback(uniqueEmail && uniquePhone);
+    }
   });
 }
 
@@ -21,26 +55,17 @@ function pushToProspects(prospectsRef, firstName, lastName, phone, city, email) 
     verified        :   false,
     reputation      :   null,
   });
-  console.log('user added with UID:', uidRef.key());
+  console.log("user added with UID:", uidRef.key());
 }
 
-function checkUniquePhone(phone, ref, callback) {
-  ref.orderByChild("phone").equalTo(phone).once("value", function(snapshot) {
-    if (!snapshot.exists()) {
-      callback();
-    } else {
-      console.log('phone already exists!');
-    }
+function fetchProspectWithPhone(phone, ref, callback) {
+  ref.orderByChild("phone").equalTo(phone).once("value", function (snapshot) {
+    callback(snapshot.val());
   });
 }
 
-function checkUniqueEmail(email, ref, callback) {
+function fetchProspectWithEmail(email, ref, callback) {
   ref.orderByChild("email").equalTo(email).once("value", function(snapshot) {
-    if (!snapshot.exists()) {
-      callback();
-    } else {
-      console.log('email already exists!');
-    }
+    callback(snapshot.val());
   });
 }
-
