@@ -1,12 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Josefin+Sans:300);
+
+h1, h2, h3, h4, h5, h6, a, button, p, span {
+	font-family: "Lato";
+}
+
+
+@green: #0eb06d;
+@dark-green: #15925E;
+@light-green: #70D2A9;
+@very-light-green: #f2fff3;
+@silhouette-color: #515151;
+@box-shadow-color: #ccc;
+
 header {
-	height: 40px;
-	background: green;
+	top: 0;
+	width: 100%;
+	position: fixed;
+	z-index: 3000;
+	height: 50px;
+	background-color: green;
 }
 
 #choice-description {
 	h1 {
-
-
+		font-size: 4em;
 	}
 
 	p {
@@ -15,11 +32,82 @@ header {
 
 }
 
-#application-container {
-
+#form-container {
+	padding: 20px;
 	background: white;
-	border: ;
+	.border-radius();
+	border: 1px solid #ccc;
+
+	.form-control {
+		height: 40px;
+		margin-bottom: 10px;
+	}
 }
+
+
+input::-webkit-input-placeholder { 
+	.placeholder-style();
+}
+input:-moz-placeholder { 
+	.placeholder-style();
+}
+input::-moz-placeholder { 
+	.placeholder-style();
+}
+input:-ms-input-placeholder { 
+	.placeholder-style();
+}
+
+
+input[type=text]:focus {
+  box-shadow: 0 0 5px @green;
+  border: 1px solid @green;
+}
+
+
+
+input:focus::-webkit-input-placeholder { 
+	color:transparent; 
+}
+input:focus:-moz-placeholder { 
+	color:transparent; 
+}
+input:focus::-moz-placeholder { 
+	color:transparent; 
+}
+input:focus:-ms-input-placeholder { 
+	color:transparent; 
+}
+
+
+
+#submit-button {
+	display: block;
+	padding: 20px 10px;
+	margin: 0 auto;
+	background-color: @green;
+	text-decoration: none;
+	.border-radius();
+	border: none;
+	text-align: center;
+	color: white;
+	font-size: 1.3em;
+	margin-top: 20px;
+
+	a {
+		text-decoration: none;
+		color: white;
+	}
+}
+
+#submit-button:hover {
+	background-color: #17C37C;
+}
+
+#submit-button:active {
+	background-color: #0A9C60;
+}
+
 
 
 
@@ -27,6 +115,14 @@ header {
 
 	text-align: center;
 }
+
+
+
+footer {
+	background-color: red;
+	height: 300px;
+}
+
 
 
 
