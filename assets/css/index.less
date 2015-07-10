@@ -12,35 +12,104 @@ h1, h2, h3, h4, h5, h6, a, button, p, span {
 @silhouette-color: #515151;
 @box-shadow-color: #ccc;
 
+
+/* -----------------
+HEADER 
+------------------*/
+
+
 header {
 	top: 0;
 	width: 100%;
 	position: fixed;
 	z-index: 3000;
-	height: 50px;
-	background-color: green;
+	height: 60px;
+	background-color: rgba(0, 0, 0, .75);
 }
+
+#logo {
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+	margin-top: 8px;
+	display: inline-block;
+
+}
+
+.button {
+	display: block;
+	padding: 20px 10px;
+	margin: 0 auto;
+	background-color: @green;
+	text-decoration: none;
+	.border-radius();
+	border: none;
+	text-align: center;
+	color: white;
+	font-size: 1.3em;
+
+	a {
+		text-decoration: none;
+		color: white;
+		font-weight: 300;
+	}
+}
+
+
+#merchant-button {
+	background-color: blue;
+	float: right;
+	padding: 10px 20px;
+}
+
+
+/* -----------------
+HERO SECTION
+------------------*/
+
+#hero-section-jumbotron {
+	background: url("../images/background.jpg");
+	background-position: 25%;
+	background-size: 100%
+}
+
+#hero-section {
+	margin-top: 80px;
+}
+
+
 
 #choice-description {
 	h1 {
 		font-size: 4em;
+		margin-bottom: 30px;
 	}
 
 	p {
-
+		font-size: 1.7em;
 	}
 
 }
 
 #form-container {
-	padding: 20px;
+	padding: 10px 20px;
 	background: white;
 	.border-radius();
 	border: 1px solid #ccc;
 
+
+	h2 {
+		text-align: center;
+		margin-bottom: 25px;
+		font-size: 1.8em;
+	}
+
 	.form-control {
-		height: 40px;
+		height: 50px;
 		margin-bottom: 10px;
+		font-weight: 300;
+		font-size: 1.8em;
+		padding: 10px;
 	}
 }
 
@@ -62,12 +131,14 @@ input:-ms-input-placeholder {
 input[type=text]:focus {
   box-shadow: 0 0 5px @green;
   border: 1px solid @green;
+  transition-duration: .3s;
+  -webkit-transition-duration: .3s;
 }
 
 
 
 input:focus::-webkit-input-placeholder { 
-	color:transparent; 
+	color:transparent;
 }
 input:focus:-moz-placeholder { 
 	color:transparent; 
@@ -111,10 +182,40 @@ input:focus:-ms-input-placeholder {
 
 
 
-#why-choice-container {
+/* -----------------
+HERO SECTION
+------------------*/
 
-	text-align: center;
+#why-choice-container {
+	
+	padding: 30px 0px 50px 0px;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	h2 {
+		margin-bottom: 60px;
+		text-align: center;
+	}
+
+
+	h3 {
+		font-weight: 400px;
+		text-align: center;
+	}
+
+	p {
+		line-height: 1.5em;
+		font-size: 1.3em;
+		font-weight: 300;
+	}
+
 }
+
+
+
 
 
 
