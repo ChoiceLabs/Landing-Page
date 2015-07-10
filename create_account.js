@@ -45,7 +45,7 @@ function uniqueAccount(prospectsRef, phone, email, completionCallback) {
 }
 
 function pushToProspects(prospectsRef, firstName, lastName, phone, city, email) {
-  var uidRef = prospectsRef.push({
+  var newUser = {
     timeCreated     :   (new Date()).getTime(),
     firstName       :   firstName,
     lastName        :   lastName,
@@ -54,8 +54,15 @@ function pushToProspects(prospectsRef, firstName, lastName, phone, city, email) 
     email           :   email,
     verified        :   false,
     reputation      :   null,
+  };
+
+  var uidRef = prospectsRef.push(newUser, function(error) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("user added with UID:", uidRef.key());
+    }
   });
-  console.log("user added with UID:", uidRef.key());
 }
 
 function fetchProspectWithPhone(phone, ref, callback) {
