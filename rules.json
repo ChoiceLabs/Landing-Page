@@ -5,25 +5,29 @@
 
     "workers": {
       ".indexOn": ["phone", "email"],
-      "timeCreated": { ".validate": true },
-      "firstName": { ".validate": "newData.isString() && newData.val().length <= 20" },
-      "lastName": { ".validate": "newData.isString() && newData.val().length <= 20" },
-      "phone": { ".validate": "newData.isString() && newData.val().length <= 12 && newData.val().matches(/^\\d+$/)" },
-      "city": { ".validate": "newData.isString() && newData.val().length <= 20" },
-      "email": { ".validate": "newData.isString() && newData.val().length <= 20 && newData.val().matches(/^[\\w\\.\\-\\+\\_]+@[\\w\\.\\-\\+\\_]+\\.\\w+$/)" },
-      "verified": { ".validate": true },
-      "reputation": { ".validate": true }
+      "$UID": {
+        "timeCreated": { ".validate": true },
+        "firstName": { ".validate": "newData.isString() && newData.val().length <= 20" },
+        "lastName": { ".validate": "newData.isString() && newData.val().length <= 20" },
+        "phone": { ".validate": "newData.isString() && newData.val().length <= 12 && newData.val().matches(/^\\d+$/)" },
+        "city": { ".validate": "newData.isString() && newData.val().length <= 20" },
+        "email": { ".validate": "newData.isString() && newData.val().length <= 20 && newData.val().matches(/^[\\w\\.\\-\\+\\_]+@[\\w\\.\\-\\+\\_]+\\.\\w+$/)" },
+        "verified": { ".validate": true },
+        "reputation": { ".validate": true }
+      }
     },
 
     "prospects": {
       ".indexOn": ["phone", "email"],
-      "timeCreated": { ".validate": true },
-      "firstName": { ".validate": "newData.isString() && newData.val().length <= 20" },
-      "lastName": { ".validate": "newData.isString() && newData.val().length <= 20" },
-      "phone": { ".validate": "newData.isString() && newData.val().length <= 12 && newData.val().matches(/^\\d+$/)" },
-      "city": { ".validate": "newData.isString() && newData.val().length <= 20" },
-      "email": { ".validate": "newData.isString() && newData.val().length <= 20 && newData.val().matches(/^[\\w\\.\\-\\+\\_]+@[\\w\\.\\-\\+\\_]+\\.\\w+$/)" },
-      "workerId": { ".validate": "newData.isString() && newData.val().length <= 20" }
+      "$UID": {
+        "timeCreated": { ".validate": true },
+        "firstName": { ".validate": "newData.isString() && newData.val().length <= 20" },
+        "lastName": { ".validate": "newData.isString() && newData.val().length <= 20" },
+        "phone": { ".validate": "newData.isString() && newData.val().length <= 12 && newData.val().matches(/^\\d+$/)" },
+        "city": { ".validate": "newData.isString() && newData.val().length <= 20" },
+        "email": { ".validate": "newData.isString() && newData.val().length <= 20 && newData.val().matches(/^[\\w\\.\\-\\+\\_]+@[\\w\\.\\-\\+\\_]+\\.\\w+$/)" },
+        "workerId": { ".validate": "newData.isString() && newData.val().length <= 20" }
+      }
     }
   }
 }
