@@ -49,7 +49,7 @@ header {
   font-weight: 300;
 }
 #merchant-button {
-  background-color: blue;
+  background-color: gray;
   float: right;
   padding: 10px 20px;
 }
@@ -64,11 +64,18 @@ HERO SECTION
 #hero-section {
   margin-top: 80px;
 }
+#choice-description {
+  margin-top: 200px;
+}
 #choice-description h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
   font-size: 4em;
   margin-bottom: 30px;
 }
 #choice-description p {
+  color: white;
+  text-shadow: 1px 1px 2px #000000;
   font-size: 1.7em;
 }
 #form-container {
@@ -186,7 +193,7 @@ HERO SECTION
   font-weight: 300;
 }
 footer {
-  background-color: red;
+  background-color: gray;
   height: 300px;
 }
 /* ---------------------
