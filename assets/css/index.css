@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Josefin+Sans:300);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+p,
+span {
+  font-family: "Lato";
+}
+header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 3000;
+  height: 50px;
+  background-color: green;
+}
+#choice-description h1 {
+  font-size: 4em;
+}
+#form-container {
+  padding: 20px;
+  background: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+#form-container .form-control {
+  height: 40px;
+  margin-bottom: 10px;
+}
+input::-webkit-input-placeholder {
+  color: #bbb;
+  font-size: 0.7em;
+  padding-top: .3em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+input:-moz-placeholder {
+  color: #bbb;
+  font-size: 0.7em;
+  padding-top: .3em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+input::-moz-placeholder {
+  color: #bbb;
+  font-size: 0.7em;
+  padding-top: .3em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+input:-ms-input-placeholder {
+  color: #bbb;
+  font-size: 0.7em;
+  padding-top: .3em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+input[type=text]:focus {
+  box-shadow: 0 0 5px #0eb06d;
+  border: 1px solid #0eb06d;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+#submit-button {
+  display: block;
+  padding: 20px 10px;
+  margin: 0 auto;
+  background-color: #0eb06d;
+  text-decoration: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+#submit-button a {
+  text-decoration: none;
+  color: white;
+}
+#submit-button:hover {
+  background-color: #17C37C;
+}
+#submit-button:active {
+  background-color: #0A9C60;
+}
+#why-choice-container {
+  text-align: center;
+}
+footer {
+  background-color: red;
+  height: 300px;
+}
+/* ---------------------
+FUNCTIONS 
+-----------------------*/
