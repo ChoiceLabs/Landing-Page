@@ -7,6 +7,7 @@ function createAccount(firstName, lastName, phone, city, email) {
       pushToProspects(prospectsRef, firstName, lastName, phone, city, email);
     } else {
       console.log('account not created.');
+      validationError("email or phone already registered");
     }
   });
 }
@@ -58,9 +59,9 @@ function pushToProspects(prospectsRef, firstName, lastName, phone, city, email) 
 
   var uidRef = prospectsRef.push(newUser, function(error) {
     if (error) {
-      console.log(error);
+      validationError("invalid input");
     } else {
-      console.log("user added with UID:", uidRef.key());
+      validationSuccess();
     }
   });
 }

@@ -12,6 +12,8 @@
 
   <script type="text/javascript" src="assets/js/firebase.js"></script>
 
+  <script type="text/javascript" src="assets/js/form.js"></script>
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 </head>
@@ -77,6 +79,7 @@
             </div>
           </div>
 
+          <div id="form-status"></div>
           <a onclick="submit()" class="button" id="submit-button">Apply Now</a>
 
         </form>
@@ -115,16 +118,7 @@
 <footer>
 </footer> 
 
-<script type="text/javascript">
-  function submit() {
-      createAccount(
-              $("#first-name-input").val(),
-              $("#last-name-input").val(),
-              $("#phone-number-input").val(),
-              $("#city-input").val(),
-              $("#email-input").val());
-  }
-</script>
+
 
 </body>
 
