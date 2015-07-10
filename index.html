@@ -8,6 +8,12 @@
 
   <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 
+  <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+
+  <script type="text/javascript" src="assets/js/firebase.js"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 </head>
 
 
@@ -106,6 +112,16 @@
 <footer>
 </footer>
 
+<script type="text/javascript">
+  function submit() {
+      createAccount(
+              $("#first-name-input").val(),
+              $("#last-name-input").val(),
+              $("#phone-number-input").val(),
+              $("#city-input").val(),
+              $("#email-input").val());
+  }
+</script>
 
 </body>
 
