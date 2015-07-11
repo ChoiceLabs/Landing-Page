@@ -8,6 +8,14 @@
 
   <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 
+  <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+
+  <script type="text/javascript" src="assets/js/firebase.js"></script>
+
+  <script type="text/javascript" src="assets/js/form.js"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 </head>
 
 
@@ -30,6 +38,10 @@
         <a href="/merchants" id="merchant-button">MERCHANTS</a>
       </li>
     <ul>
+    <a href="/" id="logo"> Choice
+      <img src="">
+    </a>
+    <a href="/merchants" class="button" id="merchant-button">For Companies</a>
   </div>
 </header>
 
@@ -49,7 +61,7 @@
 			<div class="col-md-5" id="form-container">
 
         <form>
-          <h2> Let's grab coffee! </h2>
+          <h2> Become a Driver with Choice </h2>
 
           <div class="row">
             <div class="col-md-6" id="first-name-column">
@@ -79,6 +91,7 @@
             </div>
           </div>
 
+          <div id="form-status"></div>
           <a onclick="submit()" class="button" id="submit-button">Apply Now</a>
 
         </form>
@@ -118,6 +131,6 @@
 </footer> 
 
 
+
 </body>
 
-</head>
