@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Josefin+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Josefin+Sans:300);
 
 h1, h2, h3, h4, h5, h6, a, button, p, span {
 	font-family: "Lato";
@@ -11,6 +11,14 @@ h1, h2, h3, h4, h5, h6, a, button, p, span {
 @very-light-green: #f2fff3;
 @silhouette-color: #515151;
 @box-shadow-color: #ccc;
+
+@black: #333;
+
+.jumbotron {
+	background-color: white;
+	margin: 0;
+	padding: 60px;
+}
 
 
 /* -----------------
@@ -29,6 +37,7 @@ header {
 
 #logo {
 	color: white;
+	font-family: "Josefin Sans";
 	text-decoration: none;
 	font-size: 30px;
 	margin-top: 8px;
@@ -111,24 +120,37 @@ HERO SECTION
 }
 
 #form-container {
-	padding: 10px 20px;
+	padding: 10px 25px;
 	background: white;
-	.border-radius();
-	border: 1px solid #ccc;
+	.border-radius(8px);
+	border: 5px solid @green;
 
 
-	h2 {
+	h2#cta {
+		font-size: 2.2em;
+		font-weight: 900;
+		letter-spacing: 1px;
 		text-align: center;
-		margin-bottom: 25px;
-		font-size: 1.8em;
+		color: @black;
+	}
+
+	p#instructions {
+		font-size: 1.3em;
+		line-height: 1.5em;
+		font-weight: 300;
+		margin-bottom: 20px;
+		text-align: center;
 	}
 
 	.form-control {
-		height: 50px;
-		margin-bottom: 10px;
-		font-weight: 300;
-		font-size: 1.8em;
-		padding: 10px;
+		height: 45px;
+		margin-bottom: 15px;
+		font-weight: 400;
+		font-family: "Lato";
+		padding: 15px;
+		font-size: 1.5em;
+		color: @black;
+		letter-spacing: 1px;
 	}
 }
 
@@ -144,6 +166,10 @@ input::-moz-placeholder {
 }
 input:-ms-input-placeholder { 
 	.placeholder-style();
+}
+
+input[type=text] {
+	font-size: 1.2em;
 }
 
 
@@ -182,7 +208,6 @@ input:focus:-ms-input-placeholder {
 	text-align: center;
 	color: white;
 	font-size: 1.3em;
-	margin-top: 20px;
 
 	a {
 		text-decoration: none;
@@ -205,29 +230,34 @@ input:focus:-ms-input-placeholder {
 HERO SECTION
 ------------------*/
 
+.section-header {
+	margin-bottom: 100px;
+	text-align: center;
+	font-weight: 300;
+	font-size: 2.5em;
+}
+
+
 #why-choice-container {
 	
-	padding: 30px 0px 80px 0px;
+	
 
 	img {
 		display: block;
-		margin: 0 auto;
+		margin: 0px auto 20px auto;
 	}
-
-	h2 {
-		margin-bottom: 60px;
-		text-align: center;
-	}
-
 
 	h3 {
-		font-weight: 400px;
+		font-weight: 600px;
+		color: @black;
 		text-align: center;
+		margin-bottom: 20px;
+		font-size: 1.8em;
 	}
 
 	p {
-		line-height: 1.5em;
-		font-size: 1.3em;
+		line-height: 1.7em;
+		font-size: 1.4em;
 		font-weight: 300;
 	}
 
