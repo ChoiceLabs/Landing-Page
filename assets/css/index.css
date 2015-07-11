@@ -48,10 +48,20 @@ header {
   color: white;
   font-weight: 300;
 }
-#merchant-button {
-  background-color: blue;
+#nav-links {
+  list-style: none;
+}
+#nav-links li {
+  display: block;
   float: right;
-  padding: 10px 20px;
+}
+#merchant-button {
+  margin-top: 18px;
+  text-decoration: none;
+  color: white;
+}
+#merchant-button:hover {
+  color: #0eb06d;
 }
 /* -----------------
 HERO SECTION
@@ -166,7 +176,7 @@ input:focus:-ms-input-placeholder {
 HERO SECTION
 ------------------*/
 #why-choice-container {
-  padding: 30px 0px 50px 0px;
+  padding: 30px 0px 80px 0px;
 }
 #why-choice-container img {
   display: block;
