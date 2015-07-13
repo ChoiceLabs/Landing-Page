@@ -81,7 +81,8 @@ HERO SECTION
   margin-top: 80px;
 }
 #choice-description {
-  margin-top: 200px;
+  margin-top: 306px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 #choice-description h1 {
   color: white;
