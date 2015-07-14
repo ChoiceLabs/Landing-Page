@@ -2,11 +2,17 @@
 
 <head>
 
+  <meta charset="UTF-8">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
   <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
 
   <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
 
@@ -15,6 +21,10 @@
   <script type="text/javascript" src="assets/js/form.js"></script>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
 
 </head>
 
@@ -137,12 +147,38 @@
 
       <h2 class="section-header"> How it Works </h2>
 
-      <div class="col-md-4">
-        <img src="assets/images/pick_job.png">
-      </div>
-      <div class="col-md-6 col-md-offset-1 caption">
-        <h3>Pick your job</h3>
-        <p>A single package pickup, and multiple drop-off locations to minimize your time and maximize your earnings.</p>
+      <div class="slider">
+
+        <div id="slide1">
+          <div class="col-md-4">
+            <img src="assets/images/pick_job.png" height="500" width="244">
+          </div>
+          <div class="col-md-6 col-md-offset-1 caption">
+            <h3>Pick your job</h3>
+            <p>A single package pickup, and multiple drop-off locations to minimize your time and maximize your earnings.</p>
+          </div>
+        </div>
+
+        <div id="slide2">
+          <div class="col-md-4">
+            <img src="assets/images/follow_steps_choose_order.png" height="500" width="244">
+          </div>
+          <div class="col-md-6 col-md-offset-1 caption">
+            <h3>Simple steps, displayed clearly</h3>
+            <p>We give you a list of deliveries, you get to choose the best order to do them in.</p>
+          </div>
+        </div>
+
+        <div id="slide3">
+          <div class="col-md-4">
+            <img src="assets/images/ext_nav_opt.png" height="500" width="244">
+          </div>
+          <div class="col-md-6 col-md-offset-1 caption">
+            <h3>Navigate with ease</h3>
+            <p>The Choice app will direct you right to your delivery, or let you use your favourite navigation app.</p>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -155,6 +191,14 @@
 <footer>
 </footer> 
 
+<script>
+$(document).ready(function(){
+  $('.slider').slick({
+    dots: true,
+    infinite: false
+  });
+});
+</script>
 
 
 </body>
