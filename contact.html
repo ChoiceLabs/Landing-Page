@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  </head>
+
+  <body>
+    <header >
+      <div class="container">
+        <a href="/" id="logo"> Choice </a>
+        <ul class="navbar navbar-right nav">
+          <li>
+            <!-- <a href="/merchants" class="button" id="merchant-button">For Companies</a> -->
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- why choice -->
+    <div class="jumbotron">
+      <div class="container" id="contact-form-container">
+        <div class="row">
+          <h1 class="section-header"> Contact Us </h1>
+          <p>Hit us up with a short message and we will get right back to you.</p>
+          <form class="col-md-8 col-md-offset-2" id="contact-form">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" class="form-control" id="name-input" placeholder="Name">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" class="form-control" id="email-input" placeholder="Email">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <textarea class="form-control" id="contact-form-textarea" rows="8" placeholder="What would you like to tell us...?"></textarea>
+              </div>
+            </div>
+
+            <div id="form-status"></div>
+            <a onclick="submit()" class="button" id="submit-button">Submit</a>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; Choice 2015 All rights reserved.</p>
+    </footer> 
+
+  </body>
+</html>
