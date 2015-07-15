@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, a, button, p, span {
 
 
 /* -----------------
-HEADER 
+HEADER
 ------------------*/
 header {
   top: 0;
@@ -143,40 +143,41 @@ HERO SECTION
   }
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   .placeholder-style();
 }
-input:-moz-placeholder {
+input:-moz-placeholder, textarea:-moz-placeholder {
   .placeholder-style();
 }
-input::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   .placeholder-style();
 }
-input:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   .placeholder-style();
 }
 
-input[type=text] {
+
+input[type=text], textarea {
   font-size: 1.2em;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, #contact-form-textarea:focus {
   box-shadow: 0 0 5px @green;
   border: 1px solid @green;
   transition-duration: .3s;
   -webkit-transition-duration: .3s;
 }
 
-input:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
   color:transparent;
 }
-input:focus:-moz-placeholder {
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
   color:transparent;
 }
-input:focus::-moz-placeholder {
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
   color:transparent;
 }
-input:focus:-ms-input-placeholder {
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
   color:transparent;
 }
 
@@ -208,10 +209,57 @@ input:focus:-ms-input-placeholder {
 
 
 /* -----------------
+CONTACT FORM SPECIFIC
+------------------*/
+#contact-form {
+  //padding: 60px;
+  padding: 10px 25px;
+  background: white;
+
+  h2#cta {
+    font-size: 2.2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    color: @black;
+  }
+
+  p#instructions {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .form-control {
+    height: 45px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-family: "Lato";
+    padding: 15px;
+    font-size: 1.5em;
+    color: @black;
+    letter-spacing: 1px;
+  }
+
+  #contact-form-textarea {
+    resize: none;
+    height: 200px;
+    font-size: 1.2em;
+  }
+}
+
+#contact-form-container {
+  text-align: center;
+}
+
+
+/* -----------------
 HERO SECTION
 ------------------*/
 .section-header {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   text-align: center;
   font-weight: 300;
   font-size: 2.5em;
