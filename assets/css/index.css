@@ -14,7 +14,6 @@ span {
 .jumbotron {
   background-color: white;
   margin: 0;
-  padding: 60px;
 }
 /* -----------------
 HEADER 
@@ -75,14 +74,10 @@ HERO SECTION
 #hero-section-jumbotron {
   background: url("../images/background.jpg");
   background-repeat: no-repeat;
-  background-position: 25%;
   background-size: 100%;
 }
 #hero-section {
   margin-top: 80px;
-}
-#choice-description {
-  margin-top: 306px;
 }
 #choice-description h1 {
   color: white;
@@ -225,6 +220,9 @@ HERO SECTION
   font-size: 1.4em;
   font-weight: 300;
 }
+/* -----------------
+How it Works
+------------------ */
 #how-it-works-container {
   background-color: #EDEDED;
 }
@@ -245,9 +243,24 @@ HERO SECTION
   font-weight: 300;
   text-align: center;
 }
+#how-it-works-container .slick-slide {
+  height: auto;
+}
+#how-it-works-container .slick-next:before,
+#how-it-works-container .slick-prev:before {
+  font-size: 40px;
+}
+#how-it-works-container .slick-next,
+#how-it-works-container .slick-prev {
+  width: 40px;
+  height: 40px;
+}
 #how-it-works-container .caption {
   text-align: center;
 }
+/* -----------------
+Footer
+------------------ */
 footer {
   background-color: gray;
   height: 200px;
@@ -256,3 +269,17 @@ footer {
 /* ---------------------
 FUNCTIONS 
 -----------------------*/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #choice-description {
+    margin-top: 306px;
+  }
+  .caption {
+    height: 500px;
+  }
+  .how-it-works-text-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
