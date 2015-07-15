@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
@@ -12,15 +11,14 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
   </head>
 
   <body>
     <!-- header
       <header >
       <div class="container">
-
       <a href="/" id="logo"> Choice </a>
-
       <ul class="navbar navbar-right nav">
       <li>
       <a href="/merchants" class="button" id="merchant-button">For Companies</a>
@@ -92,9 +90,7 @@
     <!-- why choice -->
     <div class="jumbotron">
       <div class="container" id="why-choice-container">
-
         <div class="row">
-
           <h2 class="section-header"> On Demand the way it should have been. </h2>
 
           <div class="col-md-4">
@@ -102,11 +98,13 @@
             <h3>Access to More Jobs</h3>
             <p> Don&#39;t be tied to one provider&#39;s. &#32; Choose from a variety of well-paying jobs throughout the day &#8212; all on one platform.</p>
           </div>
+
           <div class="col-md-4">
             <img src="assets/images/agile_flexible_planning-128.png">
             <h3>Eliminate Slow Times</h3>
             <p> No more sitting around idle during the midday slump. &#32; Make the most of your time, any time of the day.  </p>
           </div>
+
           <div class="col-md-4">
             <img src="assets/images/agile_sprint_goal-128.png">
             <h3>Truly Flexible Schedules</h3>
@@ -121,41 +119,51 @@
     <!-- How it works -->
     <div class="jumbotron" id="how-it-works-container">
       <div class="container">
-        <div class="row">
-          <h2 class="section-header"> How it Works </h2>
-          <div class="slider">
+        <h2 class="section-header"> How it Works </h2>
+        <div class="slider">
 
-            <div id="slide1">
+          <div id="slide1">
+            <div class="row">
               <div class="col-md-4">
                 <img src="assets/images/pick_job.png" height="500" width="244">
               </div>
               <div class="col-md-6 col-md-offset-1 caption">
-                <h3>Pick your job</h3>
-                <p>A single package pickup, and multiple drop-off locations to minimize your time and maximize your earnings.</p>
+                <div class="how-it-works-text-wrapper">
+                  <h3>Pick your job</h3>
+                  <p>A single package pickup, and multiple drop-off locations to minimize your time and maximize your earnings.</p>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div id="slide2">
+          <div id="slide2">
+            <div class="row">
               <div class="col-md-4">
                 <img src="assets/images/follow_steps_choose_order.png" height="500" width="244">
               </div>
               <div class="col-md-6 col-md-offset-1 caption">
-                <h3>Simple steps, displayed clearly</h3>
-                <p>We give you a list of deliveries, you get to choose the best order to do them in.</p>
+                <div class="how-it-works-text-wrapper">
+                  <h3>Simple steps, displayed clearly</h3>
+                  <p>We give you a list of deliveries, you get to choose the best order to do them in.</p>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div id="slide3">
+          <div id="slide3">
+            <div class="row">
               <div class="col-md-4">
                 <img src="assets/images/ext_nav_opt.png" height="500" width="244">
               </div>
               <div class="col-md-6 col-md-offset-1 caption">
-                <h3>Navigate with ease</h3>
-                <p>The Choice app will direct you right to your delivery, or let you use your favourite navigation app.</p>
+                <div class="how-it-works-text-wrapper">
+                  <h3>Navigate with ease</h3>
+                  <p>The Choice app will direct you right to your delivery, or let you use your favourite navigation app.</p>
+                </div>
               </div>
             </div>
-
           </div>
+
         </div>
       </div>
     </div>
@@ -169,8 +177,10 @@
     <script>
       $(document).ready(function(){
         $('.slider').slick({
+          adaptiveHeight: true,
           dots: true,
-          infinite: false
+          infinite: false,
+          respondTo: 'slider'
         });
       });
     </script>
