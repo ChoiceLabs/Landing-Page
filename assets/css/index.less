@@ -13,6 +13,23 @@ h1, h2, h3, h4, h5, h6, a, button, p, span {
 
 @black: #333;
 
+/* -----------------
+BODY
+------------------*/
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
 .jumbotron {
   background-color: white;
   margin: 0;
@@ -321,6 +338,10 @@ HOW IT WORKS
 
   .slick-slide {
     height: auto;
+  }
+
+  .slick-slide:focus {
+    outline: none;
   }
 
   .slick-next:before, .slick-prev:before{
