@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header >
+        <div class="container">
+          <a href="/" id="logo"><img src="assets/images/choice_logo.png" id="logo-image"></a>
+          <ul class="navbar navbar-right nav">
+            <li>
+              <!-- <a href="/merchants" class="button" id="merchant-button">For Companies</a> -->
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="jumbotron" id="signup-form-jumbotron">
+        <div class="container" id="signup-form-container">
+          <div class="slider" id="signup-form-slider">
+
+            <div class="row">
+              <h1 class="section-header"> Basics </h1>
+              <p>You are 4 steps away from getting the driving job that is right for you!
+              <br>First we just need a few details</p>
+              <form class="col-md-8 col-md-offset-2" id="basics-form">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" id="first-name-input" placeholder="First Name">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" id="last-name-input" placeholder="Last Name">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="tel" class="form-control" id="phone-input" placeholder="Phone">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" id="email-input" placeholder="Email">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <select class="form-control" id="city-select">
+                      <option value="San Fransisco"></option>
+                      <option value="San Fransisco">San Fransisco</option>
+                      <option value="Las Angeles">Las Angeles</option>
+                      <option value="Seattle">Seattle</option>
+                      <option value="Washington DC">Washington DC</option>
+                      <option value="San Diego">San Diego</option>
+                      <option value="Brooklyn">Brooklyn</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+
+            <div class="row">
+              <h1 class="section-header"> Experience </h1>
+              <p> We want to get to know you, and what you know </p>
+              <form class="col-md-8 col-md-offset-2" id="experience-form">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>Which of these are you able to drive (and have a license for)?</p>
+                    <input type="checkbox" class="form-control" id="auto-checkbox" value="auto">Automatic
+                    <input type="checkbox" class="form-control" id="manual-checkbox" value="manual">Manual
+                  </div>
+                </div>
+
+                <div class="row">
+                  <p>Do you have driving experience in any of these?</p>
+                  <div class="col-md-12">
+                    <button class="button">Traditional Valet</button>
+                    <button class="button">Taxi</button>
+                    <button class="button">Uber</button>
+                    <button class="button">Lyft</button>
+                    <button class="button">Sidecar</button>
+                    <button class="button">On Demand Service</button>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>Have you got any customer service experience?</p>
+                    <textarea class="form-control" id="customer-service-form-textarea" rows="8" placeholder=""></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="row">
+              <h1 class="section-header"> Eligibility </h1>
+              <p> Let us get this out of the way, almost at the end. </p>
+              <form class="col-md-8 col-md-offset-2" id="experience-form">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>Are you eligible to work in the U.S.</p>
+                    <button class="button">No</button>
+                    <button class="button">Yes</button>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>Are you willing to undergo a background check?</p>
+                    <button class="button">No</button>
+                    <button class="button">Yes</button>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>Do you have a valid U.S. Driver's License?</p>
+                    <button class="button">No</button>
+                    <button class="button">Yes</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="row">
+              <h1 class="section-header"> Availability </h1>
+              <p> Last Step: What times work with your current schedule?
+              <br>This is just to get a rough idea - don't worry if this is going to change, we're flexible!</p>
+              <form class="col-md-8 col-md-offset-2" id="experience-form">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>Easy week time chooser goes here</p>
+                    <p>here.</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>  <!-- slider -->
+          <div id="form-status"></div>
+          <a onclick="submit()" class="button" id="next-button">Next</a>
+
+        </div>
+      </div>
+
+      <div class="push"></div>
+    </div>
+
+    <!-- footer -->
+    <footer id="contact-form-footer">
+      <p>&copy; Choice 2015 All rights reserved.</p>
+    </footer>
+
+    <script>
+      $(document).ready(function(){
+        $('.slider').slick({
+          adaptiveHeight: true,
+          dots: true,
+          infinite: false,
+          respondTo: 'slider'
+        });
+      });
+    </script>
+  </body>
+</html>
