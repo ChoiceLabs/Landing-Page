@@ -29,137 +29,130 @@
         <div class="container" id="signup-form-container">
           <div class="slider" id="signup-form-slider">
 
-            <div class="row question">
-              <h2 class="question-header"> Basics </h2>
-              <p class="question-caption"> STEP 1 OF 4 </p>
-              <p>First we just need a few details</p>
-              <form class="col-md-8 col-md-offset-2" id="basics-form">
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" id="first-name-input" placeholder="First Name">
-                  </div>
-                </div>
 
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" id="last-name-input" placeholder="Last Name">
-                  </div>
-                </div>
 
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="tel" class="form-control" id="phone-input" placeholder="Phone">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" id="email-input" placeholder="Email">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <select class="form-control" id="city-select">
-                      <option value="San Fransisco"></option>
-                      <option value="San Fransisco">San Fransisco</option>
-                      <option value="Las Angeles">Las Angeles</option>
-                      <option value="Seattle">Seattle</option>
-                      <option value="Washington DC">Washington DC</option>
-                      <option value="San Diego">San Diego</option>
-                      <option value="Brooklyn">Brooklyn</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                </div>
-              </form>
-
+            <div class="row question-step-container">
+              <div class="col-md-6 col-md-offset-3">
+                <h2 class="question-header"> Basics </h2>
+                <p class="question-caption"> STEP 1 OF 4 </p>
+                <form id="basics-form">
+                  <input type="text" class="form-control" id="first-name-input" placeholder="First Name">
+                  <input type="text" class="form-control" id="last-name-input" placeholder="Last Name">
+                  <input type="tel" class="form-control" id="phone-input" placeholder="Phone">
+                  <input type="text" class="form-control" id="email-input" placeholder="Email">
+                  <select placeholder="City" class="form-control" id="city-select">
+                    <option value="San Fransisco"></option>
+                    <option value="San Fransisco">San Fransisco</option>
+                    <option value="Las Angeles">Las Angeles</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Washington DC">Washington DC</option>
+                    <option value="San Diego">San Diego</option>
+                    <option value="Brooklyn">Brooklyn</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </form>
+              </div>
             </div>
 
 
-            <div class="row question">
-              <h2 class="question-header"> Experience </h2>
-              <p class="question-caption"> STEP 2 OF 4 </p>
-              <p> We want to get to know you, and what you know </p>
-              <form class="col-md-8 col-md-offset-2" id="experience-form">
-                <div class="row">
-                  <div class="col-md-12">
-                    <p>Which of these are you able to drive (and have a license for)?</p>
-                    <input type="checkbox" class="form-control" id="auto-checkbox" value="auto">Automatic
-                    <input type="checkbox" class="form-control" id="manual-checkbox" value="manual">Manual
-                  </div>
-                </div>
+            <div class="row question-step-container">
+              <div class="col-md-6 col-md-offset-3">
+                <h2 class="question-header"> Experience </h2>
+                <p class="question-caption"> STEP 2 OF 4 </p>
+                <form id="experience-form">
 
-                <div class="row">
-                  <p>Do you have driving experience in any of these?</p>
-                  <div class="col-md-12">
-                    <button class="button">Traditional Valet</button>
-                    <button class="button">Taxi</button>
-                    <button class="button">Uber</button>
-                    <button class="button">Lyft</button>
-                    <button class="button">Sidecar</button>
-                    <button class="button">On Demand Service</button>
+                  <div class="row">
+                    <div class="col-md-12 question">
+                      <p class="question-text">Which of these are you able to drive (and have a license for)?</p>
+                      <input type="checkbox" value="auto"><label> Automatic</label>
+                      <input type="checkbox" value="manual"><label> Manual</label>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="col-md-12">
-                    <p>Have you got any customer service experience?</p>
-                    <textarea class="form-control" id="customer-service-form-textarea" rows="8" placeholder=""></textarea>
+                  <div class="row">
+                    <div class="col-md-12 question">
+                      <p class="question-text"> Do you have driving experience in any of these?</p>
+                      <input type="checkbox"><label>Traditional Valet </label>
+                      <input type="checkbox"><label> Uber </label>>
+                      <input type="checkbox"><label> Lyft </label>
+                      <br>
+                      <input type="checkbox"><label> Sidecar </label>
+                      <input type="checkbox"><label> Other On Demand Service </label>
+                    </div>
                   </div>
-                </div>
-              </form>
+                  
+
+                  <div class="row">
+                    <div class="col-md-12 question">
+                      <p class="question-text">Please describe any other customer service experience?</p>
+                      <textarea class="form-control" id="customer-service-form-textarea" rows="8" placeholder=""></textarea>
+                    </div>
+                  </div>
+                  
+                </form>
+              </div>
             </div>
 
-            <div class="row question">
-              <h2 class="question-header"> Eligibility </h2>
-              <p class="question-caption"> STEP 3 OF 4 </p>
-              <p> Let us get this out of the way, almost at the end. </p>
-              <form class="col-md-8 col-md-offset-2" id="experience-form">
-                <div class="row">
-                  <div class="col-md-12">
-                    <p>Are you eligible to work in the U.S.</p>
-                    <button class="button">No</button>
-                    <button class="button">Yes</button>
-                  </div>
-                </div>
 
-                <div class="row">
-                  <div class="col-md-12">
-                    <p>Are you willing to undergo a background check?</p>
-                    <button class="button">No</button>
-                    <button class="button">Yes</button>
-                  </div>
-                </div>
 
-                <div class="row">
-                  <div class="col-md-12">
-                    <p>Do you have a valid U.S. Driver's License?</p>
-                    <button class="button">No</button>
-                    <button class="button">Yes</button>
+            <div class="row question-step-container">
+              <div class="col-md-6 col-md-offset-3">
+                <h2 class="question-header"> Eligibility </h2>
+                <p class="question-caption"> STEP 3 OF 4 </p>
+                <form id="experience-form">
+
+                  <div class="row">
+                    <div class="col-md-12 question">
+                      <p class="question-text">Are you eligible to work in the U.S.</p>
+                      <input type="radio"></input> <label> No </label>
+                      <input type="radio"></input> <label> Yes </label>
+                    </div>
                   </div>
-                </div>
-              </form>
+
+                  <div class="row">
+                    <div class="col-md-12 question">
+                      <p class="question-text">Are you willing to undergo a background check?</p>
+                      <input type="radio"></input> <label> No </label>
+                      <input type="radio"></input> <label> Yes </label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 question">
+                      <p class="question-text">Do you have a valid U.S. Driver's License?</p>
+                      <input type="radio"></input> <label> No </label>
+                      <input type="radio"></input> <label> Yes </label>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
             </div>
 
-            <div class="row question">
-              <h2 class="question-header"> Availability </h2>
-              <p class="question-caption"> STEP 4 OF 4 </p>
-              <p> Last Step: What times work with your current schedule?
-              <br>This is just to get a rough idea - don't worry if this is going to change, we're flexible!</p>
-              <form class="col-md-8 col-md-offset-2" id="experience-form">
-                <div class="row">
-                  <div class="col-md-12">
-                    <p>Easy week time chooser goes here</p>
-                    <p>here.</p>
+
+
+            <div class="row question-step-container">
+              <div class="col-md-6 col-md-offset-3">
+                <h2 class="question-header"> Availability </h2>
+                <p class="question-caption"> STEP 4 OF 4 </p>
+                <p class="question-text"> What times work with your current schedule?</p>
+                <form class="col-md-8 col-md-offset-2" id="experience-form">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>**Easy time and day chooser goes here**</p>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
 
           </div>  <!-- slider -->
           <div id="form-status"></div>
-          <a class="button" id="next-button">Next</a>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <a class="button" id="next-button">Next</a>
+            </div>
+          </div>
 
         </div>
       </div>

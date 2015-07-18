@@ -373,7 +373,7 @@ SURVEY
 --------------------*/
 
 
-.question {
+.question-step-container {
 
   .question-header {
     font-size: 2.5em;
@@ -384,6 +384,16 @@ SURVEY
     font-size: 1em;
     font-weight: 200;
     margin-bottom: 30px;
+  }
+
+  .question-container {
+    margin: 10px 0px;
+
+  }
+
+  .question-text {
+    /*text-align: left;*/
+    margin-bottom: 5px;
   }
 
 }
@@ -413,11 +423,20 @@ SURVEY
   a {
     text-decoration: none;
   }
-
 }
 
 #next-button:active {
   background-color: @dark-green;
+}
+
+label {
+  font-weight: 300;
+  font-size: 1.2em;
+  margin: 0px 5px;
+}
+
+input[type=radio] {
+  margin-bottom: 20px;
 }
 
 
