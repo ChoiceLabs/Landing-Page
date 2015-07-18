@@ -29,10 +29,10 @@
         <div class="container" id="signup-form-container">
           <div class="slider" id="signup-form-slider">
 
-            <div class="row">
-              <h1 class="section-header"> Basics </h1>
-              <p>You are 4 steps away from getting the driving job that is right for you!
-              <br>First we just need a few details</p>
+            <div class="row question">
+              <h2 class="question-header"> Basics </h2>
+              <p class="question-caption"> STEP 1 OF 4 </p>
+              <p>First we just need a few details</p>
               <form class="col-md-8 col-md-offset-2" id="basics-form">
                 <div class="row">
                   <div class="col-md-12">
@@ -76,8 +76,10 @@
 
             </div>
 
-            <div class="row">
-              <h1 class="section-header"> Experience </h1>
+
+            <div class="row question">
+              <h2 class="question-header"> Experience </h2>
+              <p class="question-caption"> STEP 2 OF 4 </p>
               <p> We want to get to know you, and what you know </p>
               <form class="col-md-8 col-md-offset-2" id="experience-form">
                 <div class="row">
@@ -109,8 +111,9 @@
               </form>
             </div>
 
-            <div class="row">
-              <h1 class="section-header"> Eligibility </h1>
+            <div class="row question">
+              <h2 class="question-header"> Eligibility </h2>
+              <p class="question-caption"> STEP 3 OF 4 </p>
               <p> Let us get this out of the way, almost at the end. </p>
               <form class="col-md-8 col-md-offset-2" id="experience-form">
                 <div class="row">
@@ -139,8 +142,9 @@
               </form>
             </div>
 
-            <div class="row">
-              <h1 class="section-header"> Availability </h1>
+            <div class="row question">
+              <h2 class="question-header"> Availability </h2>
+              <p class="question-caption"> STEP 4 OF 4 </p>
               <p> Last Step: What times work with your current schedule?
               <br>This is just to get a rough idea - don't worry if this is going to change, we're flexible!</p>
               <form class="col-md-8 col-md-offset-2" id="experience-form">
@@ -155,7 +159,7 @@
 
           </div>  <!-- slider -->
           <div id="form-status"></div>
-          <a onclick="submit()" class="button" id="next-button">Next</a>
+          <a class="button" id="next-button">Next</a>
 
         </div>
       </div>
@@ -172,9 +176,14 @@
       $(document).ready(function(){
         $('.slider').slick({
           adaptiveHeight: true,
-          dots: true,
+          dots: false,
+          arrows: false,
           infinite: false,
           respondTo: 'slider'
+        });
+
+        $('#next-button').click(function(){
+          $(".slider").slick('slickNext');
         });
       });
     </script>

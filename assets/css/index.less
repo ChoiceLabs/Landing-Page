@@ -5,16 +5,15 @@ h1, h2, h3, h4, h5, h6, a, button, p, span {
 }
 
 @green: #0eb06d;
-@dark-green: #15925E;
-@light-green: #70D2A9;
+@dark-green: #0AA263;
+@light-green: #17C17B;
 @very-light-green: #f2fff3;
 @silhouette-color: #515151;
 @box-shadow-color: #ccc;
-
 @black: #333;
 
 /* -----------------
-BODY
+GENERAL
 ------------------*/
 body {
   height: 100%;
@@ -33,6 +32,10 @@ html {
 .jumbotron {
   background-color: white;
   margin: 0;
+
+  h1 {
+    font-size: auto;
+  }
 }
 
 
@@ -58,7 +61,7 @@ header {
 }
 
 .button {
-  display: block;
+  display: inline-block;
   padding: 20px 10px;
   margin: 0 auto;
   background-color: @green;
@@ -336,6 +339,17 @@ HOW IT WORKS
     margin-bottom: 60px
   }
 
+  .caption {
+    text-align: center;
+    //transform: translateY(180%);
+  }
+}
+
+
+/* -----------------
+SLICK SLIDE
+------------------ */
+
   .slick-slide {
     height: auto;
   }
@@ -353,11 +367,63 @@ HOW IT WORKS
     height: 40px;
   }
 
-  .caption {
-    text-align: center;
-    //transform: translateY(180%);
+
+/* -------------------
+SURVEY
+--------------------*/
+
+
+.question {
+
+  .question-header {
+    font-size: 2.5em;
+    font-weight: 400;
+  }
+
+  .question-caption {
+    font-size: 1em;
+    font-weight: 200;
+    margin-bottom: 30px;
+  }
+
+}
+
+
+#next-button {
+  display: block;
+  padding: 20px 10px;
+  margin: 0 auto;
+  background-color: @green;
+  text-decoration: none;
+  .border-radius();
+  border: none;
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
   }
 }
+
+#next-button:hover {
+  background-color: @light-green;
+  a {
+    text-decoration: none;
+  }
+
+}
+
+#next-button:active {
+  background-color: @dark-green;
+}
+
+
+
+
+
 
 
 /* -----------------
@@ -368,6 +434,11 @@ footer {
   height: 200px;
   padding: 20px 20px;
 }
+
+
+
+
+
 
 /* ---------------------
 FUNCTIONS
