@@ -8,21 +8,15 @@
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script type="text/javascript" src="templates.js"></script>
+    <script type="text/javascript" src="actuate_templates.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
   </head>
 
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container">
-          <a href="/" id="logo"><img src="assets/images/choice_logo.png" id="logo-image"></a>
-          <ul class="navbar navbar-right nav">
-            <li>
-              <!-- <a href="/merchants" class="button" id="merchant-button">For Companies</a> -->
-            </li>
-          </ul>
-        </div>
-      </header>
+      <div class="template-header"></div>
 
       <!-- why choice -->
       <div class="jumbotron" id="contact-form-jumbotron">
@@ -60,10 +54,7 @@
       <div class="push"></div>
     </div>
 
-    <!-- footer -->
-    <footer id="contact-form-footer">
-      <p>&copy; Choice 2015 All rights reserved.</p>
-    </footer>
+    <div class="template-footer"></div>
 
   </body>
 </html>
