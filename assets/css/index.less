@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Josefin+Sans:300);
+@import "./functions.less";
+@import "./slider.less";
+@import "./form.less";
 
 h1, h2, h3, h4, h5, h6, a, button, p, span {
   font-family: "Lato";
@@ -7,10 +10,15 @@ h1, h2, h3, h4, h5, h6, a, button, p, span {
 @green: #0eb06d;
 @dark-green: #0AA263;
 @light-green: #17C17B;
+
 @very-light-green: #f2fff3;
 @silhouette-color: #515151;
 @box-shadow-color: #ccc;
 @black: #333;
+
+
+
+
 
 /* -----------------
 GENERAL
@@ -270,6 +278,14 @@ CONTACT FORM SPECIFIC
   }
 }
 
+.form-container {
+  margin-top: 70;
+  text-align: center;
+  background-color: #eee;
+}
+
+
+/* DELETE THIS AFTER UPDATING THE CONTACT FORM TO USE .form-container */
 #contact-form-container, #signup-form-slider {
   margin-top: 70;
   text-align: center;
@@ -368,37 +384,6 @@ SLICK SLIDE
   }
 
 
-/* -------------------
-SURVEY
---------------------*/
-
-
-.slide {
-
-  .question-header {
-    font-size: 2.5em;
-    font-weight: 400;
-  }
-
-  .question-caption {
-    font-size: 1em;
-    font-weight: 200;
-    margin-bottom: 30px;
-  }
-
-  .question-container {
-    margin: 10px 0px;
-
-  }
-
-  .question-text {
-    /*text-align: left;*/
-    margin-bottom: 5px;
-  }
-
-}
-
-
 #next-button {
   display: block;
   padding: 20px 10px;
@@ -459,31 +444,6 @@ footer {
 
 
 
-/* ---------------------
-FUNCTIONS
------------------------*/
-.placeholder-style() {
-  color: #bbb;
-  font-size: 0.7em;
-  padding-top: .3em;
-  font-weight: 300;
-  font-family: "Lato";
-}
-
-.box-shadow(@color) {
-  -webkit-box-shadow: 3px 3px 2px 0 @color;
-  box-shadow: 3px 3px 2px 0 @color;
-}
-
-.text-shadow(@color) {
-  text-shadow: 2px 2px 0 @color;
-}
-
-.border-radius(@radius: 3px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  border-radius: @radius;
-}
 
 /* Medium devices (desktops, 992px and up) */
 @screen-md : 992px;
