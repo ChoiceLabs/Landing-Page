@@ -1,10 +1,18 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
 templates['footer'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<footer>\n  <p>&copy; Choice 2015 All rights reserved.</p>\n</footer>\n";
+    var helper;
+
+  return "<footer>\n  <p>"
+    + this.escapeExpression(((helper = (helper = helpers.copyright || (depth0 != null ? depth0.copyright : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"copyright","hash":{},"data":data}) : helper)))
+    + "</p>\n</footer>\n";
 },"useData":true});
 templates['header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<header>\n  <div class=\"container\">\n    <a href=\"/\" id=\"logo\"><img alt=\"Choice company driving car logo\" src=\"assets/images/choice_logo.png\" id=\"logo-image\"></a>\n    <ul class=\"navbar navbar-right nav\">\n      <li>\n        <!-- <a href=\"/merchants\" class=\"button\" id=\"merchant-button\">For Companies</a> -->\n      </li>\n    </ul>\n  </div>\n</header>\n";
+    var helper;
+
+  return "<header>\n  <div class=\"container\">\n    <a href=\"/\" id=\"logo\"><img alt=\"Choice company driving car logo\" src=\""
+    + this.escapeExpression(((helper = (helper = helpers.logo_file || (depth0 != null ? depth0.logo_file : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"logo_file","hash":{},"data":data}) : helper)))
+    + "\" id=\"logo-image\"></a>\n    <ul class=\"navbar navbar-right nav\">\n      <li>\n        <!-- <a href=\"/merchants\" class=\"button\" id=\"merchant-button\">For Companies</a> -->\n      </li>\n    </ul>\n  </div>\n</header>\n";
 },"useData":true});
 templates['hero'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"jumbotron\" id=\"hero-section-jumbotron\">\n  <div class=\"container\" id=\"hero-section\">\n\n    <div class=\"row\">\n\n      <div class=\"col-md-7\" id=\"choice-description\">\n        <h1> Drive with Choice </h1>\n        <p> Earn up to $25 an hour, <span style=\"font-style: italics\"> even during off-peak times.</span> </p>\n        <p>Choice partners with multiple, hand-selected retailers to provide you with access more jobs, increased efficiency, and higher pay. </p>\n      </div>\n\n      <div class=\"col-md-4 col-md-offset-1\" id=\"form-container\">\n\n        <form>\n          <h2 id=\"cta\"> Start Driving </h2>\n          <p id=\"instructions\"> Enter your info, download the Choice App, and we will reach out to get you started! </p>\n\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <input type=\"text\" class=\"form-control\" id=\"first-name-input\" placeholder=\"First\">\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <input type=\"text\" class=\"form-control\" id=\"last-name-input\" placeholder=\"Last\">\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <input type=\"text\" class=\"form-control\" id=\"email-input\" placeholder=\"Email\">\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <input type=\"text\" class=\"form-control\" id=\"phone-number-input\" placeholder=\"Phone\">\n            </div>\n          </div>\n\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <input type=\"text\" class=\"form-control\" id=\"city-input\" placeholder=\"City\">\n            </div>\n          </div>\n\n          <div id=\"form-status\"></div>\n          <a onclick=\"submit()\" class=\"button\" id=\"submit-button\">Apply Now</a>\n        </form>\n\n      </div>\n    </div>\n\n  </div>\n</div>\n";
