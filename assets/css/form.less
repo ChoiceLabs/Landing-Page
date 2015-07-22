@@ -1,17 +1,146 @@
+@import "./functions.less";
+
 @form-element-padding: 10px;
 
-/* YES/NO Button */
-.bool-button {
+@green: green;
+@hover-green: red;
+@active-green: blue;
+
+
+
+/* ---------------
+CHECKBOX BUTTONS
+* ----------------
+
+
+/* --------------
+RADIO BUTTONS 
+(use toggle button if 2 options)
+---------------*/
+
+
+
+
+/* -------------
+TOGGLE BUTTON 
+-------------- */
+.toggle-button {
   width: 100%;
-  padding: form-element-padding;
+  padding: @form-element-padding;
   border: 1px solid black;
 }
 
-.yes-no-button:active {
-  background-color: green;
-}
-
-.yes-no-button--active {
+.toggle-button:active {
   background-color: red;
 }
+
+.toggle-button:hover {
+
+}
+
+.toggle-button--on {
+  background-color: red;
+}
+
+
+
+
+
+/* ------------------
+INPUT TEXT
+TEXTAREA 
+-------------------*/
+
+input[type=text], textarea {
+  font-size: 1.2em;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px @green;
+  border: 1px solid @green;
+  transition-duration: .3s;
+  -webkit-transition-duration: .3s;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  .placeholder-style();
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  .placeholder-style();
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  .placeholder-style();
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  .placeholder-style();
+}
+
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color:transparent;
+}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
+  color:transparent;
+}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color:transparent;
+}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  color:transparent;
+}
+
+
+
+
+/* ------------------
+BUTTON
+-------------------*/
+
+.button {
+  display: block;
+  padding: 20px 10px;
+  margin: 0 auto;
+  text-decoration: none;
+  .border-radius();
+  border: none;
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
+
+.button--green {
+  background-color: @green;
+}
+
+.button--green:hover {
+  background-color: @hover-green;
+}
+
+#submit-button:active {
+  background-color: @active-green;
+}
+
+
+
+
+/* ----------------
+FUNCTIONS 
+------------------*/
+
+
+.placeholder-style() {
+  color: #bbb;
+  font-size: 0.7em;
+  padding-top: .3em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+
 
