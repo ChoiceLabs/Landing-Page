@@ -1,188 +1,46 @@
 <html>
+
   <head>
     <meta charset="UTF-8">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
-    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
-    <script type="text/javascript" src="assets/js/firebase.js"></script>
-    <script type="text/javascript" src="assets/js/form.js"></script>
+
+    <!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script type="text/javascript" src="assets/js/firebase.js"></script>
+
+    <!-- Templating -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script type="text/javascript" src="assets/js/templates.js"></script>
+    <script type="text/javascript" src="assets/js/actuate_common.js"></script>
+    <script type="text/javascript" src="assets/js/actuate_landing.js"></script>
+
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/landing/slider_config.js"></script>
+
+    <!-- Landing Page -->
+    <script type="text/javascript" src="assets/js/form.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
   </head>
 
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container">
-          <a href="/" id="logo"><img src="assets/images/choice_logo.png" id="logo-image"></a>
-          <ul class="navbar navbar-right nav">
-            <li>
-              <!-- <a href="/merchants" class="button" id="merchant-button">For Companies</a> -->
-            </li>
-          </ul>
-        </div>
-      </header>
-
-      <!-- Hero section -->
-      <div class="jumbotron" id="hero-section-jumbotron">
-        <div class="container" id="hero-section">
-
-          <div class="row">
-
-            <div class="col-md-7" id="choice-description">
-              <h1> Drive with Choice </h1>
-              <p> Earn up to $25 an hour, <span style="font-style: italics"> even during off-peak times.</span> </p>
-              <p>Choice partners with multiple, hand-selected retailers to provide you with access more jobs, increased efficiency, and higher pay. </p>
-            </div>
-
-            <div class="col-md-4 col-md-offset-1" id="form-container">
-
-              <form>
-                <h2 id="cta"> Start Driving </h2>
-                <p id="instructions"> Enter your info, download the Choice App, and we will reach out to get you started! </p>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" id="first-name-input" placeholder="First">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" id="last-name-input" placeholder="Last">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" id="email-input" placeholder="Email">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" id="phone-number-input" placeholder="Phone">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" id="city-input" placeholder="City">
-                  </div>
-                </div>
-
-                <div id="form-status"></div>
-                <a onclick="submit()" class="button" id="submit-button">Apply Now</a>
-              </form>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <!-- why choice -->
-      <div class="jumbotron">
-        <div class="container" id="why-choice-container">
-          <div class="row">
-            <h2 class="section-header"> On Demand the way it should have been. </h2>
-
-            <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
-              <img src="assets/images/connections-128.png">
-              <h3>Access to More Jobs</h3>
-              <p> Don&#39;t be tied to one provider&#39;s. &#32; Choose from a variety of well-paying jobs throughout the day &#8212; all on one platform.</p>
-            </div>
-
-            <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
-              <img src="assets/images/agile_flexible_planning-128.png">
-              <h3>Eliminate Slow Times</h3>
-              <p> No more sitting around idle during the midday slump. &#32; Make the most of your time, any time of the day.  </p>
-            </div>
-
-            <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
-              <img src="assets/images/agile_sprint_goal-128.png">
-              <h3>Truly Flexible Schedules</h3>
-              <p> &#34;Work when you want&#34; became &#34;work when there&#39;s work.&#34; With Choice, regain control with predictable schedules. </p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-      <!-- How it works -->
-      <div class="jumbotron" id="how-it-works-container">
-        <div class="container">
-          <h2 class="section-header"> How it Works </h2>
-          <div class="slider">
-
-            <div id="slide1">
-              <div class="row">
-                <div class="col-md-3 col-md-offset-1">
-                  <img src="assets/images/pick_job.png" height="500" width="244">
-                </div>
-                <div class="col-md-5 col-md-offset-1 col-xs-8 col-xs-offset-2 caption">
-                  <div class="how-it-works-text-wrapper">
-                    <h3>Pick your job</h3>
-                    <p>A single package pickup, and multiple drop-off locations to minimize your time and maximize your earnings.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="slide2">
-              <div class="row">
-                <div class="col-md-3 col-md-offset-1">
-                  <img src="assets/images/follow_steps_choose_order.png" height="500" width="244">
-                </div>
-                <div class="col-md-5 col-md-offset-1 col-xs-8 col-xs-offset-2 caption">
-                  <div class="how-it-works-text-wrapper">
-                    <h3>Simple steps, displayed clearly</h3>
-                    <p>We give you a list of deliveries, you get to choose the best order to do them in.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="slide3">
-              <div class="row">
-                <div class="col-md-3 col-md-offset-1">
-                  <img src="assets/images/ext_nav_opt.png" height="500" width="244">
-                </div>
-                <div class="col-md-5 col-md-offset-1 col-xs-8 col-xs-offset-2 caption">
-                  <div class="how-it-works-text-wrapper">
-                    <h3>Navigate with ease</h3>
-                    <p>The Choice app will direct you right to your delivery, or let you use your favourite navigation app.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
+      <div class="header-placeholder"></div>
+      <div class="hero-placeholder"></div>
+      <div class="why-choice-placeholder"></div>
+      <div class="how-it-works-placeholder"></div>
       <div class="push"></div>
     </div>
-
-    <!-- footer -->
-    <footer>
-      <p>&copy; Choice 2015 All rights reserved.</p>
-    </footer>
-
-    <script>
-      $(document).ready(function(){
-        $('.slider').slick({
-          adaptiveHeight: true,
-          dots: true,
-          infinite: false,
-          respondTo: 'slider'
-        });
-      });
-    </script>
+    <div class="footer-placeholder"></div>
   </body>
+
+</html>
