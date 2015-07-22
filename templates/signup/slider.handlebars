@@ -1,0 +1,136 @@
+<div class="slider" id="signup-form-slider">
+
+
+  <!-- SLIDE 1 -->
+  <div class="row slide">
+
+    <div class="slide__header">
+      <h2 class="slide__header__title"> Basics </h2>
+      <p class="slide__header__caption"> STEP 1 OF 4 </p>
+    </div>
+
+    <form id="basics-form">
+
+      <input type="text" class="form-control" id="first-name-input" placeholder="First Name">
+      <input type="text" class="form-control" id="last-name-input" placeholder="Last Name">
+      <input type="tel" class="form-control" id="phone-input" placeholder="Phone">
+      <input type="text" class="form-control" id="email-input" placeholder="Email">
+      <select class="form-control" id="city-select" placeholder="City">
+        {{#each cities}}
+          <option value="{{this.key}}">{{this.name}}</option>
+        {{/each}}
+      </select>
+
+      <div class="yes-no-button no">
+        <p> The question goes here </p>
+        <img src="../images/checkbox.png">
+      </div>
+
+
+    </form>
+  </div>
+
+
+
+  <!-- SLIDE 2 -->
+  <div class="row slide">
+
+    <div class="slide__header">
+      <h2 class="slide__header__title"> Experience </h2>
+      <p class="slide__header__caption"> STEP 2 OF 4 </p>
+    </div>
+
+
+    <form id="experience-form">
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="question-text">Which of these are you able to drive (and have a license for)?</p>
+          <input type="checkbox" value="auto"><label> Automatic</label>
+          <input type="checkbox" value="manual"><label> Manual</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 question">
+          <p class="question-text"> Do you have driving experience in any of these?</p>
+          <input type="checkbox"><label>Traditional Valet </label>
+          <input type="checkbox"><label> Uber </label>
+          <input type="checkbox"><label> Lyft </label>
+          <br>
+          <input type="checkbox"><label> Sidecar </label>
+          <input type="checkbox"><label> Other On Demand Service </label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12 question">
+          <p class="question-text">Please describe any other customer service experience?</p>
+          <textarea class="form-control" id="customer-service-form-textarea" rows="8" placeholder=""></textarea>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+
+  <!-- SLIDE 3 -->
+  <div class="row slide">
+
+    <div class="slide__header">
+      <h2 class="slide__header__title"> Eligibility </h2>
+      <p class="slide__header__caption"> STEP 1 OF 4 </p>
+    </div>
+
+
+    <form id="experience-form">
+
+      <div class="row">
+        <div class="col-md-12 question">
+          <p class="question-text">Are you eligible to work in the U.S.</p>
+          <input type="radio"></input> <label> No </label>
+          <input type="radio"></input> <label> Yes </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 question">
+          <p class="question-text">Are you willing to undergo a background check?</p>
+          <input type="radio"></input> <label> No </label>
+          <input type="radio"></input> <label> Yes </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 question">
+          <p class="question-text">Do you have a valid U.S. Driver's License?</p>
+          <input type="radio"></input> <label> No </label>
+          <input type="radio"></input> <label> Yes </label>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+  <!-- SLIDE 4 -->
+  <div class="row slide">
+    <div class="slide__header">
+      <h2 class="slide__header__title"> Availability </h2>
+      <p class="slide__header__caption"> STEP 4 OF 4 </p>
+    </div>
+
+    <p class="question-text"> What times work with your current schedule?</p>
+    <form class="col-md-8 col-md-offset-2" id="experience-form">
+      <div class="row">
+        <div class="col-md-12">
+          <p>**Easy time and day chooser goes here**</p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>  <!-- slider -->
