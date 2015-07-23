@@ -3,10 +3,7 @@
   <!-- SLIDE 1 -->
   <div class="row slide">
 
-    <div class="slide__header">
-      <h2 class="slide__header__title"> Basics </h2>
-      <p class="slide__header__caption"> STEP 1 OF 4 </p>
-    </div>
+    {{> slide-header heading="Basics" }}
 
     <form id="basics-form">
       <input type="text" class="form-control" id="first-name-input" placeholder="First Name">
@@ -23,7 +20,6 @@
         <p>{{checkbox-text}}</p>
         <img src="{{checkbox-image}}">
       </div>
-
 
     </form>
   </div>
