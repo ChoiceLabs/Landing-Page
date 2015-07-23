@@ -8,6 +8,20 @@
 
 
 
+
+.form-control {
+  height: 45px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-family: "Lato";
+  padding: 15px;
+  font-size: 1.2em;
+  color: @black;
+  letter-spacing: 1px;
+}
+
+
+
 /* ---------------
 CHECKBOX BUTTONS
 * ----------------
@@ -51,11 +65,17 @@ INPUT TEXT
 TEXTAREA 
 -------------------*/
 
-input[type=text], textarea {
-  font-size: 1.2em;
+input[type=text], input[type=tel], textarea {
+  font-size: 1.8em;
+  height: 45px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  padding: 15px;
+  color: @black;
+  letter-spacing: 1px;
 }
 
-input[type=text]:focus, textarea:focus {
+input[type=text]:focus, input[type=tel]:focus, textarea:focus {
   box-shadow: 0 0 5px @green;
   border: 1px solid @green;
   transition-duration: .3s;
@@ -137,7 +157,7 @@ FUNCTIONS
 
 .placeholder-style() {
   color: #bbb;
-  font-size: 0.7em;
+  font-size: 0.9em;
   padding-top: .3em;
   font-weight: 300;
   font-family: "Lato";
