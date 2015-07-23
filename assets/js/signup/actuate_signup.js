@@ -54,17 +54,9 @@ $(document).ready(function () {
     ],
 
     'checkbox-image': '../images/checkbox.png',
-    'checkbox-text': 'The question goes here'
+    'checkbox-text': 'The question goes here',
+    'heading': 'not-basics'
   };
-
-  Handlebars.registerPartial(
-    'slide-header',
-
-    '<div class="slide__header">' +
-      '<h2 class="slide__header__title">{{heading}}</h2>' +
-      '<p class="slide__header__caption">5 of 3</p>' +
-    '</div>'
-  );
 
   $('.slider-placeholder').html(Handlebars.templates.slider(slider_context));
 });
