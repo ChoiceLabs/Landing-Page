@@ -26,6 +26,48 @@ templates['why_choice'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":func
 templates['resources'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<meta charset=\"UTF-8\">\n\n<!-- Bootstrap -->\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css\">\n\n<!-- jQuery -->\n<script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-2.1.4.min.js\"></script>\n<script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-migrate-1.2.1.min.js\"></script>\n\n<!-- Firebase -->\n<script src=\"https://cdn.firebase.com/js/client/2.2.7/firebase.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/firebase.js\"></script>\n\n<!-- Templating -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/templates.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/actuate_common.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/actuate_landing.js\"></script>\n\n<!-- Slick Slider -->\n<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css\"/>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css\"/>\n<script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/landing/slider_config.js\"></script>\n\n<!-- Landing Page -->\n<script type=\"text/javascript\" src=\"assets/js/form.js\"></script>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/index.css\">\n";
 },"useData":true});
+templates['slide1_content'] = template({"1":function(depth0,helpers,partials,data) {
+    var alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "    <option value=\""
+    + alias2(alias1((depth0 != null ? depth0.key : depth0), depth0))
+    + "\">"
+    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
+    + "</option>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "<form id=\"basics-form\">\n  <input type=\"text\" class=\"form-control\" id=\"first-name-input\" placeholder=\"First Name\">\n  <input type=\"text\" class=\"form-control\" id=\"last-name-input\" placeholder=\"Last Name\">\n  <input type=\"tel\" class=\"form-control\" id=\"phone-input\" placeholder=\"Phone\">\n  <input type=\"text\" class=\"form-control\" id=\"email-input\" placeholder=\"Email\">\n  <select class=\"form-control\" id=\"city-select\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.cities : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "  </select>\n\n  <div class=\"yes-no-button no\">\n    <p>"
+    + alias3(((helper = (helper = helpers['checkbox-text'] || (depth0 != null ? depth0['checkbox-text'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"checkbox-text","hash":{},"data":data}) : helper)))
+    + "</p>\n    <img src=\""
+    + alias3(((helper = (helper = helpers['checkbox-image'] || (depth0 != null ? depth0['checkbox-image'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"checkbox-image","hash":{},"data":data}) : helper)))
+    + "\">\n  </div>\n\n</form>\n";
+},"useData":true});
+templates['slide2_content'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<form id=\"experience-form\">\n\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <p class=\"question-text\">Which of these are you able to drive (and have a license for)?</p>\n      <input type=\"checkbox\" value=\"auto\"><label> Automatic</label>\n      <input type=\"checkbox\" value=\"manual\"><label> Manual</label>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-md-12 question\">\n      <p class=\"question-text\"> Do you have driving experience in any of these?</p>\n      <input type=\"checkbox\"><label>Traditional Valet </label>\n      <input type=\"checkbox\"><label> Uber </label>\n      <input type=\"checkbox\"><label> Lyft </label>\n      <br>\n      <input type=\"checkbox\"><label> Sidecar </label>\n      <input type=\"checkbox\"><label> Other On Demand Service </label>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-md-12 question\">\n      <p class=\"question-text\">Please describe any other customer service experience?</p>\n      <textarea class=\"form-control\" id=\"customer-service-form-textarea\" rows=\"8\" placeholder=\"\"></textarea>\n    </div>\n  </div>\n\n</form>\n";
+},"useData":true});
+templates['slide3_content'] = template({"1":function(depth0,helpers,partials,data) {
+    var alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "  <div class=\"row\">\n    <div class=\"col-md-12 question\">\n      <p class=\"question-text\">"
+    + alias2(alias1((depth0 != null ? depth0['question-text'] : depth0), depth0))
+    + "</p>\n      <input type=\"radio\" /> <label>"
+    + alias2(alias1((depth0 != null ? depth0['toggle-true-text'] : depth0), depth0))
+    + "</label>\n      <input type=\"radio\" /> <label>"
+    + alias2(alias1((depth0 != null ? depth0['toggle-false-text'] : depth0), depth0))
+    + "</label>\n    </div>\n  </div>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<form id=\"eligibility-form\">\n\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.questions : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n</form>\n";
+},"useData":true});
+templates['slide4_content'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<p class=\"question-text\"> What times work with your current schedule?</p>\n<form class=\"col-md-8 col-md-offset-2\" id=\"availability-form\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <p>**Easy time and day chooser goes here**</p>\n    </div>\n  </div>\n</form>\n";
+},"useData":true});
 templates['slide_header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -36,34 +78,18 @@ templates['slide_header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":fu
     + "</p>\n</div>\n";
 },"useData":true});
 templates['slider'] = template({"1":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "          <option value=\""
-    + alias2(alias1((depth0 != null ? depth0.key : depth0), depth0))
-    + "\">"
-    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
-    + "</option>\n";
-},"3":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
-
-  return "        <div class=\"row\">\n          <div class=\"col-md-12 question\">\n            <p class=\"question-text\">"
-    + alias2(alias1((depth0 != null ? depth0['question-text'] : depth0), depth0))
-    + "</p>\n            <input type=\"radio\" /> <label>"
-    + alias2(alias1((depth0 != null ? depth0['toggle-true-text'] : depth0), depth0))
-    + "</label>\n            <input type=\"radio\" /> <label>"
-    + alias2(alias1((depth0 != null ? depth0['toggle-false-text'] : depth0), depth0))
-    + "</label>\n          </div>\n        </div>\n";
+  return "    <div class=\"row slide\">\n      <div class=\"slide"
+    + alias3(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
+    + "-header-placeholder\"></div>\n      <div class=\"slide"
+    + alias3(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
+    + "-content-placeholder\"></div>\n    </div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+    var stack1;
 
-  return "<div class=\"slider\" id=\"signup-form-slider\">\n\n  <!-- SLIDE 1 -->\n  <div class=\"row slide\">\n    <div class=\"slide1-header-placeholder\"></div>\n\n    <form id=\"basics-form\">\n      <input type=\"text\" class=\"form-control\" id=\"first-name-input\" placeholder=\"First Name\">\n      <input type=\"text\" class=\"form-control\" id=\"last-name-input\" placeholder=\"Last Name\">\n      <input type=\"tel\" class=\"form-control\" id=\"phone-input\" placeholder=\"Phone\">\n      <input type=\"text\" class=\"form-control\" id=\"email-input\" placeholder=\"Email\">\n      <select class=\"form-control\" id=\"city-select\" placeholder=\"City\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.cities : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "      </select>\n\n      <div class=\"yes-no-button no\">\n        <p>"
-    + alias3(((helper = (helper = helpers['checkbox-text'] || (depth0 != null ? depth0['checkbox-text'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"checkbox-text","hash":{},"data":data}) : helper)))
-    + "</p>\n        <img src=\""
-    + alias3(((helper = (helper = helpers['checkbox-image'] || (depth0 != null ? depth0['checkbox-image'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"checkbox-image","hash":{},"data":data}) : helper)))
-    + "\">\n      </div>\n\n    </form>\n  </div>\n\n\n\n  <!-- SLIDE 2 -->\n  <div class=\"row slide\">\n    <div class=\"slide2-header-placeholder\"></div>\n\n    <form id=\"experience-form\">\n\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <p class=\"question-text\">Which of these are you able to drive (and have a license for)?</p>\n          <input type=\"checkbox\" value=\"auto\"><label> Automatic</label>\n          <input type=\"checkbox\" value=\"manual\"><label> Manual</label>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-md-12 question\">\n          <p class=\"question-text\"> Do you have driving experience in any of these?</p>\n          <input type=\"checkbox\"><label>Traditional Valet </label>\n          <input type=\"checkbox\"><label> Uber </label>\n          <input type=\"checkbox\"><label> Lyft </label>\n          <br>\n          <input type=\"checkbox\"><label> Sidecar </label>\n          <input type=\"checkbox\"><label> Other On Demand Service </label>\n        </div>\n      </div>\n\n\n      <div class=\"row\">\n        <div class=\"col-md-12 question\">\n          <p class=\"question-text\">Please describe any other customer service experience?</p>\n          <textarea class=\"form-control\" id=\"customer-service-form-textarea\" rows=\"8\" placeholder=\"\"></textarea>\n        </div>\n      </div>\n\n    </form>\n  </div>\n\n\n  <!-- SLIDE 3 -->\n  <div class=\"row slide\">\n    <div class=\"slide3-header-placeholder\"></div>\n\n    <form id=\"eligibility-form\">\n\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.questions : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n    </form>\n  </div>\n\n\n\n  <!-- SLIDE 4 -->\n  <div class=\"row slide\">\n    <div class=\"slide4-header-placeholder\"></div>\n\n    <p class=\"question-text\"> What times work with your current schedule?</p>\n    <form class=\"col-md-8 col-md-offset-2\" id=\"availability-form\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <p>**Easy time and day chooser goes here**</p>\n        </div>\n      </div>\n    </form>\n  </div>\n\n</div>  <!-- slider -->\n";
+  return "<div class=\"slider\" id=\"signup-form-slider\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.slides : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</div>  <!-- slider -->\n";
 },"useData":true});
 })();

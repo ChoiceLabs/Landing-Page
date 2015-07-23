@@ -1,4 +1,25 @@
 $(document).ready(function () {
+  var context = {
+    'slides': [
+      {
+        'heading': 'Basics',
+        'caption': 'STEP 1 of 4',
+      },
+      {
+        'heading': 'Experience',
+        'caption': 'STEP 2 of 4',
+      },
+      {
+        'heading': 'Eligibility',
+        'caption': 'STEP 3 of 4',
+      },
+      {
+        'heading': 'Availability',
+        'caption': 'STEP 4 of 4',
+      }
+    ]
+  };
+
   var slider_context = {
     'cities': [
       {
