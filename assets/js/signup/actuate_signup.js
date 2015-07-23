@@ -34,6 +34,7 @@ $(document).ready(function () {
         name: 'Other'
       },
     ],
+
     'questions': [
       {
         'question-text': 'Are you eligible to work in the U.S.?',
@@ -50,7 +51,10 @@ $(document).ready(function () {
         'toggle-true-text': 'Yes',
         'toggle-false-text': 'No'
       }
-    ]
+    ],
+
+    'checkbox-image': '../images/checkbox.png',
+    'checkbox-text': 'The question goes here'
   };
   $('.slider-placeholder').html(Handlebars.templates.slider(slider_context));
 });
