@@ -33,6 +33,23 @@ $(document).ready(function () {
         key: 'Other',
         name: 'Other'
       },
+    ],
+    'questions': [
+      {
+        'question-text': 'Are you eligible to work in the U.S.?',
+        'toggle-true-text': 'Yes',
+        'toggle-false-text': 'No'
+      },
+      {
+        'question-text': 'Are you willing to undergo a background check?',
+        'toggle-true-text': 'Yes',
+        'toggle-false-text': 'No'
+      },
+      {
+        'question-text': 'Do you have a valid U.S. Driver\'s License?',
+        'toggle-true-text': 'Yes',
+        'toggle-false-text': 'No'
+      }
     ]
   };
   $('.slider-placeholder').html(Handlebars.templates.slider(slider_context));

@@ -80,35 +80,21 @@
 
     <div class="slide__header">
       <h2 class="slide__header__title"> Eligibility </h2>
-      <p class="slide__header__caption"> STEP 1 OF 4 </p>
+      <p class="slide__header__caption"> STEP 8 OF 4 </p>
     </div>
 
 
     <form id="experience-form">
 
-      <div class="row">
-        <div class="col-md-12 question">
-          <p class="question-text">Are you eligible to work in the U.S.</p>
-          <input type="radio"></input> <label> No </label>
-          <input type="radio"></input> <label> Yes </label>
+      {{#each questions}}
+        <div class="row">
+          <div class="col-md-12 question">
+            <p class="question-text">{{this.question-text}}</p>
+            <input type="radio" /> <label>{{this.toggle-true-text}}</label>
+            <input type="radio" /> <label>{{this.toggle-false-text}}</label>
+          </div>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 question">
-          <p class="question-text">Are you willing to undergo a background check?</p>
-          <input type="radio"></input> <label> No </label>
-          <input type="radio"></input> <label> Yes </label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 question">
-          <p class="question-text">Do you have a valid U.S. Driver's License?</p>
-          <input type="radio"></input> <label> No </label>
-          <input type="radio"></input> <label> Yes </label>
-        </div>
-      </div>
+      {{/each}}
 
     </form>
 
