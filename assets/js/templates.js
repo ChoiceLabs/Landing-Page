@@ -30,9 +30,9 @@ templates['slide1_content'] = template({"1":function(depth0,helpers,partials,dat
     var alias1=this.lambda, alias2=this.escapeExpression;
 
   return "    <option value=\""
-    + alias2(alias1((depth0 != null ? depth0.key : depth0), depth0))
+    + alias2(alias1(depth0, depth0))
     + "\">"
-    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
+    + alias2(alias1(depth0, depth0))
     + "</option>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
@@ -77,19 +77,7 @@ templates['slide_header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":fu
     + alias3(((helper = (helper = helpers.caption || (depth0 != null ? depth0.caption : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"caption","hash":{},"data":data}) : helper)))
     + "</p>\n</div>\n";
 },"useData":true});
-templates['slider'] = template({"1":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
-
-  return "    <div class=\"row slide\">\n      <div class=\"slide"
-    + alias3(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
-    + "-header-placeholder\"></div>\n      <div class=\"slide"
-    + alias3(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
-    + "-content-placeholder\"></div>\n    </div>\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1;
-
-  return "<div class=\"slider\" id=\"signup-form-slider\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.slides : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</div>  <!-- slider -->\n";
+templates['slider'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<div class=\"slider\" id=\"signup-form-slider\">\n\n  <!-- SLIDE 1 -->\n  <div class=\"row slide\">\n    <div class=\"slide1-header-placeholder\"></div>\n    <div class=\"slide1-content-placeholder\"></div>\n  </div>\n\n  <!-- SLIDE 2 -->\n  <div class=\"row slide\">\n    <div class=\"slide2-header-placeholder\"></div>\n    <div class=\"slide2-content-placeholder\"></div>\n  </div>\n\n  <!-- SLIDE 3 -->\n  <div class=\"row slide\">\n    <div class=\"slide3-header-placeholder\"></div>\n    <div class=\"slide3-content-placeholder\"></div>\n  </div>\n\n  <!-- SLIDE 4 -->\n  <div class=\"row slide\">\n    <div class=\"slide4-header-placeholder\"></div>\n    <div class=\"slide4-content-placeholder\"></div>\n  </div>\n\n</div>  <!-- slider -->\n";
 },"useData":true});
 })();

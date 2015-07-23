@@ -18,7 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script type="text/javascript" src="assets/js/templates.js"></script>
     <script type="text/javascript" src="assets/js/actuate_common.js"></script>
-    <script type="text/javascript" src="assets/js/signup/actuate_signup.js"></script>
     <script type="text/javascript" src="assets/js/signup/actuate_slides.js"></script>
 
     <!-- Slick Slider -->
@@ -33,34 +32,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
-
   <body>
     <div class="wrapper">
-
       <div class="header-placeholder"></div>
+        <div class="container form-container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="slider" id="signup-form-slider">
 
+                <!-- SLIDE 1 -->
+                <div class="row slide">
+                  <div class="slide1-header-placeholder"></div>
+                  <div class="slide1-content-placeholder"></div>
+                </div>
 
-      <div class="container form-container">
+                <!-- SLIDE 2 -->
+                <div class="row slide">
+                  <div class="slide2-header-placeholder"></div>
+                  <div class="slide2-content-placeholder"></div>
+                </div>
 
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
+                <!-- SLIDE 3 -->
+                <div class="row slide">
+                  <div class="slide3-header-placeholder"></div>
+                  <div class="slide3-content-placeholder"></div>
+                </div>
 
-            <div class="slider-placeholder"></div>
+                <!-- SLIDE 4 -->
+                <div class="row slide">
+                  <div class="slide4-header-placeholder"></div>
+                  <div class="slide4-content-placeholder"></div>
+                </div>
 
-          </div> <!-- col -->
-        </div> <!-- row -->
+              </div>  <!-- slider -->
+            </div> <!-- col -->
+          </div> <!-- row -->
 
+          <div id="form-status"></div>
 
-      <div id="form-status"></div>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <a class="button" id="next-button">Next</a>
+            </div>
+          </div>
 
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <a class="button" id="next-button">Next</a>
-        </div>
-      </div>
-
-
-    </div> <!-- container -->
+        </div> <!-- container -->
 
       <div class="push"></div>
     </div>
