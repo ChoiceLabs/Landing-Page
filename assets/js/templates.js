@@ -26,6 +26,32 @@ templates['why_choice'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":func
 templates['resources'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<meta charset=\"UTF-8\">\n\n<!-- Bootstrap -->\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css\">\n\n<!-- jQuery -->\n<script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-2.1.4.min.js\"></script>\n<script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-migrate-1.2.1.min.js\"></script>\n\n<!-- Firebase -->\n<script src=\"https://cdn.firebase.com/js/client/2.2.7/firebase.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/firebase.js\"></script>\n\n<!-- Templating -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/templates.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/actuate_common.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/actuate_landing.js\"></script>\n\n<!-- Slick Slider -->\n<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css\"/>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css\"/>\n<script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js\"></script>\n<script type=\"text/javascript\" src=\"assets/js/landing/slider_config.js\"></script>\n\n<!-- Landing Page -->\n<script type=\"text/javascript\" src=\"assets/js/form.js\"></script>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/index.css\">\n";
 },"useData":true});
+templates['jobs_hero'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "<div class=\"row\">\n  <div class=\"col-md-6 col-md-offset-3\">\n    <h1> "
+    + this.escapeExpression(((helper = (helper = helpers.slogan || (depth0 != null ? depth0.slogan : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"slogan","hash":{},"data":data}) : helper)))
+    + " </h1>\n  </div>\n</div>\n\n\n\n";
+},"useData":true});
+templates['single_slide'] = template({"1":function(depth0,helpers,partials,data) {
+    var alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "            <option value=\""
+    + alias2(alias1(depth0, depth0))
+    + "\">"
+    + alias2(alias1(depth0, depth0))
+    + "</option>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "<div class=\"row form-row\">\n  <div class=\"col-md-6 col-md-offset-3\">\n    <div class=\"slider\">\n\n      <div class=\"row survey_slide\">\n\n        <div class=\"survey_slide__header\">\n          <h2 class=\"survey_slide__header__title\">"
+    + alias3(((helper = (helper = helpers.heading || (depth0 != null ? depth0.heading : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"heading","hash":{},"data":data}) : helper)))
+    + "</h2>\n          <p class=\"survey_slide__header__caption\">"
+    + alias3(((helper = (helper = helpers.caption || (depth0 != null ? depth0.caption : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"caption","hash":{},"data":data}) : helper)))
+    + "</p>\n        </div>\n\n        <form id=\"form_container_white_border\">\n          <input type=\"text\" class=\"form-control\" id=\"first-name-input\" placeholder=\"First Name\">\n          <input type=\"text\" class=\"form-control\" id=\"last-name-input\" placeholder=\"Last Name\">\n          <input type=\"tel\" class=\"form-control\" id=\"phone-input\" placeholder=\"Phone\">\n          <input type=\"text\" class=\"form-control\" id=\"email-input\" placeholder=\"Email\">\n\n          <label class=\"question_label\">Where do you want to work?</label>\n\n          <select class=\"form-control\" id=\"city-select\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.cities : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "          </select>\n\n          <label class=\"question_label\">How many hours a week would you like to work?</label>\n          <input type=\"text\" class=\"form-control\" id=\"hours-a-week\">\n          <input type=\"checkbox\" class=\"form-control\" id=\"hours-a-week\">\n\n          <label class=\"question_label\">Do you have a valid Driver's License?</label>\n          <input type=\"text\" class=\"form-control\" id=\"has-drivers-license\">\n\n          <label class=\"question_label\">Are you willing to do a background check?</label>\n          <input type=\"text\" class=\"form-control\" id=\"willing-background-check\">\n\n          <label class=\"question_label\">When can we call you?</label>\n          <input type=\"text\" class=\"form-control\" id=\"time-to-call\">\n\n          <label class=\"question_label\">What year were you born</label>\n          <input type=\"text\" class=\"form-control\" id=\"year-born\">\n\n        </form>\n\n        \n      </div>\n\n      <div id=\"form-status\"></div>\n\n    </div>  <!-- slider -->\n  </div> <!-- col -->\n</div> <!-- row -->";
+},"useData":true});
 templates['slide1_content'] = template({"1":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
@@ -37,7 +63,7 @@ templates['slide1_content'] = template({"1":function(depth0,helpers,partials,dat
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<form>\n  <input type=\"text\" class=\"form-control\" id=\"first-name-input\" placeholder=\"First Name\">\n  <input type=\"text\" class=\"form-control\" id=\"last-name-input\" placeholder=\"Last Name\">\n  <input type=\"tel\" class=\"form-control\" id=\"phone-input\" placeholder=\"Phone\">\n  <input type=\"text\" class=\"form-control\" id=\"email-input\" placeholder=\"Email\">\n\n  <label class=\"question_label\">Where do you want to work?</label>\n  <select class=\"form-control\" id=\"city-select\">\n"
+  return "<form id=\"form-container\">\n  <input type=\"text\" class=\"form-control\" id=\"first-name-input\" placeholder=\"First Name\">\n  <input type=\"text\" class=\"form-control\" id=\"last-name-input\" placeholder=\"Last Name\">\n  <input type=\"tel\" class=\"form-control\" id=\"phone-input\" placeholder=\"Phone\">\n  <input type=\"text\" class=\"form-control\" id=\"email-input\" placeholder=\"Email\">\n\n  <label class=\"question_label\">Where do you want to work?</label>\n  <select class=\"form-control\" id=\"city-select\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.cities : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </select>\n\n  <label class=\"question_label\">How many hours a week would you like to work?</label>\n  <input type=\"text\" class=\"form-control\" id=\"hours-a-week\">\n\n  <label class=\"question_label\">Do you have a valid Driver's License?</label>\n  <input type=\"text\" class=\"form-control\" id=\"has-drivers-license\">\n\n  <label class=\"question_label\">Are you willing to do a background check?</label>\n  <input type=\"text\" class=\"form-control\" id=\"willing-background-check\">\n\n  <label class=\"question_label\">When can we call you?</label>\n  <input type=\"text\" class=\"form-control\" id=\"time-to-call\">\n\n  <label class=\"question_label\">What year were you born</label>\n  <input type=\"text\" class=\"form-control\" id=\"year-born\">\n\n</form>\n";
 },"useData":true});

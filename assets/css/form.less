@@ -1,4 +1,4 @@
-@import "./functions.less";
+@import "./common.less";
 
 @form-element-padding: 10px;
 
@@ -13,6 +13,38 @@ form {
 }
 
 
+#form_container {
+  padding: 10px 25px;
+  background: white;
+  .border-radius(8px);
+  border: 5px solid @green;
+}
+
+#form_container__white_border {
+  border: 1px solid #eee;
+}
+
+h2#cta {
+  font-size: 2.2em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
+  color: @black;
+}
+
+p#instructions {
+  font-size: 1.3em;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
 /* general layout for each field */
 .form-control {
   height: 45px;
@@ -23,8 +55,6 @@ form {
   font-size: 1.2em;
   letter-spacing: 1px;
 }
-
-
 
 /* ---------------
 CHECKBOX BUTTONS

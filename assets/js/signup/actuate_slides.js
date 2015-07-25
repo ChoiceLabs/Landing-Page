@@ -39,6 +39,29 @@ $(document).ready(function () {
 
   var slide4_content_context = {};
 
+  var single_slide_context = {
+    "heading" : "Enter your info",
+    "caption" : "We'll reach out and help you find flexible work",
+    'cities': [
+      '',
+      'San Fransisco',
+      'Brooklyn',
+      'Los Angeles',
+      'San Diego',
+      'Seattle',
+      'Washington DC',
+      'Other',
+    ],
+  }
+  $(".jobs-form-single-slide").html(Handlebars.templates.single_slide(single_slide_context));
+
+
+
+  var jobs_hero_context = {}
+  $(".jobs-hero").html(Handlebars.templates.jobs_hero(jobs_hero_context));
+
+
+
 
   // template context for overall slider (renders each slide's content)
   var slides_context = {
