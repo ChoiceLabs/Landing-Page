@@ -29,7 +29,7 @@ templates['resources'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":funct
 templates['jobs_hero'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;
 
-  return "<div class=\"row\">\n  <div class=\"col-md-6 col-md-offset-3\">\n    <h1> "
+  return "<div class=\"row\">\n  <div class=\"col-md-6 col-md-offset-3\">\n    <h1 id=\"jobs-slogan\"> "
     + this.escapeExpression(((helper = (helper = helpers.slogan || (depth0 != null ? depth0.slogan : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"slogan","hash":{},"data":data}) : helper)))
     + " </h1>\n  </div>\n</div>\n\n\n\n";
 },"useData":true});
