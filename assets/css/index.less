@@ -1,98 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Josefin+Sans:300);
 @import "./common.less";
 @import "./slider.less";
 @import "./form.less";
-
-h1, h2, h3, h4, h5, h6, a, button, p, span {
-  font-family: "Lato";
-}
-
-
-/* -----------------
-GENERAL
-------------------*/
-body {
-  height: 100%;
-}
-
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-}
-
-html {
-  height: 100%;
-}
-
-.jumbotron {
-  background-color: white;
-  margin: 0;
-
-  h1 {
-    font-size: auto;
-  }
-}
-
-
-/* -----------------
-HEADER
-------------------*/
-header {
-  top: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 3000;
-  height: 60px;
-  background-color: rgba(0, 0, 0, .75);
-}
-
-#logo {
-  margin-top: 8px;
-  display: inline-block;
-
-  #logo-image {
-    height: 44px;
-  }
-}
-
-.button {
-  display: inline-block;
-  padding: 20px 10px;
-  margin: 0 auto;
-  background-color: @green;
-  text-decoration: none;
-  .border-radius();
-  border: none;
-  text-align: center;
-  color: white;
-  font-size: 1.3em;
-
-  a {
-    text-decoration: none;
-    color: white;
-    font-weight: 300;
-  }
-}
-
-#nav-links {
-  list-style: none;
-
-  li {
-    display: block;
-    float: right;
-  }
-}
-
-#merchant-button {
-  margin-top: 18px;
-  text-decoration: none;
-  color: white;
-}
-
-#merchant-button:hover {
-  color: @green;
-}
 
 
 /* -----------------
@@ -159,15 +67,10 @@ CONTACT FORM SPECIFIC
   }
 }
 
-.form-container {
-  text-align: center;
-  background-color: #eee;
-}
-
 
 
 /* -----------------
-HERO SECTION
+WHY CHOICE
 ------------------*/
 .section-header {
   margin-bottom: 60px;
@@ -267,30 +170,6 @@ HOW IT WORKS
 #next-button:active {
   background-color: @dark-green;
 }
-
-label {
-  font-weight: 300;
-  font-size: 1.2em;
-  margin: 0px 5px;
-}
-
-
-
-
-
-
-
-
-/* -----------------
-FOOTER
------------------- */
-footer {
-  background-color: gray;
-  height: 200px;
-  padding: 20px 20px;
-}
-
-
 
 
 

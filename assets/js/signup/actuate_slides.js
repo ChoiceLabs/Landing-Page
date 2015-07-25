@@ -57,7 +57,9 @@ $(document).ready(function () {
 
 
 
-  var jobs_hero_context = {}
+  var jobs_hero_context = {
+    "slogan" : "Drive with Choice",
+  }
   $(".jobs-hero").html(Handlebars.templates.jobs_hero(jobs_hero_context));
 
 
