@@ -25,31 +25,14 @@ form {
 
 .form_container--white_border {
   border: 1px solid #eee;
+  border: none;
 }
-
-/*
-h2#cta {
-  font-size: 2.2em;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-align: center;
-  color: @black;
-}
-
-p#instructions {
-  font-size: 1.3em;
-  line-height: 1.5em;
-  font-weight: 300;
-  margin-bottom: 20px;
-  text-align: center;
-}
-*/
 
 
 label {
   font-weight: 300;
   font-size: 1.2em;
-  margin: 0px;
+  margin: 0px 0px 3px 0px;
 }
 
 
@@ -58,11 +41,34 @@ label {
 CHECKBOX BUTTONS
 ---------------- */
 
-.btn {
-  margin-right: 5px;
-  margin-bottom: 10px;
+
+.button-checkbox {
+  width: 48%;
 }
 
+.btn {
+  margin-bottom: 10px;
+  width: 100%;
+  color: @black;
+  background-image: none;
+  background-color: #eee;
+  font-size: 1.1em;
+  font-family: "Lato";
+}
+
+.btn-primary.active {
+  background-color: @green;
+  border-color: @dark-green;
+  outline: none;
+}
+
+.button-checkbox:nth-child(odd) {
+  float:right;
+}
+
+.button-checkbox:nth-child(even) {
+  float:left;
+}
 
 /* --------------
 RADIO BUTTONS 
@@ -75,7 +81,7 @@ input[type=radio] {
 }
 
 .radio {
-  width: 50%;
+  width: 100%;
 }
 
 
