@@ -12,6 +12,10 @@ form {
   margin-bottom: 0px;
 }
 
+.question {
+  margin-bottom: 15px;
+}
+
 
 .form_container {
   padding: 10px 25px;
@@ -23,6 +27,7 @@ form {
   border: 1px solid #eee;
 }
 
+/*
 h2#cta {
   font-size: 2.2em;
   font-weight: 900;
@@ -38,19 +43,25 @@ p#instructions {
   margin-bottom: 20px;
   text-align: center;
 }
+*/
 
 
 label {
   font-weight: 300;
   font-size: 1.2em;
-  margin: 0px 5px;
+  margin: 0px;
 }
 
 
 
 /* ---------------
 CHECKBOX BUTTONS
-* ----------------
+---------------- */
+
+.btn {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
 
 
 /* --------------
@@ -63,6 +74,10 @@ input[type=radio] {
   margin-bottom: 20px;
 }
 
+.radio {
+  width: 50%;
+}
+
 
 
 /* -------------
@@ -71,22 +86,39 @@ TOGGLE BUTTON
 .toggle-button {
   width: 100%;
   padding: @form-element-padding;
-  border: 1px solid black;
-}
+  height: auto;
+  letter-spacing: 0px;
+  font-size: auto;
 
-.toggle-button:active {
-  background-color: red;
-}
+  .checkbox-image {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+  }
 
-.toggle-button:hover {
+  .checkbox--unchecked {
+    }
 
+  .checkbox--checked {
+    display: none;
+  }
 }
 
 .toggle-button--on {
   background-color: red;
 }
 
+.toggle-button:active {
 
+}
+
+.toggle-button:hover {
+
+}
+
+.toggle_question_label {
+  font-size: .8em;
+}
 
 
 
@@ -95,18 +127,17 @@ INPUT TEXT
 TEXTAREA 
 -------------------*/
 
-input[type=text], input[type=tel], textarea {
+input[type=text], select, input[type=tel], input[type=email], .toggle-button, textarea {
   font-size: 1.5em;
   height: 45px;
   width: 100%;
-  margin-bottom: 15px;
   font-weight: 400;
   padding: 15px;
   color: @black;
   letter-spacing: 1px;
 }
 
-input[type=text]:focus, input[type=tel]:focus, textarea:focus {
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus {
   box-shadow: 0 0 5px @green;
   border: 1px solid @green;
   transition-duration: .3s;
@@ -176,8 +207,6 @@ BUTTON
 #submit-button:active {
   background-color: @active-green;
 }
-
-
 
 
 /* ----------------
