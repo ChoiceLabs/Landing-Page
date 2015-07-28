@@ -18,6 +18,7 @@ $(document).ready(function() {
   $("#submit-button").click(function() {
     number_of_selected_locations = $("#desired-locations").find("button.active").length;
     if (number_of_selected_locations == 0) {
+      console.log('hi');
       $("#desired-locations-error").css("display", "auto");
     }
   });

@@ -23,75 +23,79 @@
 
       <div class="question form-group">
         <label class="question_label">Phone Number</label>
-        <input type="tel" class="form-control" id="phone-input" data-minlength="10" required>
+        <input type="tel" class="form-control" id="phone-input" data-minlength="10" placeholder="(xxx) xxx-xxxx" data-error="Please provide a valid phone number" required>
         <div class="help-block with-errors"></div>
       </div>
 
       <div class="question form-group">
         <label class="question_label">Email</label>
-        <input type="email" class="form-control" id="email-input" data-error="Oops, the email address is not valid" >
+        <input type="email" class="form-control" id="email-input" required>
         <div class="help-block with-errors"></div>
       </div>
 
-      <div class="question form-group">
-        <label class="question_label">Where in the bay would you like to work?</label>
+      <div class="question form-group" id="desired-locations">
+        <label class="question_label">I would like to work in the following regions:</label>
         {{#each cities}}
         <span class="button-checkbox">
           <button type="button" class="btn" data-color="primary">{{this}}</button>
           <input type="checkbox" class="hidden" />
         </span>
         {{/each}}
+        <div class="desired-locations-error"> Please provide at least one region </div>
       </div>
 
 
       <div class="question form-group">
-        <label class="question_label">How many hours a week can you work?</label>
-        <input type="text" class="form-control" id="hours-a-week">
+        <label class="question_label">I can work this many hours a week:</label>
+        <input type="text" class="form-control" id="hours-a-week" placeholder="ie: 5-10 hours/week">
         <div id="desired-locations-error" class="help-block with-errors"></div>
       </div>
 
+
+      <!--
       <div class="question form-group" id="valid-license">
-        <label class="question_label">Do you have a valid Driver's License?</label>
-        <span class="button-checkbox">
-          <button name="license" type="button" class="btn radio" data-color="primary">Yes</button>
-          <input type="checkbox" class="hidden" />
-        </span>
-        <span class="button-checkbox">
-          <button name="license" type="button" class="btn radio" data-color="primary">No</button>
-          <input type="checkbox" class="hidden" />
-        </span>
-
-        <span class="button-checkbox">
-          <button style="width:100%" name="license" type="button" class="btn radio" data-color="primary">Check if you have a valid driver's license</button>
-          <input type="checkbox" class="hidden" />
-        </span>
-
-      </div>
-
-
-      <div class="question form-group">
-        <label class="question_label">Are you willing to do a background check?</label>
-        <span class="button-checkbox">
-          <button name="background-check" type="button" class="btn radio" data-color="primary">Yes</button>
-          <input type="checkbox" class="hidden" />
-        </span>
-        <span class="button-checkbox">
-          <button name="background-check" type="button" class="btn radio" data-color="primary">No</button>
+        <span class="button-checkbox button-checkbox--single-column">
+          <button name="license" type="button" class="btn radio" data-color="primary">I have a valid driver's license</button>
           <input type="checkbox" class="hidden" />
         </span>
       </div>
 
 
       <div class="question form-group">
-        <label class="question_label">When would you like to receive a phone call?</label>
-        <input type="text" class="form-control" id="time-to-call">
+        <span class="button-checkbox button-checkbox--single-column">
+          <button name="background-check" type="button" class="btn radio" data-color="primary">I am willing to do a background check</button>
+          <input type="checkbox" class="hidden" />
+        </span>
+      </div>
+    -->
+
+
+      <div class="question form-group">
+        <label class="question_label">Select which of the following are true:</label>
+        <span class="button-checkbox button-checkbox--single-column">
+          <button name="license" type="button" class="btn radio" data-color="primary">I have a valid driver's license</button>
+          <input type="checkbox" class="hidden" />
+        </span>
+        <span class="button-checkbox button-checkbox--single-column">
+          <button name="background-check" type="button" class="btn radio" data-color="primary">I will pass a background check</button>
+          <input type="checkbox" class="hidden" />
+        </span>
       </div>
 
+
+
+      <div class="question form-group">
+        <label class="question_label">The best time to contact me for a free consultation is:</label>
+        <input type="text" class="form-control" id="contact-time" data-error="Please provide a time for us to call you" placeholder='ie: weekdays afternoon' required>
+        <div class="help-block with-errors"></div>
+      </div>
       
-      <!-- <a class="button" id="submit-button"> Get your free consultation</a>  -->
-      <button class="button button--green" id="submit-button"> Get your free consultation</button>
+
+      <button class="button button--green" id="submit-button"> Find a job! </button>
 
     </form>
+
+
 
   </div>
 
