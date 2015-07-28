@@ -29,7 +29,8 @@
 
       <div class="question form-group">
         <label class="question_label">Email</label>
-        <input type="email" class="form-control" id="email-input" data-error="Bruh, that email address is invalid" >
+        <input type="email" class="form-control" id="email-input" data-error="Oops, the email address is not valid" >
+        <div class="help-block with-errors"></div>
       </div>
 
       <div class="question form-group">
@@ -46,16 +47,17 @@
       <div class="question form-group">
         <label class="question_label">How many hours a week can you work?</label>
         <input type="text" class="form-control" id="hours-a-week">
+        <div id="desired-locations-error" class="help-block with-errors"></div>
       </div>
 
-      <div class="question form-group">
+      <div class="question form-group" id="valid-license">
         <label class="question_label">Do you have a valid Driver's License?</label>
         <span class="button-checkbox">
-          <button type="button" class="btn radio" data-color="primary">Yes</button>
+          <button name="license" type="button" class="btn radio" data-color="primary">Yes</button>
           <input type="checkbox" class="hidden" />
         </span>
         <span class="button-checkbox">
-          <button type="button" class="btn radio" data-color="primary">No</button>
+          <button name="license" type="button" class="btn radio" data-color="primary">No</button>
           <input type="checkbox" class="hidden" />
         </span>
       </div>
@@ -64,10 +66,12 @@
       <div class="question form-group">
         <label class="question_label">Are you willing to do a background check?</label>
         <span class="button-checkbox">
-          <button type="button" class="btn radio" data-color="primary">Yes</button>
+          <button name="background-check" type="button" class="btn radio" data-color="primary">Yes</button>
+          <input type="checkbox" class="hidden" />
         </span>
         <span class="button-checkbox">
-          <button type="button" class="btn radio" data-color="primary">No</button>
+          <button name="background-check" type="button" class="btn radio" data-color="primary">No</button>
+          <input type="checkbox" class="hidden" />
         </span>
       </div>
 
@@ -78,7 +82,7 @@
       </div>
 
       
-      <a class="button" type="submit" id="next-button" disable="true"> Get your free conslutation</a>
+      <a class="button" type="submit" id="submit-button"> Get your free conslutation</a>
 
     </form>
 

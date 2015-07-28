@@ -1,25 +1,43 @@
 $(document).ready(function() {
 
-	$(".toggle-button").click(function() {
+  $(".toggle-button").click(function() {
 
-		$(this).children(".checkbox--unchecked").toggle();
-		$(this).children(".checkbox--checked").toggle();
+    $(this).children(".checkbox--unchecked").toggle();
+    $(this).children(".checkbox--checked").toggle();
 
-		if ($(this).hasClass(".toggle-button--on")) {
-			$(this).removeClass(".toggle-button--on");
-		}
+    if ($(this).hasClass(".toggle-button--on")) {
+      $(this).removeClass(".toggle-button--on");
+    }
 
-		else {
-			$(this).addClass(".toggle-button--on");
-		}
-	});
+    else {
+      $(this).addClass(".toggle-button--on");
+    }
+  });
 
 
-	
+  $("#submit-button").click(function() {
+    number_of_selected_locations = $("#desired-locations").find("button.active").length;
+    if (number_of_selected_locations == 0) {
+      $("#desired-locations-error").css("display", "auto");
+    }
+  });
 
+  $("button.radio").click(function() {
+    /* disable all other clicked items. There needs to be a better way to simulate radio buttons" */
+    var group = "button[name='" + $(this).attr("name") + "']";
+    $(group).not(this).each(function() {
+      $(this).addClass("btn-default");
+      $(this).removeClass("btn-primary")
+      $(this).removeClass("active");
+      $(this).find("i").removeClass("glyphicon-check");
+      $(this).find("i").addClass("glyphicon-unchecked");
+    });
+  });
 
 
 });
+
+
 
 
 
