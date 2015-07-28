@@ -1,28 +1,32 @@
-
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 
 /* -----------------
 VARIABLES
 ------------------ */
 
+/* standard green */
 @green: #0eb06d;
-@dark-green: #0AA263;
-@light-green: #17C17B;
 
-@very-light-green: #f2fff3;
-@silhouette-color: #515151;
+/* button colors */
+@hover-green: #17C17B;
+@active-green: #0AA263;
+
+/* fonts */
+@black: #444;
+
+/* boxes/cards */
+@box-border-color: #bbb;
 @box-shadow-color: #ccc;
-@black: #333;
-
 
 /* -----------------
 GENERAL
 ------------------*/
 
-h1, h2, h3, h4, h5, h6, a, button, p, span {
+h1, h2, h3, h4, h5, h6, a, button, p, span, label {
   font-family: "Lato";
 }
 
-body {
+body, html {
   height: 100%;
 }
 
@@ -32,17 +36,8 @@ body {
   height: 100%;
 }
 
-html {
-  height: 100%;
-}
-
 .jumbotron {
-  background-color: white;
   margin: 0;
-
-  h1 {
-    font-size: auto;
-  }
 }
 
 
@@ -65,25 +60,6 @@ header {
 
   #logo-image {
     height: 44px;
-  }
-}
-
-.button {
-  display: inline-block;
-  padding: 20px 10px;
-  margin: 0 auto;
-  background-color: @green;
-  text-decoration: none;
-  .border-radius();
-  border: none;
-  text-align: center;
-  color: white;
-  font-size: 1.3em;
-
-  a {
-    text-decoration: none;
-    color: white;
-    font-weight: 300;
   }
 }
 
@@ -118,10 +94,6 @@ footer {
 	color: white;
 	text-decoration: none;
 }
-
-
-
-
 
 
 

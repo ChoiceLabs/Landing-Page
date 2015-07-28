@@ -1,22 +1,13 @@
-@import "./common.less";
 
-@form-element-padding: 10px;
-
+/* button colors */
 @green: green;
-@hover-green: red;
-@active-green: blue;
+@hover-green: #17C17B;
+@active-green: #0AA263;
 
+/* error colors */
 @error-light-red: #FFDCDC;
 @error-text-color: #D40C0C;
 
-.error {
-  background-color: @error-light-red;
-  border-color: @error-text-color;
-}
-
-.error-message {
-  color: @error-text-color;
-}
 
 
 
@@ -26,6 +17,8 @@ form {
   background: white;
   margin-bottom: 0px;
   .bottom-border-radius();
+  border: 1px solid @box-border-color;
+  border-top: none;
 }
 
 .question {
@@ -55,10 +48,29 @@ label {
 
 
 
+/* --------------
+ERROR MESSAGES 
+---------------
+
+
+
+.error {
+  background-color: @error-light-red;
+  border-color: @error-text-color;
+}
+
+.error-message {
+  color: @error-text-color;
+}
+
+
+*/
+
+
+
 /* ---------------
 CHECKBOX BUTTONS
 ---------------- */
-
 
 .button-checkbox {
   width: 48%;
@@ -81,7 +93,6 @@ CHECKBOX BUTTONS
 
 .btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover,  {
   background-color: @green;
-  border-color: @dark-green;
   outline: none;
 }
 
@@ -111,7 +122,7 @@ input[type=radio] {
 
 /* -------------
 TOGGLE BUTTON 
--------------- */
+-------------- 
 .toggle-button {
   width: 100%;
   padding: @form-element-padding;
@@ -149,7 +160,7 @@ TOGGLE BUTTON
   font-size: .8em;
 }
 
-
+*/
 
 /* ------------------
 INPUT TEXT
@@ -215,6 +226,7 @@ BUTTON
   text-decoration: none;
   .border-radius();
   border: none;
+  width: 100%;
   text-align: center;
   color: white;
   font-size: 1.3em;
@@ -234,8 +246,13 @@ BUTTON
   background-color: @hover-green;
 }
 
-#submit-button:active {
+.button--green:active {
   background-color: @active-green;
+
+}
+
+#submit-button:active {
+
 }
 
 
