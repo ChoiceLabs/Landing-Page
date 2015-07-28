@@ -6,35 +6,38 @@
       <p class="survey_slide__header__caption">{{caption}}</p>
     </div>
 
-    <form>
+    <form data-toggle="validator" role="form">
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">First Name</label>
-        <input type="text" class="form-control" id="first-name-input">
+        <input type="text" class="form-control" id="first-name-input" data-error="Please provide a first name" data-delay="0" required>
+        <div class="help-block with-errors"></div>
       </div>
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">Last Name</label>
-        <input type="text" class="form-control" id="last-name-input">
+        <input type="text" class="form-control" id="last-name-input" data-error="Please provide a last name" required>
+        <div class="help-block with-errors"></div>
       </div>
 
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">Phone Number</label>
-        <input type="tel" class="form-control" id="phone-input">
+        <input type="tel" class="form-control" id="phone-input" data-minlength="10" required>
+        <div class="help-block with-errors"></div>
       </div>
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">Email</label>
-        <input type="email" class="form-control" id="email-input">
+        <input type="email" class="form-control" id="email-input" data-error="Bruh, that email address is invalid" >
       </div>
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">What year were you born?</label>
         <input type="text" class="form-control" id="birth-year-input">
       </div>
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">Where in the bay would you like to work?</label>
         {{#each cities}}
         <span class="button-checkbox">
@@ -45,12 +48,12 @@
       </div>
 
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">How many hours a week can you work?</label>
         <input type="text" class="form-control" id="hours-a-week">
       </div>
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">Do you have a valid Driver's License?</label>
         <span class="button-checkbox">
           <button type="button" class="btn radio" data-color="primary">Yes</button>
@@ -63,7 +66,7 @@
       </div>
 
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">Are you willing to do a background check?</label>
         <span class="button-checkbox">
           <button type="button" class="btn radio" data-color="primary">Yes</button>
@@ -74,12 +77,13 @@
       </div>
 
 
-      <div class="question">
+      <div class="question form-group">
         <label class="question_label">When would you like to receive a phone call?</label>
         <input type="text" class="form-control" id="time-to-call">
       </div>
 
-      <a class="button" id="next-button">Get your free consultation</a>
+      
+      <a class="button" type="submit" id="next-button" disable="true"> Get your free conslutation</a>
 
     </form>
 

@@ -6,14 +6,30 @@
 @hover-green: red;
 @active-green: blue;
 
+@error-light-red: #FFDCDC;
+@error-text-color: #D40C0C;
+
+.error {
+  background-color: @error-light-red;
+  border-color: @error-text-color;
+}
+
+.error-message {
+  color: @error-text-color;
+}
+
+
+
+
 form {
-  padding: 10px 25px;
+  padding: 20px 25px;
   background: white;
   margin-bottom: 0px;
+  .bottom-border-radius();
 }
 
 .question {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   overflow: auto;
   overflow-y: hidden;
 }
@@ -32,9 +48,9 @@ form {
 
 
 label {
-  font-weight: 300;
-  font-size: 1.2em;
-  margin: 0px 0px 3px 0px;
+  font-weight: 500;
+  font-size: 1.0em;
+  margin: 0px 0px 2px 0px;
 }
 
 
@@ -151,7 +167,8 @@ input[type=text], select, input[type=tel], input[type=email], .toggle-button, te
 }
 
 input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus {
-  box-shadow: 0 0 5px @green;
+  /* box-shadow: 0 0 5px @green; */
+  box-shadow: none;
   border: 1px solid @green;
   transition-duration: .3s;
   -webkit-transition-duration: .3s;
