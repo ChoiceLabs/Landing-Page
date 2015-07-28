@@ -14,6 +14,8 @@ form {
 
 .question {
   margin-bottom: 15px;
+  overflow: auto;
+  overflow-y: hidden;
 }
 
 
@@ -48,6 +50,7 @@ CHECKBOX BUTTONS
 
 .btn {
   margin-bottom: 10px;
+  height: 40px;
   width: 100%;
   color: @black;
   background-image: none;
@@ -56,7 +59,11 @@ CHECKBOX BUTTONS
   font-family: "Lato";
 }
 
-.btn-primary.active {
+.btn, .btn:hover, .btn:active, .btn:focus {
+  outline: none;
+}
+
+.btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover,  {
   background-color: @green;
   border-color: @dark-green;
   outline: none;
