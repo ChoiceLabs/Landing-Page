@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   /* radio and checkbox button functionality */
-  $("input").on("click", function(){
+  $("input[type=checkbox], input[type=radio]").on("click", function(){
 
     // if input is a radio item
     if ( $(this).attr("type") === "radio" ) {
