@@ -15,6 +15,22 @@ $(document).ready(function() {
   });
 
 
+
+
+$("input").on("click", function(){
+
+  // if input is a radio item
+  if ( $(this).attr("type") === "radio" ) {
+    $(this).parent().siblings().removeClass("item-selected");
+  }
+
+  // if input is a checkbox
+  $(this).parent().toggleClass("item-selected");
+});
+
+
+
+
   $("#submit-button").click(function() {
     number_of_selected_locations = $("#desired-locations").find("button.active").length;
     if (number_of_selected_locations == 0) {
@@ -22,6 +38,17 @@ $(document).ready(function() {
       $("#desired-locations-error").css("display", "auto");
     }
   });
+
+
+
+  $(".available-hours").each(function()
+{
+    $(this).change(function()
+    {
+        $(".chb").prop('checked',false);
+        $(this).prop('checked',true);
+    });
+});
 
   $("button.radio").click(function() {
     /* disable all other clicked items. There needs to be a better way to simulate radio buttons" */

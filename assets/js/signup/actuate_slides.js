@@ -43,13 +43,17 @@ $(document).ready(function () {
     "heading" : "Enter your info",
     "caption" : "We'll reach out and help you find flexible work",
     'cities': [
-      'San Fransisco',
-      'East Bay',
-      'North Bay',
-      'Penninsula',
-      'South Bay',
+      'In San Fransisco',
+      'Outside San Francisco',
+    ],
+    "number-of-hours" : [
+      'Less than 15 hours',
+      'Greater than 15 hours',
     ],
     "time-to-call" : [
+      'Before 9AM',
+      '9AM - 6PM',
+      'After 6PM',
     ],
   }
   $(".jobs-form-single-slide").html(Handlebars.templates.single_slide(single_slide_context));

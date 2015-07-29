@@ -29,25 +29,57 @@
 
       <div class="question form-group">
         <label class="question_label">Email</label>
-        <input type="email" class="form-control" id="email-input" required>
+        <input type="email" class="form-control" id="email-input" data-error="Please provide an email address" required>
         <div class="help-block with-errors"></div>
+        <button type="button"> Test Button
+          <input type="checkbox"/>
+        </button>
+
       </div>
 
       <div class="question form-group" id="desired-locations">
-        <label class="question_label">I would like to work in the following regions:</label>
+        <label class="question_label">I'd prefer to work:</label>
         {{#each cities}}
-        <span class="button-checkbox">
-          <button type="button" class="btn" data-color="primary">{{this}}</button>
-          <input type="checkbox" class="hidden" />
-        </span>
+          <span class="button-checkbox">
+            <button type="button" class="btn" data-color="primary">{{this}}</button>
+            <input type="checkbox" class="hidden" />
+          </span>
         {{/each}}
+        <div class="desired-locations-error"> Please provide at least one region </div>
+      </div>
+
+      <div class="question form-group" id="desired-locations">
+        <label class="question_label">I'd prefer to work:</label>
+        <section>
+        {{#each cities}}
+          <label class="checkbox-item">
+            <input type="checkbox" name="desired-locations"/> {{this}}
+            <label></label>
+          </label>
+        {{/each}}
+        </section>
+
+        <section>
+        {{#each cities}}
+          <label class="radio-item">
+            <input type="radio" name="desired-locations"/> {{this}}
+          </label>
+        {{/each}}
+        </section>
         <div class="desired-locations-error"> Please provide at least one region </div>
       </div>
 
 
       <div class="question form-group">
-        <label class="question_label">I can work this many hours a week:</label>
-        <input type="text" class="form-control" id="hours-a-week" placeholder="ie: 5-10 hours/week">
+        <label class="question_label">Per week, I am available to work:</label>
+        {{#each number-of-hours}}
+          <span class="button-checkbox ">
+            <button type="button" class="btn" data-color="primary">{{this}}</button>
+            <input class="available-hours" type="checkbox" class="hidden" />
+          </span>
+        {{/each}}
+        
+        <!--<input type="text" class="form-control" id="hours-a-week" placeholder="ie: 5-10 hours/week" required> -->
         <div id="desired-locations-error" class="help-block with-errors"></div>
       </div>
 
@@ -85,8 +117,15 @@
 
 
       <div class="question form-group">
-        <label class="question_label">The best time to contact me for a free consultation is:</label>
-        <input type="text" class="form-control" id="contact-time" data-error="Please provide a time for us to call you" placeholder='ie: weekdays afternoon' required>
+        <label class="question_label">When can we contact you for a free consultation:</label>
+        {{#each time-to-call}}
+          <span class="button-checkbox ">
+            <button type="button" class="btn" data-color="primary">{{this}}</button>
+            <input type="checkbox" class="hidden" />
+          </span>
+        {{/each}}
+        
+        <!--<input type="text" class="form-control" id="contact-time" data-error="Please provide a time for us to call you" placeholder='ie: weekdays afternoon' required> -->
         <div class="help-block with-errors"></div>
       </div>
       
