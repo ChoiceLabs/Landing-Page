@@ -43,17 +43,17 @@ $(document).ready(function () {
     "heading" : "Enter your info",
     "caption" : "We'll reach out and help you find flexible work",
     'cities': [
-      'In San Fransisco',
-      'Outside San Francisco',
+      'San Fransisco',
+      'Outside SF',
     ],
     "number-of-hours" : [
-      'Less than 15 hours',
-      'More than 15 hours',
+      '0-15 hours',
+      '15+ hours',
     ],
     "time-to-call" : [
-      'Before 9:00AM',
-      '9:00AM - 6:00PM',
-      'After 6:00PM',
+      'Before 9AM',
+      '9AM - 6PM',
+      'After 6PM',
     ],
   }
 
