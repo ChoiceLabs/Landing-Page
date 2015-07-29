@@ -48,14 +48,15 @@ $(document).ready(function () {
     ],
     "number-of-hours" : [
       'Less than 15 hours',
-      'Greater than 15 hours',
+      'More than 15 hours',
     ],
     "time-to-call" : [
-      'Before 9AM',
-      '9AM - 6PM',
-      'After 6PM',
+      'Before 9:00AM',
+      '9:00AM - 6:00PM',
+      'After 6:00PM',
     ],
   }
+
   $(".jobs-form-single-slide").html(Handlebars.templates.single_slide(single_slide_context));
 
 
