@@ -31,22 +31,9 @@
         <label class="question_label">Email</label>
         <input type="email" class="form-control" id="email-input" data-error="Please provide an email address" required>
         <div class="help-block with-errors"></div>
-        <button type="button"> Test Button
-          <input type="checkbox"/>
-        </button>
 
       </div>
 
-      <div class="question form-group" id="desired-locations">
-        <label class="question_label">I'd prefer to work:</label>
-        {{#each cities}}
-          <span class="button-checkbox">
-            <button type="button" class="btn" data-color="primary">{{this}}</button>
-            <input type="checkbox" class="hidden" />
-          </span>
-        {{/each}}
-        <div class="desired-locations-error"> Please provide at least one region </div>
-      </div>
 
       <div class="question form-group" id="desired-locations">
         <label class="question_label">I'd prefer to work:</label>
@@ -59,49 +46,52 @@
         {{/each}}
         </section>
 
-        <section>
-        {{#each cities}}
-          <label class="radio-item">
-            <input type="radio" name="desired-locations"/> {{this}}
-          </label>
-        {{/each}}
-        </section>
         <div class="desired-locations-error"> Please provide at least one region </div>
       </div>
 
 
       <div class="question form-group">
         <label class="question_label">Per week, I am available to work:</label>
+        <section>
         {{#each number-of-hours}}
-          <span class="button-checkbox ">
-            <button type="button" class="btn" data-color="primary">{{this}}</button>
-            <input class="available-hours" type="checkbox" class="hidden" />
-          </span>
+          <label class="radio-item">
+            <input type="radio" name="available-hours"/> {{this}}
+          </label>
         {{/each}}
-        
-        <!--<input type="text" class="form-control" id="hours-a-week" placeholder="ie: 5-10 hours/week" required> -->
-        <div id="desired-locations-error" class="help-block with-errors"></div>
-      </div>
-
-
-      <!--
-      <div class="question form-group" id="valid-license">
-        <span class="button-checkbox button-checkbox--single-column">
-          <button name="license" type="button" class="btn radio" data-color="primary">I have a valid driver's license</button>
-          <input type="checkbox" class="hidden" />
-        </span>
+        </section>
+      
+        <div id="available-hours-error" class="help-block with-errors"></div>
       </div>
 
 
       <div class="question form-group">
-        <span class="button-checkbox button-checkbox--single-column">
-          <button name="background-check" type="button" class="btn radio" data-color="primary">I am willing to do a background check</button>
-          <input type="checkbox" class="hidden" />
-        </span>
+        <label class="question_label">Do you have a valid driver's license?</label>
+        <section>
+          <label class="radio-item">
+            <input type="radio" name="valid-license"/> Yes
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="valid-license"/> No
+          </label>
+        </section>
+        <div id="valid-drivers-license-error" class="help-block with-errors"></div>
       </div>
-    -->
+
+      <div class="question form-group">
+        <label class="question_label">Are you willing to do a background check?</label>
+        <section>
+          <label class="radio-item">
+            <input type="radio" name="background-check"/> Yes
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="background-check"/> No
+          </label>
+        </section>
+        <div id="background-check-error" class="help-block with-errors"></div>
+      </div>
 
 
+      <!--
       <div class="question form-group">
         <label class="question_label">Select which of the following are true:</label>
         <span class="button-checkbox button-checkbox--single-column">
@@ -113,19 +103,20 @@
           <input type="checkbox" class="hidden" />
         </span>
       </div>
+    -->
 
 
 
       <div class="question form-group">
         <label class="question_label">When can we contact you for a free consultation:</label>
+        <section>
         {{#each time-to-call}}
-          <span class="button-checkbox ">
-            <button type="button" class="btn" data-color="primary">{{this}}</button>
-            <input type="checkbox" class="hidden" />
-          </span>
+          <label class="checkbox-item">
+            <input type="checkbox" name="desired-locations"/> {{this}}
+            <label></label>
+          </label>
         {{/each}}
         
-        <!--<input type="text" class="form-control" id="contact-time" data-error="Please provide a time for us to call you" placeholder='ie: weekdays afternoon' required> -->
         <div class="help-block with-errors"></div>
       </div>
       
@@ -133,8 +124,6 @@
       <button class="button button--green" id="submit-button"> Find a job! </button>
 
     </form>
-
-
 
   </div>
 

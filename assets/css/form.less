@@ -73,21 +73,20 @@ ERROR MESSAGES
 */
 
 
-
+/* set the checkbox/radiobutton location */
 input[type="checkbox"], input[type="radio"] {
   position: relative;
   top: 0px;
   margin: 0px 10px;
 }
 
+/* overwrite checkbox image */
 input[type="checkbox"] {
   opacity: 0;
 }
-
 input[type="checkbox"] + label {
   background: url('http://www.clker.com/cliparts/w/G/Y/C/o/Q/checkbox-unchecked-gray-th.png') 0 0px no-repeat;
 }
-
 .checkbox-item, .radio-item {
   .border-radius();
   width: 100%;
@@ -107,12 +106,13 @@ input[type="checkbox"] + label {
 }
 
 
-.one-column-section:od {
+.two-column-section > label:nth-child(odd) {
+  float: right;
   width: 48%;
 }
-
-.two-column-section {
-  width: 100%;
+.two-column-section > label:nth-child(even) {
+  float: left;
+  width: 48%;
 }
 
 
