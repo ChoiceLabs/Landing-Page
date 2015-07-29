@@ -6,10 +6,13 @@ $(document).ready(function() {
     // if input is a radio item
     if ( $(this).attr("type") === "radio" ) {
       $(this).parent().siblings().removeClass("item-selected");
+      $(this).parent().addClass("item-selected");
     }
 
     // if input is a checkbox
-    $(this).parent().toggleClass("item-selected");
+    else {
+      $(this).parent().toggleClass("item-selected");
+    }
   });
 
 

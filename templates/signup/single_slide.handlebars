@@ -56,6 +56,7 @@
         {{#each number-of-hours}}
           <label class="radio-item">
             <input type="radio" name="available-hours"/> {{this}}
+            <label></label>
           </label>
         {{/each}}
         </section>
@@ -68,9 +69,11 @@
         <section class="two-column-section">
           <label class="radio-item">
             <input type="radio" name="valid-license"/> No
+            <label></label>
           </label>
           <label class="radio-item">
             <input type="radio" name="valid-license"/> Yes
+            <label></label>
           </label>
         </section>
         <div id="valid-drivers-license-error" class="help-block with-errors"></div>
@@ -82,9 +85,11 @@
         <section class="two-column-section">
           <label class="radio-item">
             <input type="radio" name="background-check"/> No
+            <label></label>
           </label>
           <label class="radio-item">
             <input type="radio" name="background-check"/> Yes
+            <label></label>
           </label>
         </section>
         <div id="background-check-error" class="help-block with-errors"></div>

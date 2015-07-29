@@ -47,7 +47,7 @@ $(document).ready(function () {
       'Outside SF',
     ],
     "number-of-hours" : [
-      '0-15 hours',
+      '1-15 hours',
       '15+ hours',
     ],
     "time-to-call" : [
