@@ -40,8 +40,8 @@ $(document).ready(function () {
   var slide4_content_context = {};
 
   var single_slide_context = {
-    "heading" : "Grab your keys nad make money",
-    "caption" : "We offer free consultations to match you with well-paying, flexible driving jobs",
+    "heading" : "Enter your info",
+    "caption" : "Just a few steps and you're done!",
     'cities': [
       'San Fransisco',
       'Outside SF',
@@ -62,7 +62,8 @@ $(document).ready(function () {
 
 
   var jobs_hero_context = {
-    "slogan" : "Drive with Choice",
+    "slogan" : "Grab your keys and make money",
+    "description" : "We offer free consultations to match you with well-paying, flexible driving jobs",
   }
   $(".jobs-hero").html(Handlebars.templates.jobs_hero(jobs_hero_context));
 
