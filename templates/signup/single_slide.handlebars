@@ -10,28 +10,28 @@
 
       <div class="question form-group">
         <label class="question_label">First Name</label>
-        <input type="text" class="form-control" id="first-name-input" data-error="Please provide a first name" data-delay="0" required>
+        <input name="first-name" type="text" class="form-control" id="first-name-input" data-error="Please provide a first name" data-delay="0" required>
         <div class="help-block with-errors"></div>
       </div>
 
 
       <div class="question form-group">
         <label class="question_label">Last Name</label>
-        <input type="text" class="form-control" id="last-name-input" data-error="Please provide a last name" required>
+        <input name="last-name" type="text" class="form-control" id="last-name-input" data-error="Please provide a last name" required>
         <div class="help-block with-errors"></div>
       </div>
 
 
       <div class="question form-group">
         <label class="question_label">Phone Number</label>
-        <input type="tel" class="form-control" id="phone-input" data-minlength="10" placeholder="(xxx) xxx-xxxx" data-error="Please provide a valid phone number" required>
+        <input name="phone" type="tel" class="form-control" id="phone-input" data-minlength="10" placeholder="(xxx) xxx-xxxx" data-error="Please provide a valid phone number" required>
         <div class="help-block with-errors"></div>
       </div>
 
 
       <div class="question form-group">
         <label class="question_label">Email</label>
-        <input type="email" class="form-control" id="email-input" data-error="Please provide an email address" required>
+        <input name="email" type="email" class="form-control" id="email-input" data-error="Please provide an email address" required>
         <div class="help-block with-errors"></div>
       </div>
 
@@ -41,7 +41,7 @@
         <section class="two-column-section">
         {{#each cities}}
           <label class="checkbox-item">
-            <input type="checkbox" name="desired-locations"/> {{this}}
+            <input name="desired-location" value="{{this}}" type="checkbox"/> {{this}}
             <label></label>
           </label>
         {{/each}}
@@ -55,7 +55,7 @@
         <section class="two-column-section">
         {{#each number-of-hours}}
           <label class="radio-item">
-            <input type="radio" name="available-hours"/> {{this}}
+            <input name="available-hours" type="radio" value="{{this}}"/> {{this}}
             <label></label>
           </label>
         {{/each}}
@@ -68,11 +68,11 @@
         <label class="question_label">Do you have a valid driver's license?</label>
         <section class="two-column-section">
           <label class="radio-item">
-            <input type="radio" name="valid-license"/> No
+            <input name="valid-license" type="radio" value="No"/> No
             <label></label>
           </label>
           <label class="radio-item">
-            <input type="radio" name="valid-license"/> Yes
+            <input name="valid-license" type="radio" value="Yes"/> Yes
             <label></label>
           </label>
         </section>
@@ -84,11 +84,11 @@
         <label class="question_label">Are you willing to do a background check?</label>
         <section class="two-column-section">
           <label class="radio-item">
-            <input type="radio" name="background-check"/> No
+            <input name="background-check" type="radio" value="No"/> No
             <label></label>
           </label>
           <label class="radio-item">
-            <input type="radio" name="background-check"/> Yes
+            <input name="background-check" type="radio" value="Yes"/> Yes
             <label></label>
           </label>
         </section>
@@ -101,17 +101,47 @@
         <section class="two-column-section">
         {{#each time-to-call}}
           <label class="checkbox-item">
-            <input type="checkbox" name="desired-locations"/> {{this}}
+            <input name="time-to-call" type="checkbox" value="{{this}}"/> {{this}}
             <label></label>
           </label>
         {{/each}}
         <div class="help-block with-errors"></div>
       </div>
+
+
+      <input type="checkbox" name="cat" value="text">
       
 
-      <button class="button button--green" id="submit-button"> Find a job! </button>
+      <button class="button button--green" id="submit-button" data-toggle="modal" data-target="#myModal"> Find a job! </button>
 
     </form>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Thank You!</h4>
+          </div>
+          <div class="modal-body">
+            <p>We'll call you in the next 24 hours. In the mean time, if you have any questions, please feel free to call or email us: </p>
+            <p> <span class="bold"> Email: </span> chris@getchoice.io </p>
+            <p> <span class="bold"> Phone: </span> 123-123-1234 </p>
+          </div>
+          <div class="modal-footer">
+            <a id="close-link" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
   </div>
 </div> 
 

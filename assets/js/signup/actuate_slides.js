@@ -40,8 +40,8 @@ $(document).ready(function () {
   var slide4_content_context = {};
 
   var single_slide_context = {
-    "heading" : "Enter your info",
-    "caption" : "We'll reach out and help you find flexible work",
+    "heading" : "Grab your keys nad make money",
+    "caption" : "We offer free consultations to match you with well-paying, flexible driving jobs",
     'cities': [
       'San Fransisco',
       'Outside SF',

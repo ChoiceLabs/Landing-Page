@@ -55,7 +55,7 @@ JUMBOTRON
 
 /* features */
 .feature-column {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .feature-image {
@@ -67,12 +67,33 @@ JUMBOTRON
   text-align: center;
 }
 
-.feature-description {
+p.feature-description {
   text-align: center;
+  font-size: 1.3em;
 }
 
 
 /* questions */
 .desired-locations-error {
   display: none;
+}
+
+
+
+
+/* who we are */
+#who-we-are-container {
+  .border-radius();
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.profile-pic {
+    width: 80px; // These are your circle dimensions
+    height: 80px;
+    border-radius: 50%;
+    background-repeat: no-repeat; 
+    background-position: center center; // Center image in the circle
+    background-size: cover; // Make sure it covers the circle, as there is no bg repeat
 }
