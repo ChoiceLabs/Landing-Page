@@ -53,45 +53,56 @@ function getData() {
     }
   });
 
-  validateFields();
+  var data = saveDataToFirebase();
 
 
   var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
-  firebaseRef.push({"firstName" : 12});
-
-  /*
-
-  firebaseRef.set({
-    first : "",
-    last : "",
-    phone : "",
-    email : "",
-    desired_locations : "",
-    hours_a_week : "",
-    valid_license : "",
-    background_check : "",
-    contact_time : ""
-  })
-*/
+  firebaseRef.push(data);
 
 
 }
 
 
-function validateFields() {
+function saveDataToFirebase() {
   data = {}
-  $("#first-name-input").val();
-  $("#last-name-input").val();
-  $("#phone-input").val();
-  $("#email-input").val();
+  data["firstName"] = $("#first-name-input").val() || "";
+  data["lastName"] = $("#last-name-input").val() || "";
+  data["phone"] = $("#phone-input").val() || "";
+  data["email"] = $("#email-input").val() ||"";
 
-  var desired_locations = [];
-  var x = $("input[name=desired-location]:checked").map(function() {
-    //console.log($(this));
-    //desired_locations.push($(this).val());
+  var desiredLocations =  $("input[name=desired-location]:checked").map(function() {
     return $(this).val();
   }).get();
-  console.log(x);
-  $("input[name=available-hours]:checked").val();
+  if (desiredLocations.length != 0) {
+    data["desiredLocations"] = desiredLocations;
+  }
+  
+  var hoursPerWeek = $("input[name=available-hours]:checked").val();
+  if (hoursPerWeek != null) {
+    data["hoursPerWeek"] = hoursPerWeek;
+  }
+
+
+  var hasLicense = $("input[name=valid-license]:checked").val();
+  if (hasLicense != null) {
+    data["hasLicense"] = hasLicense;
+  }
+
+
+  var backgroundCheck = $("input[name=background-check]:checked").val();
+  if (backgroundCheck != null) {
+    data["canDoBackgroundCheck"] = backgroundCheck;
+  }
+
+  var contactTimes = $("input[name=time-to-call]:checked").map(function() {
+    return $(this).val();
+  }).get();
+  if (contactTimes != null) {
+    data["contactTimes"] = contactTimes
+  }
+
+  return data;
+
+  
 
 }

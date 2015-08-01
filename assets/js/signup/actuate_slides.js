@@ -41,7 +41,7 @@ $(document).ready(function () {
 
   var single_slide_context = {
     "heading" : "Enter your info",
-    "caption" : "Just a few steps and you're done!",
+    "caption" : "Just a few questions and you're done!",
     'cities': [
       'San Fransisco',
       'Outside SF',
