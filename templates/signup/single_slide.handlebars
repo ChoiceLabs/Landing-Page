@@ -24,7 +24,7 @@
 
       <div class="question form-group">
         <label class="question_label">Phone Number</label>
-        <input name="phone" type="tel" class="form-control" id="phone-input" data-minlength="10" placeholder="(xxx) xxx-xxxx" data-error="Please provide a valid phone number" required>
+        <input name="phone" type="tel" class="form-control" id="phone-input" placeholder="(xxx) xxx-xxxx" data-error="Please provide a valid phone number" required>
         <div class="help-block with-errors"></div>
       </div>
 
@@ -112,14 +112,17 @@
       <input type="checkbox" name="cat" value="text">
       
 
+      <!--
       <button class="button button--green" id="submit-button" data-toggle="modal" data-target="#myModal"> Find a job! </button>
+    -->
+    <button class="button button--green" id="submit-button"> Find a job! </button>
 
     </form>
 
 
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="thank-you-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">

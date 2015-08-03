@@ -18,52 +18,65 @@ $(document).ready(function() {
 
   /* submit button functionality */
   $("#submit-button").click(function() {
-    getData();
-    
-    /*
-    number_of_selected_locations = $("#desired-locations").find("button.active").length;
-    if (number_of_selected_locations == 0) {
-      console.log('hi');
-      $("#desired-locations-error").css("display", "auto");
+
+    // validate fields and display error messages
+    isValidated = validateForm();
+
+    // if the data is validated,
+    // format data for firebase
+    // additional user data grabbed here
+    if (isValidated) {
+      var data = formatFirebaseData();
+
+      // send data to firebase
+      // if successful, display thank you modal
+      // if not successful, display error
+      var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
+      firebaseRef.push(data, function(error) {
+        if (error) {
+          alert("there was an error" + error);
+        }
+        else {
+          $('#thank-you-modal').modal('toggle');
+        }
+      });
     }
-    */
+
+  
   });
 
+
+
+  $('input[name=phone]').keyup(function()
+{
+    this.value = this.value.replace('^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$');
+});
 });
 
 
-function getData() {
-  var questions = $("form").children().hasClass("question");
 
-  /* 
-  Easiest Solution: Grab every element in form automatically, put in array, and dump it to firebase
-  Pros: can work for any number and type of fields
-  Cons: everything is now stored as an array :(
-    */
-  var form_data = $('form').serializeArray();
-  form_data_obj = {}
-  jQuery.each(form_data, function() {    
-    var name = $(this).attr("name");
-    var value = $(this).attr("value");;
-    if (name in form_data_obj) {
-      form_data_obj[name].push(value);
-    }
-    else {
-      form_data_obj[name] = [value];
-    }
-  });
-
-  var data = saveDataToFirebase();
-
-
-  var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
-  firebaseRef.push(data);
-
-
+function validateForm() {
+  var isValidated = false
+  if ($("#first-name-input").val() == "") {
+    //alert('Please write your first name');
+  }
+  else if ($("#last-name-input").val() == "") {
+    //alert('Please write your first name');
+  }
+  else if ($("#phone-input").val() == "") {
+    //alert("Please input a phone number");
+  }
+  else if ($("#email-input").val() == "") {
+    //alert("please provide an email address");
+  }
+  else {
+    isValidated = true;
+  }
+  return isValidated;
 }
 
 
-function saveDataToFirebase() {
+function formatFirebaseData() {
   data = {}
   data["firstName"] = $("#first-name-input").val() || "";
   data["lastName"] = $("#last-name-input").val() || "";
@@ -82,12 +95,10 @@ function saveDataToFirebase() {
     data["hoursPerWeek"] = hoursPerWeek;
   }
 
-
   var hasLicense = $("input[name=valid-license]:checked").val();
   if (hasLicense != null) {
     data["hasLicense"] = hasLicense;
   }
-
 
   var backgroundCheck = $("input[name=background-check]:checked").val();
   if (backgroundCheck != null) {
