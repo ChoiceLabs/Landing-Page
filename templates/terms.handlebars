@@ -1,8 +1,26 @@
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <h1 class="section-header"> Terms of Service </h1>
-      {{terms}}
+      <div class="col-md-12">
+        <div id="terms">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="terms">
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
+
+
+<!-- script for importing markdown -->
+<script type="text/javascript">
+  var converter = new showdown.Converter(),
+  text      = '#hello, markdown!',
+  html      = converter.makeHtml(text);
+  $("#terms").append(html);
+</script>

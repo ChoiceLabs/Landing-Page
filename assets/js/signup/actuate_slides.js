@@ -52,7 +52,8 @@ $(document).ready(function () {
     ],
     "time-to-call" : [
       'Before 9AM',
-      '9AM - 6PM',
+      '9AM - Noon',
+      'Noon - 6PM',
       'After 6PM',
     ],
   }
@@ -62,7 +63,7 @@ $(document).ready(function () {
 
 
   var jobs_hero_context = {
-    "slogan" : "Grab your keys and make money",
+    "slogan" : "Grab your keys and make more money",
     "description" : "We offer free consultations to match you with well-paying, flexible driving jobs",
   }
   $(".jobs-hero").html(Handlebars.templates.jobs_hero(jobs_hero_context));

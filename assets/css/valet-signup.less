@@ -2,14 +2,15 @@
 @import "./slider.less";
 @import "./form.less";
 
+
 /* ------------------
 HEADER
 ------------------*/
 
 header {
   position: relative;
-  height: 50px;
-  background-color: #444;
+  height: 46px;
+  background-color: @dull-black;
 }
 
 #logo {
@@ -19,7 +20,7 @@ header {
 }
 
 #logo-image {
-  height: 30px;
+  height: 22px;
   margin-top: 10px;
 
 }
@@ -30,9 +31,9 @@ header {
 JUMBOTRON
 ------------------*/
 #top-jumbotron {
-  background-color: #444;
+  .linear-gradient(@green, @dark-green);
   /* height: 300px;  Not using this because of header */
-  height: 350px;
+  height: 450px;
 
 }
 
@@ -41,7 +42,7 @@ JUMBOTRON
 }
 
 #content-container {
-  margin-top: -400px;
+  margin-top: -500px;
 }
 
 #jobs-slogan {
@@ -97,10 +98,10 @@ p.feature-description {
 }
 
 .profile-pic {
-    width: 80px; // These are your circle dimensions
+    width: 80px; 
     height: 80px;
     border-radius: 50%;
     background-repeat: no-repeat; 
-    background-position: center center; // Center image in the circle
-    background-size: cover; // Make sure it covers the circle, as there is no bg repeat
+    background-position: center center; 
+    background-size: cover;
 }

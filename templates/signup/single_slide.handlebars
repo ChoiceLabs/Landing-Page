@@ -1,12 +1,16 @@
 <div class="row form-row">
   <div class="col-md-6 col-md-offset-3">
 
+    <!--
     <div class="survey_slide__header">
       <h2 class="survey_slide__header__title">{{heading}}</h2>
       <p class="survey_slide__header__caption">{{caption}}</p>
     </div>
+  -->
 
     <form data-toggle="validator" role="form">
+
+      <h2 class="survey_slide__header__title">{{heading}}</h2>
 
       <div class="question form-group">
         <label class="question_label">First Name</label>
@@ -17,7 +21,7 @@
 
       <div class="question form-group">
         <label class="question_label">Last Name</label>
-        <input name="last-name" type="text" class="form-control" id="last-name-input" data-error="Please provide a last name" required>
+        <input name="last-name" type="text" class="form-control" id="last-name-input" data-error="Please provide a last name">
         <div class="help-block with-errors"></div>
       </div>
 
@@ -108,14 +112,9 @@
         <div class="help-block with-errors"></div>
       </div>
 
-
-      <input type="checkbox" name="cat" value="text">
       
-
-      <!--
-      <button class="button button--green" id="submit-button" data-toggle="modal" data-target="#myModal"> Find a job! </button>
-    -->
-    <button class="button button--green" id="submit-button"> Find a job! </button>
+    <button class="button button--green" id="submit-button"> Become a Driver </button>
+    <p id="terms-notice"> By pressing the above link you agree to our <a href="terms.html"> Terms of Service </p>
 
     </form>
 
@@ -141,108 +140,5 @@
       </div>
     </div>
 
-
-
-
-
   </div>
 </div> 
-
-<!--<div class="row form-row">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="slider">
-
-      <div class="row survey_slide">
-
-        <div class="survey_slide__header">
-          <h2 class="survey_slide__header__title">{{heading}}</h2>
-          <p class="survey_slide__header__caption">{{caption}}</p>
-        </div>
-
-        <form>
-
-
-          <div class="question">
-            <label class="question_label">First Name</label>
-            <input type="text" class="form-control" id="first-name-input">
-          </div>
-
-          <div class="question">
-            <label class="question_label">Last Name</label>
-            <input type="text" class="form-control" id="last-name-input">
-          </div>
-
-
-          <div class="question">
-            <label class="question_label">Phone Number</label>
-            <input type="tel" class="form-control" id="phone-input">
-          </div>
-
-          <div class="question">
-            <label class="question_label">Email</label>
-            <input type="email" class="form-control" id="email-input">
-          </div>
-
-          <div class="question">
-            <label class="question_label">What year were you born?</label>
-            <input type="text" class="form-control" id="birth-year-input">
-          </div>
-
-          <div class="question">
-            <label class="question_label">Where in the bay would you like to work?</label>
-            {{#each cities}}
-            <span class="button-checkbox">
-              <button type="button" class="btn" data-color="primary">{{this}}</button>
-              <input type="checkbox" class="hidden" />
-            </span>
-            {{/each}}
-          </div>
-
-
-          <div class="question">
-            <label class="question_label">How many hours a week can you work?</label>
-            <input type="text" class="form-control" id="hours-a-week">
-          </div>
-
-          <div class="question">
-            <label class="question_label">Do you have a valid Driver's License?</label>
-            <span class="button-checkbox">
-              <button type="button" class="btn radio" data-color="primary">Yes</button>
-              <input type="checkbox" class="hidden" />
-            </span>
-            <span class="button-checkbox">
-              <button type="button" class="btn radio" data-color="primary">No</button>
-              <input type="checkbox" class="hidden" />
-            </span>
-          </div>
-
-
-          <div class="question">
-            <label class="question_label">Are you willing to do a background check?</label>
-            <span class="button-checkbox">
-              <button type="button" class="btn radio" data-color="primary">Yes</button>
-            </span>
-            <span class="button-checkbox">
-              <button type="button" class="btn radio" data-color="primary">No</button>
-            </span>
-          </div>
-
-
-
-          <div class="question">
-            <label class="question_label">When would you like to receive a phone call?</label>
-            <input type="text" class="form-control" id="time-to-call">
-          </div>
-
-          <a class="button" id="next-button">Get your free consultation</a>
-
-        </form>
-
-        
-      </div>
-
-
-
-    </div>
-  </div>
-</div> -->

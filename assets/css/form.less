@@ -1,12 +1,7 @@
 
 
 /* checkbox */
-@selected-item: #5E6B6F;
-
-/* error colors */
-@error-light-red: #FFDCDC;
-@error-text-color: #D40C0C;
-
+@selected-item: #9E9E9E;
 
 
 
@@ -15,9 +10,8 @@ form {
   padding: 20px 25px;
   background: white;
   margin-bottom: 0px;
-  .bottom-border-radius();
-  border: 1px solid @box-border-color;
-  border-top: none;
+  border: none;
+  .border-radius(7px);
 }
 
 .question {
@@ -73,7 +67,7 @@ input[type="checkbox"] + label, input[type="radio"] + label {
   margin: 3px 10px 0px 5px;
 }
 
-input[type="checkbox"] + label {
+input[type="checkbox"] + label, #agree-to-terms-checkbox + label {
   background: url('../images/checkbox-unchecked.png') 0 0px no-repeat;
 }
 input[type="radio"] + label {
@@ -210,7 +204,13 @@ BUTTON
 }
 
 
-
+/* ---------------
+TERMS NOTICE 
+--------------- */
+#terms-notice {
+  font-size: 1.0em;
+  margin-top: 20px;
+}
 
 /* ---------------
 THANK YOU MODAL
