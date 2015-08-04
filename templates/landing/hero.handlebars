@@ -5,48 +5,46 @@
 
       <div class="col-md-7" id="choice-description">
         <h1> Drive with Choice </h1>
-        <p> Earn up to $25 an hour, <span style="font-style: italics"> even during off-peak times.</span> </p>
+        <p> Earn up to $25 an hour, even during off-peak times.</p>
         <p>Choice partners with multiple, hand-selected retailers to provide you with access more jobs, increased efficiency, and higher pay. </p>
       </div>
 
       <div class="col-md-4 col-md-offset-1" id="form-container">
 
-        <form>
-          <h2 id="cta"> Start Driving </h2>
-          <p id="instructions"> Enter your info, download the Choice App, and we will reach out to get you started! </p>
+        <h2> Start Driving </h2>
+        <p> Enter your info, download the Choice App, and we will reach out to get you started! </p>
 
-          <div class="row">
-            <div class="col-md-12">
-              <input type="text" class="form-control" id="first-name-input" placeholder="First">
-            </div>
+        <form class="row form-row">
+
+          <div class="question form-group">
+            <label class="question_label">First Name</label>
+            <input name="first-name" type="text" class="form-control" id="first-name-input" data-error="Please provide a first name" data-delay="0" required>
+            <div class="help-block with-errors"></div>
           </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <input type="text" class="form-control" id="last-name-input" placeholder="Last">
-            </div>
+          
+          <div class="question form-group">
+            <label class="question_label">Last Name</label>
+            <input name="last-name" type="text" class="form-control" id="last-name-input" data-error="Please provide a last name">
+            <div class="help-block with-errors"></div>
           </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <input type="text" class="form-control" id="email-input" placeholder="Email">
-            </div>
+
+          <div class="question form-group">
+            <label class="question_label">Phone Number</label>
+            <input name="phone" type="tel" class="form-control" id="phone-input" placeholder="(xxx) xxx-xxxx" data-error="Please provide a valid phone number" required>
+            <div class="help-block with-errors"></div>
           </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <input type="text" class="form-control" id="phone-number-input" placeholder="Phone">
-            </div>
+          <div class="question form-group">
+            <label class="question_label">Email</label>
+            <input name="email" type="email" class="form-control" id="email-input" data-error="Please provide an email address" required>
+            <div class="help-block with-errors"></div>
           </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <input type="text" class="form-control" id="city-input" placeholder="City">
-            </div>
-          </div>
+          <button class="button button--green" id="submit-button"> Become a Driver </button>
+  
 
-          <div id="form-status"></div>
-          <a onclick="submit()" class="button" id="submit-button">Apply Now</a>
         </form>
 
       </div>
@@ -54,3 +52,28 @@
 
   </div>
 </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="thank-you-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Thank You!</h4>
+          </div>
+          <div class="modal-body">
+            <p>We'll call you in the next 24 hours. In the mean time, if you have any questions, please feel free to call or email us: </p>
+            <p> <span class="bold"> Email: </span> chris@getchoice.io </p>
+            <p> <span class="bold"> Phone: </span> 123-123-1234 </p>
+          </div>
+          <div class="modal-footer">
+            <a id="close-link" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> 
+
