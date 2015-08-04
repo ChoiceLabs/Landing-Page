@@ -48,15 +48,19 @@ body, html {
 
 
 /* -----------------
-HEADER
-------------------*/
+HEADER (fixed)
+------------------
 header {
   top: 0;
   width: 100%;
   position: fixed;
   z-index: 3000;
-  height: 60px;
+  height: 45px;
   background-color: rgba(0, 0, 0, .75);
+}
+
+#logo-image {
+  height: 40px;
 }
 
 #logo {
@@ -64,17 +68,29 @@ header {
   display: inline-block;
 }
 
-#logo-image {
+*/
+
+
+/*  ----------------
+HEADER (relative)
+------------------ */
+
+header {
+  position: relative;
   height: 44px;
+  background-color: @dull-black;
 }
 
-#nav-links {
-  list-style: none;
+#logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  li {
-    display: block;
-    float: right;
-  }
+#logo-image {
+  height: 22px;
+  margin-top: 10px;
+
 }
 
 
