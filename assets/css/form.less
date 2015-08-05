@@ -3,8 +3,9 @@
 /* checkbox */
 @selected-item: #9E9E9E;
 
+@red: #E01212;
 
-
+/* GENERAL */
 
 form {
   padding: 20px 25px;
@@ -24,6 +25,11 @@ form {
 .form-caption {
   font-size: 1.3em;
 }
+
+
+
+
+/* QUESTIONAIRE */
 
 .question {
   margin-bottom: 10px;
@@ -53,10 +59,8 @@ form {
 
 
 
-/* --------------
-ERROR MESSAGES 
----------------
 
+/* CHECK BOXES */
 
 /* set the checkbox/radio button location */
 input[type="checkbox"], input[type="radio"] {
@@ -221,6 +225,19 @@ TERMS NOTICE
 #terms-notice {
   font-size: 1.0em;
   margin-top: 20px;
+}
+
+
+
+/* ----------------
+ERROR 
+----------------- */
+
+#form-error-message {
+  display:none;
+  color: @red;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 /* ---------------

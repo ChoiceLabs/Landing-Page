@@ -16,17 +16,23 @@ $(document).ready(function() {
   });
 
 
-  /* submit button functionality */
+
+
+
+
+  /* SUBMIT FORM */
   $("#submit-button").click(function() {
 
     // validate fields and display error messages
     isValidated = validateForm();
+    console.log("isValidated: " + isValidated);
 
     // if the data is validated,
     // format data for firebase
     // additional user data grabbed here
     if (isValidated) {
       var data = formatFirebaseData();
+      console.log(data);
 
       // send data to firebase
       // if successful, display thank you modal
@@ -34,44 +40,44 @@ $(document).ready(function() {
       var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
       firebaseRef.push(data, function(error) {
         if (error) {
-          alert("there was an error" + error);
-        }
-        else {
-          $('#thank-you-modal').modal('toggle');
+          $(".thank-you-message").html("Whoops, there was an error. Please try again or contact us below");
         }
       });
-    }
 
+      // show thank you message
+      $('#thank-you-modal').modal('toggle');
+    }
   
   });
 
-
-
-  $('input[name=phone]').keyup(function()
-{
-    this.value = this.value.replace('^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$');
 });
-});
+
 
 
 
 function validateForm() {
-  var isValidated = false
+  var isValidated = false;
+  
+  // checks for errors
+  // create custom error message for each field
   if ($("#first-name-input").val() == "") {
-    //alert('Please write your first name');
-  }
-  else if ($("#last-name-input").val() == "") {
-    //alert('Please write your first name');
+    console.log('first name error')
   }
   else if ($("#phone-input").val() == "") {
-    //alert("Please input a phone number");
+    console.log('phone error');
   }
   else if ($("#email-input").val() == "") {
-    //alert("please provide an email address");
+    console.log('email-error');
   }
   else {
     isValidated = true;
   }
+
+  // display general error message
+  if (!isValidated) {
+    $("#form-error-message").css("display", "block");
+  }
+
   return isValidated;
 }
 
@@ -114,6 +120,6 @@ function formatFirebaseData() {
 
   return data;
 
-  
-
 }
+
+
