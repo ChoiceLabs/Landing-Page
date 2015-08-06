@@ -1,11 +1,16 @@
 @import "./common.less";
 
 /* checkbox */
-@selected-item: #9E9E9E;
+@selected-item: #808080;
 
-@red: #E01212;
+@error-light-red: #FFCACA;
+@error-red: #EF6868;
 
-/* GENERAL */
+@success-light-green: #D9FDDA;
+
+/* -------------
+GENERAL 
+-------------- */
 
 form {
   padding: 20px 25px;
@@ -29,7 +34,9 @@ form {
 
 
 
-/* QUESTIONAIRE */
+/* --------------
+QUESTIONAIRE 
+--------------- */
 
 .question {
   margin-bottom: 10px;
@@ -60,7 +67,9 @@ form {
 
 
 
-/* CHECK BOXES */
+/* -------------
+CHECK BOXES 
+------------- */
 
 /* set the checkbox/radio button location */
 input[type="checkbox"], input[type="radio"] {
@@ -107,11 +116,13 @@ input[type="radio"]:checked + label {
   font-size: 1.0em;
   background-color: #fafafa;
   border: 1px solid #ccc;
+  .box-shadow-inset(whitesmoke, 0px, -2px, 2px, 1px);
 }
 
 .item-selected {
   background-color: @selected-item;
-  border: 1px solid @selected-item; 
+  border: 1px solid #727272;
+  .box-shadow-inset(#797979, 2px, 2px, 2px, 2px);
   color: white;
 }
 
@@ -124,6 +135,18 @@ input[type="radio"]:checked + label {
   float: right;
   width: 48%;
 }
+
+
+
+input.visited:not(:focus):invalid {
+  border: 2px solid @error-red;
+}
+
+.text-input-error {
+  border: 2px solid @error-red;
+}
+
+
 
 
 
@@ -144,7 +167,6 @@ input[type=text], select, input[type=tel], input[type=email], .toggle-button, te
 }
 
 input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus {
-  /* box-shadow: 0 0 5px @green; */
   box-shadow: none;
   border: 1px solid @green;
   transition-duration: .3s;
@@ -188,6 +210,7 @@ BUTTON
 .button {
   display: block;
   padding: 20px 10px;
+  outline: none;
   margin: 0 auto;
   text-decoration: none;
   .border-radius();
@@ -235,9 +258,15 @@ ERROR
 
 #form-error-message {
   display:none;
-  color: @red;
+  color: @error-red;
   font-size: 1.2em;
   text-align: center;
+}
+
+p.validation-error {
+  color: @error-red;
+  font-size: 1.1em;
+  display: none;
 }
 
 /* ---------------
@@ -261,10 +290,6 @@ THANK YOU MODAL
 
 .bold {
   font-weight: 600;
-}
-
-.modal-footer {
-
 }
 
 .close-link {

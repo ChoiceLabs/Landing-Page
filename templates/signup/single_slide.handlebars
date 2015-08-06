@@ -2,35 +2,33 @@
   <div class="col-md-6 col-md-offset-3">
 
 
-    <form data-toggle="validator" role="form">
+    <form id="driver-form"vf>
 
       <h2 class="form-title">{{heading}}</h2>
 
       <div class="question form-group">
         <label class="question_label">First Name</label>
-        <input name="first-name" type="text" class="form-control" id="first-name-input" data-error="Please provide a first name" data-delay="0" required>
-        <div class="help-block with-errors"></div>
+        <input name="first-name" type="text" class="form-control" id="first-name-input">
       </div>
 
 
       <div class="question form-group">
         <label class="question_label">Last Name</label>
-        <input name="last-name" type="text" class="form-control" id="last-name-input" data-error="Please provide a last name">
-        <div class="help-block with-errors"></div>
+        <input name="last-name" type="text" class="form-control" id="last-name-input">
       </div>
 
 
       <div class="question form-group">
-        <label class="question_label">Phone Number</label>
-        <input name="phone" type="tel" class="form-control" id="phone-input" placeholder="(xxx) xxx-xxxx" data-error="Please provide a valid phone number" required>
-        <div class="help-block with-errors"></div>
+        <label class="question_label">Phone Number*</label>
+        <input name="phone" type="tel" class="form-control" id="phone-input" minlength="10" placeholder="(xxx) xxx-xxxx"required>
+        <p class="validation-error" id="phone-error"> Please input a valid phone number, including your area code </p>
       </div>
 
 
       <div class="question form-group">
-        <label class="question_label">Email</label>
-        <input name="email" type="email" class="form-control" id="email-input" data-error="Please provide an email address" required>
-        <div class="help-block with-errors"></div>
+        <label class="question_label">Email*</label>
+        <input name="email" type="email" class="form-control" minlength="5" id="email-input" required>
+        <p class="validation-error" id="email-error"> Please input a valid phone number, including your area code </p>
       </div>
 
 
@@ -44,7 +42,6 @@
           </label>
         {{/each}}
         </section>
-        <div class="desired-locations-error"> Please select at least one region </div>
       </div>
 
 
@@ -58,7 +55,6 @@
           </label>
         {{/each}}
         </section>
-        <div id="available-hours-error" class="help-block with-errors"></div>
       </div>
 
 
@@ -74,7 +70,6 @@
             <label></label>
           </label>
         </section>
-        <div id="valid-drivers-license-error" class="help-block with-errors"></div>
       </div>
 
 
@@ -90,7 +85,6 @@
             <label></label>
           </label>
         </section>
-        <div id="background-check-error" class="help-block with-errors"></div>
       </div>
 
 
@@ -103,13 +97,12 @@
             <label></label>
           </label>
         {{/each}}
-        <div class="help-block with-errors"></div>
       </div>
 
       
-    <button type="button" class="button button--green" id="submit-button"> Become a Driver </button>
-    <p id="terms-notice"> By pressing the above link you agree to our <a href="terms.html"> Terms of Service </a> </p>
-    <p id="form-error-message">Whoops, looks like there are some errors </p>
+      <button type="button" class="button button--green" id="submit-button"> Become a Driver </button>
+      <p id="terms-notice"> By pressing the above link you agree to our <a href="terms.html"> Terms of Service </a> </p>
+      <p id="form-error-message">Whoops, looks like there are some errors </p>
 
     </form>
 

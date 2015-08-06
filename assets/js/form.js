@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
-  /* radio and checkbox button functionality */
+
+
+  /* ---------
+  radio and checkbox button functionality 
+  -----------*/
   $("input[type=checkbox], input[type=radio]").on("click", function(){
 
     // if input is a radio item
@@ -15,30 +19,53 @@ $(document).ready(function() {
     }
   });
 
+  /* ----------
+  validation
+  ------------ */
 
 
+  // real-time validation styling on visited inputs
+  $("input[type=text], input[type=tel], input[type=email]").focus(function() {
+    $(this).addClass('visited');
+  });
+
+  // removes error message when valid
+  $('input[required]').keydown(function(event) {
+    var error_message_id = this.name + "-error";
+    if (this.checkValidity() == false) {;
+      showElementErrorMessage(this);
+    }
+    else {
+      hideElementErrorMessage(this);
+    }
+
+  });
 
 
 
   /* SUBMIT FORM */
-  $("#submit-button").click(function() {
+  $("#submit-button").click(function(evt) {
 
-    // validate fields and display error messages
-    isValidated = validateForm();
-    console.log("isValidated: " + isValidated);
+    var isValid = true;
+    // show errors if form is not valid
+    if ($("#driver-form")[0].checkValidity() === false) {      
+      showValidationErrors();
+      evt.preventDefault();
+      isValid = false;
+    }
 
     // if the data is validated,
     // format data for firebase
     // additional user data grabbed here
-    if (isValidated) {
+    if (isValid) {
+
       var data = formatFirebaseData();
-      console.log(data);
 
       // send data to firebase
-      // if successful, display thank you modal
-      // if not successful, display error
       var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
       firebaseRef.push(data, function(error) {
+
+        // if not successful, display error in thank you modal
         if (error) {
           $(".thank-you-message").html("Whoops, there was an error. Please try again or contact us below");
         }
@@ -53,33 +80,29 @@ $(document).ready(function() {
 });
 
 
+function showValidationErrors() {
 
-
-function validateForm() {
-  var isValidated = false;
-  
-  // checks for errors
-  // create custom error message for each field
-  if ($("#first-name-input").val() == "") {
-    console.log('first name error')
-  }
-  else if ($("#phone-input").val() == "") {
-    console.log('phone error');
-  }
-  else if ($("#email-input").val() == "") {
-    console.log('email-error');
-  }
-  else {
-    isValidated = true;
-  }
-
-  // display general error message
-  if (!isValidated) {
-    $("#form-error-message").css("display", "block");
-  }
-
-  return isValidated;
+  $("input[required").each(function() {
+    if (this.checkValidity() == false) {
+      $(this).addClass("visited");
+      showElementErrorMessage(this);
+    }
+  });
 }
+
+function showElementErrorMessage(elem) {
+  var elem_error_message_id = "#" + elem.name + "-error";
+  $(elem_error_message_id).css("display", "block");
+}
+
+function hideElementErrorMessage(elem) {
+ var elem_error_message_id = "#" + elem.name + "-error";
+  $(elem_error_message_id).css("display", "none"); 
+}
+
+
+
+
 
 
 function formatFirebaseData() {

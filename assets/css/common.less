@@ -6,8 +6,8 @@ VARIABLES
 
 /* green */
 @green: #58B16E;
-@hover-green: #20BB5F;
-@active-green: #179449;
+@hover-green: #63bb79;
+@active-green: #53a267;
 @dark-green: #2B8655; /* used in gradients */
 
 
@@ -108,6 +108,11 @@ FUNCTIONS
 .box-shadow(@color) {
   -webkit-box-shadow: 3px 3px 2px 0 @color;
   box-shadow: 3px 3px 2px 0 @color;
+}
+
+.box-shadow-inset(@color, @x:3, @y:3, @blur:3, @spread:0) {
+  -webkit-box-shadow: inset @x @y @blur @spread @color;
+  box-shadow: inset @x @y @blur @spread @color;
 }
 
 .text-shadow(@color) {
