@@ -28,7 +28,7 @@
       <div class="question form-group">
         <label class="question_label">Email*</label>
         <input name="email" type="email" class="form-control" minlength="5" id="email-input" required>
-        <p class="validation-error" id="email-error"> Please input a valid phone number, including your area code </p>
+        <p class="validation-error" id="email-error"> Please input a valid email address </p>
       </div>
 
 
@@ -88,21 +88,36 @@
       </div>
 
 
-      <div class="question form-group">
+       <div class="question form-group">
         <label class="question_label">When can we contact you for a free consultation?</label>
         <section class="two-column-section">
-        {{#each time-to-call}}
+          {{#each time-to-call}}
+            <label class="checkbox-item">
+              <input name="time-to-call" type="checkbox" value="{{this}}"/> {{this}}
+              <label></label>
+            </label>
+          {{/each}}
+        </section>
+      </div>
+
+
+      <div class="question form-group">
+        <section>
           <label class="checkbox-item">
-            <input name="time-to-call" type="checkbox" value="{{this}}"/> {{this}}
+            <input name="terms" type="checkbox" id="terms-checkbox" required/> 
+            <p id="terms-notice"> By checking this box and clicking “Become a Driver” below, you acknowledge that you have read and agree to abide by our <a id="terms-link" href="terms.html"> Terms of Service </a> </p>
             <label></label>
           </label>
-        {{/each}}
+        </section>
+        <p class="validation-error" id="terms-error"> Please read and agree to our Terms of Service </p>
       </div>
+
+
+
 
       
       <button type="button" class="button button--green" id="submit-button"> Become a Driver </button>
-      <p id="terms-notice"> By pressing the above link you agree to our <a href="terms.html"> Terms of Service </a> </p>
-      <p id="form-error-message">Whoops, looks like there are some errors </p>
+      <p class="form-error-message">Whoops, looks like some fields are invalid. </p>
 
     </form>
 
