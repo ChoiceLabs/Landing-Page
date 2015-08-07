@@ -43,7 +43,7 @@ $(document).ready(function () {
     "heading" : "Enter your info",
     "caption" : "Just a few questions and you're done!",
     'cities': [
-      'San Fransisco',
+      'SF',
       'Outside SF',
     ],
     "number-of-hours" : [
