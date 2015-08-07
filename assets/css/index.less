@@ -10,6 +10,8 @@ HERO SECTION
   background: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position-y: -75px;
+  height: 100%;
 }
 
 #choice-slogan {
@@ -18,9 +20,10 @@ HERO SECTION
   margin-bottom: 30px;
 }
 
-.choice-description {
+p.choice-description {
   color: white;
-  font-size: 1.7em;
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
 
@@ -68,6 +71,13 @@ WHY CHOICE
 /* -----------------
 HOW IT WORKS
 ------------------ */
+
+.phone-screenshot {
+  height: 500px;
+  width: 244px;
+}
+
+
 #how-it-works-container {
   background-color: #DEDEDE;
 
@@ -104,19 +114,21 @@ HOW IT WORKS
 
 
 
+/* mobile media query */
+@media only screen and (max-device-width: 480px) {
+
+  #hero-section-jumbotron {
+    background-size: auto;
+  }
+}
+
+
 
 /* Medium devices (desktops, 992px and up) */
 @screen-md : 992px;
 @media (min-width: @screen-md) {
 
-  #choice-description {
-    // margin-top: 340px;
-  }
-
-  .caption {
-    height: 500px;
-  }
-
+  
   .how-it-works-text-wrapper {
     position: absolute; 
     top: 50%;
