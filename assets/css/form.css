@@ -1,0 +1,385 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+/* -----------------
+VARIABLES
+------------------ */
+/* green */
+/* used in gradients */
+/* fonts */
+/* boxes/cards */
+/* -----------------
+GENERAL
+------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+p,
+span,
+label {
+  font-family: "Lato";
+}
+h1 {
+  font-size: 3em;
+}
+body,
+html {
+  height: 100%;
+  background-color: #eee;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+.jumbotron {
+  margin: 0;
+}
+.box {
+  padding: 20px 25px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: white;
+}
+/*  ----------------
+HEADER (relative)
+------------------ */
+header {
+  position: relative;
+  height: 44px;
+  background-color: #444444;
+}
+#logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+#logo-image {
+  height: 22px;
+  margin-top: 10px;
+}
+/* -----------------
+FOOTER
+------------------ */
+footer {
+  background-color: #444444;
+  padding: 15px;
+}
+.footer-link {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+.footer-link:hover {
+  color: white;
+  text-decoration: none;
+}
+/* ---------------------
+FUNCTIONS
+-----------------------*/
+/* checkbox */
+/* -------------
+GENERAL 
+-------------- */
+form {
+  padding: 20px 25px;
+  background: white;
+  margin-bottom: 0px;
+  border: none;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+.form-title {
+  font-size: 1.7em;
+  font-weight: 700;
+  margin: 10px 0px 20px 0px;
+  text-align: center;
+}
+p.form-caption {
+  font-size: 1.0em;
+}
+/* --------------
+QUESTIONAIRE 
+--------------- */
+.question {
+  margin-bottom: 10px;
+  overflow: auto;
+  overflow-y: hidden;
+}
+.form_container {
+  padding: 10px 25px;
+  background: white;
+  border: 5px solid #58b16e;
+}
+.form_container--white_border {
+  border: 1px solid #eee;
+  border: none;
+}
+.question_label {
+  font-weight: 600;
+  font-size: 1.1em;
+  width: 100%;
+  margin: 0px 0px 2px 0px;
+}
+/* -------------
+CHECK BOXES 
+------------- */
+/* set the checkbox/radio button location */
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative;
+  top: 0px;
+  margin: 0px 5px;
+}
+/* disable default checkbox and radio images */
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+/* new checkbox and radio button image position and size */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin: 3px 7px 0px 2px;
+}
+input[type="checkbox"] + label {
+  background: url('../images/checkbox-unchecked.png') 0 0px no-repeat;
+}
+input[type="radio"] + label {
+  background: url('../images/radio.png') 0 0px no-repeat;
+}
+input[type="checkbox"]:checked + label {
+  background: url('../images/checkbox.png') 0 0px no-repeat;
+}
+input[type="radio"]:checked + label {
+  background: url('../images/radio-checked.png') 0 0px no-repeat;
+}
+.checkbox-item,
+.radio-item {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  font-family: "Lato";
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.0em;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0px -2px 2px 1px #f5f5f5;
+  box-shadow: inset 0px -2px 2px 1px #f5f5f5;
+}
+.item-selected {
+  background-color: #808080;
+  border: 1px solid #727272;
+  -webkit-box-shadow: inset 2px 2px 2px 2px #797979;
+  box-shadow: inset 2px 2px 2px 2px #797979;
+  color: white;
+}
+.two-column-section > label:nth-child(odd) {
+  float: left;
+  width: 48%;
+}
+.two-column-section > label:nth-child(even) {
+  float: right;
+  width: 48%;
+}
+input.visited:not(:focus):invalid {
+  border: 2px solid #ef6868;
+}
+.text-input-error {
+  border: 2px solid #ef6868;
+}
+/* ------------------
+INPUT TEXT
+TEXTAREA 
+-------------------*/
+input[type=text],
+select,
+input[type=tel],
+input[type=email],
+.toggle-button,
+textarea {
+  font-size: 1.5em;
+  height: 45px;
+  width: 100%;
+  font-weight: 400;
+  padding: 15px;
+  color: #444444;
+  letter-spacing: 1px;
+}
+input[type=text]:focus,
+input[type=tel]:focus,
+input[type=email]:focus,
+textarea:focus {
+  box-shadow: none;
+  border: 1px solid #58b16e;
+  transition-duration: .3s;
+  -webkit-transition-duration: .3s;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #444;
+  font-size: 0.8em;
+  padding-top: .1em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #444;
+  font-size: 0.8em;
+  padding-top: .1em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #444;
+  font-size: 0.8em;
+  padding-top: .1em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #444;
+  font-size: 0.8em;
+  padding-top: .1em;
+  font-weight: 300;
+  font-family: "Lato";
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+/* ------------------
+BUTTON
+-------------------*/
+.button {
+  display: block;
+  padding: 20px 10px;
+  outline: none;
+  margin: 0 auto;
+  text-decoration: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+}
+.button a {
+  text-decoration: none;
+  color: white;
+}
+.button--green {
+  background-color: #58b16e;
+}
+.button--green:hover {
+  background-color: #63bb79;
+  outline: none;
+}
+.button--green:active {
+  background-color: #53a267;
+  outline: none;
+}
+/* ---------------
+TERMS NOTICE 
+--------------- */
+#terms-notice {
+  font-size: 1.0em;
+  display: inline;
+  margin: 0;
+}
+#terms-link {
+  color: #333;
+  font-weight: 600;
+}
+input[type=checkbox]#terms-checkbox {
+  display: inline-block;
+}
+/* ----------------
+ERROR 
+----------------- */
+/* cumulative error message */
+p.form-error-message {
+  display: none;
+  color: #ef6868;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 5px;
+}
+.form-error-message--success {
+  color: #58b16e;
+  display: block;
+}
+/* individual input error message */
+p.validation-error {
+  color: #ef6868;
+  font-size: 1.1em;
+  display: none;
+  margin-bottom: 5px;
+}
+/* ---------------
+THANK YOU MODAL
+-----------------*/
+.modal-content {
+  -webkit-border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.modal-header {
+  text-align: center;
+  background-color: #58b16e;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.modal-title {
+  font-weight: 600;
+  font-size: 1.4em;
+  color: white;
+}
+.modal-body {
+  padding: 25px;
+}
+.bold {
+  font-weight: 600;
+}
+.close-link {
+  cursor: pointer;
+}
+/* ----------------
+FUNCTIONS 
+------------------*/

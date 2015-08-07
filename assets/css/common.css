@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+/* -----------------
+VARIABLES
+------------------ */
+/* green */
+/* used in gradients */
+/* fonts */
+/* boxes/cards */
+/* -----------------
+GENERAL
+------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+p,
+span,
+label {
+  font-family: "Lato";
+}
+h1 {
+  font-size: 3em;
+}
+body,
+html {
+  height: 100%;
+  background-color: #eee;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+.jumbotron {
+  margin: 0;
+}
+.box {
+  padding: 20px 25px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: white;
+}
+/*  ----------------
+HEADER (relative)
+------------------ */
+header {
+  position: relative;
+  height: 44px;
+  background-color: #444444;
+}
+#logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+#logo-image {
+  height: 22px;
+  margin-top: 10px;
+}
+/* -----------------
+FOOTER
+------------------ */
+footer {
+  background-color: #444444;
+  padding: 15px;
+}
+.footer-link {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+.footer-link:hover {
+  color: white;
+  text-decoration: none;
+}
+/* ---------------------
+FUNCTIONS
+-----------------------*/
