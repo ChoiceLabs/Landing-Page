@@ -1,7 +1,7 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
 templates['footer'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<footer>\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-xs-4\">\n        <a href=\"./terms.html\" class=\"footer-link\">Terms</a>\n      </div>\n      <div class=\"col-xs-4\">\n        <a href=\"./privacy.html\" class=\"footer-link\">Privacy</a>\n      </div>\n      <div class=\"col-xs-4\">\n        <a href=\"./simple_contact.html\" class=\"footer-link\">Contact</a>\n      </div>\n</footer>\n";
+    return "<footer>\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-xs-4\">\n        <a href=\"./terms.html\" class=\"footer-link\">Terms</a>\n      </div>\n      <div class=\"col-xs-4\">\n        <a href=\"./privacy.html\" class=\"footer-link\">Privacy</a>\n      </div>\n      <div class=\"col-xs-4\">\n        <a href=\"./contact.html\" class=\"footer-link\">Contact</a>\n      </div>\n</footer>\n";
 },"useData":true});
 templates['header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;
@@ -13,18 +13,18 @@ templates['header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function
 templates['privacy'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;
 
-  return "<div class=\"jumbotron\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <h1 class=\"section-header\"> Privacy </h1>\n      "
+  return "<div class=\"jumbotron\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <h1 class=\"section-header\"> Privacy </h1>\n        "
     + this.escapeExpression(((helper = (helper = helpers.privacy || (depth0 != null ? depth0.privacy : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"privacy","hash":{},"data":data}) : helper)))
-    + "\n    </div>\n  </div>\n</div>\n";
+    + "\n      </div>\n    </div>\n  </div>\n</div>\n";
 },"useData":true});
 templates['simple_contact'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"jumbotron\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-6 col-md-offset-3 box\">\n        <h2 class=\"form-title\"> Contact </h2>\n        <label> Email </label>\n        <p> "
+  return "<div class=\"jumbotron\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-6 col-md-offset-3\">\n        <div class=\"box\">\n          <h2 class=\"form-title\"> Contact </h2>\n          <label> Email </label>\n          <p> "
     + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
-    + " </p>\n        <label> Phone </label>\n        <p> "
+    + " </p>\n          <label> Phone </label>\n          <p> "
     + alias3(((helper = (helper = helpers.phone || (depth0 != null ? depth0.phone : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"phone","hash":{},"data":data}) : helper)))
-    + " </p>\n      </div>\n    </div>\n  </div>\n</div>\n";
+    + " </p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>";
 },"useData":true});
 templates['terms'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"jumbotron\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div id=\"terms\">\n      </div>\n    </div>\n\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div id=\"terms\">\n        </div>\n      </div>\n      \n    </div>\n  </div>\n</div>\n\n\n<!-- script for importing markdown -->\n<script type=\"text/javascript\">\n  var converter = new showdown.Converter(),\n  text      = '#hello, markdown!',\n  html      = converter.makeHtml(text);\n  $(\"#terms\").append(html);\n</script>\n";
