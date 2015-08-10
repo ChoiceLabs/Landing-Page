@@ -22,7 +22,6 @@ $(document).ready(function() {
 
 
 
-
   /* ----------
   Validation
   ------------ */
@@ -133,8 +132,8 @@ $(document).ready(function() {
 
       // show thank you messages
       $('#thank-you-modal').modal('toggle');
-      $(".form-error-message").html("Thanks! We'll reach out shortly");
-      $(".form-error-message").addClass("form-error-message--success");
+      $(".form-error-message").css("display", "none");
+      $(".form-success-message").css("display", "block");
       $("#submit-button").attr("disabled", true);
     }
   

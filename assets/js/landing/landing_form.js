@@ -111,8 +111,8 @@ $(document).ready(function() {
 
       // show thank you messages
       $('#thank-you-modal').modal('toggle');
-      $(".form-error-message").html("Thanks! We'll reach out shortly");
-      $(".form-error-message").addClass("form-error-message--success");
+      $(".form-error-message").toggle();
+      $(".form-success-message").toggle();
       $("#submit-button").attr("disabled", true);
     }
   

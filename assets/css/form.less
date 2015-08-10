@@ -13,7 +13,7 @@ GENERAL
 -------------- */
 
 form {
-  padding: 20px 25px;
+  padding: 15px;
   background: white;
   margin-bottom: 0px;
   border: none;
@@ -29,6 +29,7 @@ form {
 
 p.form-caption {
   font-size: 1.0em;
+  text-align: center;
 }
 
 
@@ -274,9 +275,12 @@ p.form-error-message {
   margin-top: 5px;
 }
 
-.form-error-message--success {
+p.form-success-message {
   color: @green;
-  display: block;
+  display: none;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 5px;
 }
 
 /* individual input error message */
