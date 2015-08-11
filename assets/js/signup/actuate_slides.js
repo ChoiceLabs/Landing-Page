@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   var jobs_hero_context = {
     "slogan" : "Grab your keys and make more money",
-    "description" : "We offer free consultations to match you with well-paying, flexible driving jobs",
+    "description" : "We offer free consultations to match you with well-paying, flexible driving jobs, including Uber, Lyft, Instacart, Postmates, Doordash, and dozens more.",
   }
   $(".jobs-hero").html(Handlebars.templates.jobs_hero(jobs_hero_context));
 
