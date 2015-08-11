@@ -227,11 +227,7 @@ FUNCTIONS
 GENERAL 
 -------------- */
 form {
-<<<<<<< HEAD
-  padding: 20px 25px;
-=======
   padding: 15px;
->>>>>>> neilsharma
   background: white;
   margin-bottom: 0px;
   border: none;
@@ -247,10 +243,7 @@ form {
 }
 p.form-caption {
   font-size: 1.0em;
-<<<<<<< HEAD
-=======
   text-align: center;
->>>>>>> neilsharma
 }
 /* --------------
 QUESTIONAIRE 
@@ -296,11 +289,7 @@ input[type="radio"] + label {
   width: 16px;
   height: 16px;
   float: left;
-<<<<<<< HEAD
-  margin: 3px 10px 0px 5px;
-=======
   margin: 3px 7px 0px 2px;
->>>>>>> neilsharma
 }
 input[type="checkbox"] + label {
   background: url('../images/checkbox-unchecked.png') 0 0px no-repeat;
@@ -486,18 +475,12 @@ p.form-error-message {
   text-align: center;
   margin-top: 5px;
 }
-<<<<<<< HEAD
-.form-error-message--success {
-  color: #58b16e;
-  display: block;
-=======
 p.form-success-message {
   color: #58b16e;
   display: none;
   font-size: 1.1em;
   text-align: center;
   margin-top: 5px;
->>>>>>> neilsharma
 }
 /* individual input error message */
 p.validation-error {
@@ -552,10 +535,6 @@ HERO SECTION
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: -75px;
-<<<<<<< HEAD
-  height: 100%;
-=======
->>>>>>> neilsharma
 }
 #choice-slogan {
   color: white;
@@ -639,6 +618,7 @@ HOW IT WORKS
 @media (min-width: 992px) {
   .how-it-works-text-wrapper {
     position: absolute;
+    height: 100%;
     top: 50%;
     transform: translateY(-50%);
   }
