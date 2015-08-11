@@ -13,7 +13,7 @@ GENERAL
 -------------- */
 
 form {
-  padding: 20px 25px;
+  padding: 15px;
   background: white;
   margin-bottom: 0px;
   border: none;
@@ -29,6 +29,7 @@ form {
 
 p.form-caption {
   font-size: 1.0em;
+  text-align: center;
 }
 
 
@@ -66,7 +67,6 @@ QUESTIONAIRE
 
 
 
-
 /* -------------
 CHECK BOXES 
 ------------- */
@@ -88,7 +88,7 @@ input[type="checkbox"] + label, input[type="radio"] + label {
   width: 16px;
   height: 16px;
   float: left;
-  margin: 3px 10px 0px 5px;
+  margin: 3px 7px 0px 2px;
 }
 
 input[type="checkbox"] + label {
@@ -275,9 +275,12 @@ p.form-error-message {
   margin-top: 5px;
 }
 
-.form-error-message--success {
+p.form-success-message {
   color: @green;
-  display: block;
+  display: none;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 5px;
 }
 
 /* individual input error message */

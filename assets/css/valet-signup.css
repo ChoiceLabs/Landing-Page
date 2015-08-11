@@ -172,7 +172,11 @@ FUNCTIONS
 GENERAL 
 -------------- */
 form {
+<<<<<<< HEAD
   padding: 20px 25px;
+=======
+  padding: 15px;
+>>>>>>> neilsharma
   background: white;
   margin-bottom: 0px;
   border: none;
@@ -181,6 +185,7 @@ form {
   border-radius: 7px;
 }
 .form-title {
+<<<<<<< HEAD
   font-size: 1.8em;
   font-weight: 700;
   margin: 10px 0px 30px 0px;
@@ -188,6 +193,16 @@ form {
 }
 .form-caption {
   font-size: 1.3em;
+=======
+  font-size: 1.7em;
+  font-weight: 700;
+  margin: 10px 0px 20px 0px;
+  text-align: center;
+}
+p.form-caption {
+  font-size: 1.0em;
+  text-align: center;
+>>>>>>> neilsharma
 }
 /* --------------
 QUESTIONAIRE 
@@ -233,7 +248,11 @@ input[type="radio"] + label {
   width: 16px;
   height: 16px;
   float: left;
+<<<<<<< HEAD
   margin: 3px 10px 0px 5px;
+=======
+  margin: 3px 7px 0px 2px;
+>>>>>>> neilsharma
 }
 input[type="checkbox"] + label {
   background: url('../images/checkbox-unchecked.png') 0 0px no-repeat;
@@ -412,6 +431,7 @@ input[type=checkbox]#terms-checkbox {
 ERROR 
 ----------------- */
 /* cumulative error message */
+<<<<<<< HEAD
 .form-error-message {
   display: none;
   color: #ef6868;
@@ -421,6 +441,21 @@ ERROR
 .form-error-message--success {
   color: #58b16e;
   display: block;
+=======
+p.form-error-message {
+  display: none;
+  color: #ef6868;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 5px;
+}
+p.form-success-message {
+  color: #58b16e;
+  display: none;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 5px;
+>>>>>>> neilsharma
 }
 /* individual input error message */
 p.validation-error {
