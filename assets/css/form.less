@@ -161,7 +161,6 @@ input[type=text], select, input[type=tel], input[type=email], .toggle-button, te
   height: 45px;
   width: 100%;
   font-weight: 400;
-  padding: 15px;
   color: @black;
   letter-spacing: 1px;
 }
@@ -176,7 +175,7 @@ input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   .placeholder-style();
 }
-input:-moz-placeholder, textarea:-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   .placeholder-style();
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
@@ -278,6 +277,7 @@ p.form-error-message {
 p.form-success-message {
   color: @green;
   display: none;
+  font-weight: 400;
   font-size: 1.1em;
   text-align: center;
   margin-top: 5px;

@@ -69,7 +69,7 @@ $(document).ready(function() {
   function showValidationErrors() {
 
     // show validation errors on each field
-    $("input[required").each(function() {
+    $("input[required]").each(function() {
       if (this.checkValidity() == false) {
         $(this).addClass("visited");
         showElementErrorMessage(this);
@@ -134,7 +134,15 @@ $(document).ready(function() {
       $('#thank-you-modal').modal('toggle');
       $(".form-error-message").css("display", "none");
       $(".form-success-message").css("display", "block");
+
+      // disable submit button
       $("#submit-button").attr("disabled", true);
+      $("#submit-button").css("background-color", "#ccc");
+
+      // clear fields
+      $("#driver-form")[0].reset();
+      $("input.visited").removeClass("visited");
+      $(".item-selected").removeClass("item-selected");
     }
   
   });
