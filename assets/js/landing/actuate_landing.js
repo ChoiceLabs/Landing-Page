@@ -53,5 +53,11 @@ $(document).ready(function () {
     "Each of our partners has a different compensation policy. More information can be provided during the consultation.",
     ],
   }
+
   $('.worker-faq-placeholder').html(Handlebars.templates.worker_faq(worker_faq_context));
+
+
+
+  var getting_started_context = {};
+  $('.getting-started-placeholder').html(Handlebars.templates.getting_started(getting_started_context));
 });
