@@ -614,6 +614,9 @@ FAQ
 .panel-default > .panel-heading {
   background-image: none;
 }
+.panel-heading:hover {
+  background-color: #eee;
+}
 .panel-title {
   font-size: 1.3em;
   color: #58b16e;
@@ -624,6 +627,9 @@ FAQ
 .panel-title:hover {
   text-decoration: none;
   color: #63bb79;
+}
+.answer {
+  font-size: 1.2em;
 }
 /* mobile media query */
 @media only screen and (max-device-width: 480px) {
