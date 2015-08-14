@@ -1,7 +1,7 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
 templates['footer'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<footer>\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-xs-4\">\n        <a href=\"./terms.html\" class=\"footer-link\">Terms</a>\n      </div>\n      <div class=\"col-xs-4\">\n        <a href=\"./privacy.html\" class=\"footer-link\">Privacy</a>\n      </div>\n      <div class=\"col-xs-4\">\n        <a href=\"./contact.html\" class=\"footer-link\">Contact</a>\n      </div>\n</footer>\n";
+    return "<footer>\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-xs-4\">\n        <a href=\"./terms.html\" class=\"footer-link\">Terms</a>\n      </div>\n      <div class=\"col-xs-4\">\n        <a href=\"./privacy.html\" class=\"footer-link\">Privacy</a>\n      </div>\n      <div class=\"col-xs-4\">\n        <a href=\"./contact.html\" class=\"footer-link\">Contact</a>\n      </div>\n</footer>\n\n\n<!-- GA -->\n<script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n  ga('create', 'UA-66338927-1', 'auto');\n  ga('send', 'pageview');\n\n</script>";
 },"useData":true});
 templates['header'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;
