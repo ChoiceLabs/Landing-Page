@@ -575,6 +575,53 @@ WHY CHOICE
   font-weight: 300;
   text-align: center;
 }
+/* ---------------
+GETTING STARTED 
+----------------*/
+#why-choice-container img {
+  display: block;
+  margin: 0px auto 20px auto;
+}
+#why-choice-container h3 {
+  font-weight: 600px;
+  color: #444444;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+#why-choice-container p {
+  line-height: 1.7em;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: center;
+}
+#getting-started {
+  text-align: center;
+}
+.getting-started__image {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+.getting-started__step {
+  font-weight: 300px;
+  color: #444444;
+  text-align: center;
+  font-size: 1.2em;
+}
+.getting-started__title {
+  font-weight: 600px;
+  color: #444444;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+.getting-started__description {
+  line-height: 1.7em;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: center;
+}
 /* -----------------
 HOW IT WORKS
 ------------------ */
