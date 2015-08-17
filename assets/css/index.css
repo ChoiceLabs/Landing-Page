@@ -53,7 +53,7 @@ HEADER (relative)
 header {
   position: relative;
   height: 44px;
-  background-color: #444444;
+  background-color: #313131;
 }
 #logo {
   display: block;
@@ -68,7 +68,7 @@ header {
 FOOTER
 ------------------ */
 footer {
-  background-color: #444444;
+  background-color: #313131;
   padding: 15px;
 }
 .footer-link {
@@ -191,7 +191,7 @@ HEADER (relative)
 header {
   position: relative;
   height: 44px;
-  background-color: #444444;
+  background-color: #313131;
 }
 #logo {
   display: block;
@@ -206,7 +206,7 @@ header {
 FOOTER
 ------------------ */
 footer {
-  background-color: #444444;
+  background-color: #313131;
   padding: 15px;
 }
 .footer-link {
@@ -598,25 +598,25 @@ GETTING STARTED
 #getting-started {
   text-align: center;
 }
-.getting-started__image {
+#getting-started .getting-started__image {
   width: 100px;
   display: block;
   margin: 0 auto;
 }
-.getting-started__step {
+#getting-started .getting-started__step {
   font-weight: 300px;
   color: #444444;
   text-align: center;
   font-size: 1.2em;
 }
-.getting-started__title {
-  font-weight: 600px;
+#getting-started .getting-started__title {
+  font-weight: 400;
   color: #444444;
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.6em;
 }
-.getting-started__description {
+#getting-started .getting-started__description {
   line-height: 1.7em;
   font-size: 1.2em;
   font-weight: 300;
