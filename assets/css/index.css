@@ -53,7 +53,7 @@ HEADER (relative)
 header {
   position: relative;
   height: 44px;
-  background-color: #444444;
+  background-color: #313131;
 }
 #logo {
   display: block;
@@ -68,7 +68,7 @@ header {
 FOOTER
 ------------------ */
 footer {
-  background-color: #444444;
+  background-color: #313131;
   padding: 15px;
 }
 .footer-link {
@@ -191,7 +191,7 @@ HEADER (relative)
 header {
   position: relative;
   height: 44px;
-  background-color: #444444;
+  background-color: #313131;
 }
 #logo {
   display: block;
@@ -206,7 +206,7 @@ header {
 FOOTER
 ------------------ */
 footer {
-  background-color: #444444;
+  background-color: #313131;
   padding: 15px;
 }
 .footer-link {
