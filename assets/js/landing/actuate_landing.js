@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   // Landing page content
   var hero_context = {};
   $('.hero-placeholder').html(Handlebars.templates.hero(hero_context));
