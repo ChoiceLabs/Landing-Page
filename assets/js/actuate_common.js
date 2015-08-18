@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var header_context = {
-    'logo_file': 'assets/images/choice_logo.png'
+    'logo_file': 'assets/images/choice_logo2.png'
   };
   $('.header-placeholder').html(Handlebars.templates.header(header_context));
 

@@ -1,68 +1,90 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+/* -----------------
+VARIABLES
+------------------ */
+/* green */
+/* used in gradients */
+/* fonts */
+/* boxes/cards */
+/* -----------------
+GENERAL
+------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+p,
+span,
+label {
+  font-family: "Lato";
+}
+h1 {
+  font-size: 3em;
+}
+body,
+html {
+  height: 100%;
+  background-color: #eee;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+.jumbotron {
+  margin: 0;
+}
+.box {
+  padding: 20px 25px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: white;
+}
+/*  ----------------
+HEADER (relative)
+------------------ */
+header {
+  position: relative;
+  height: 85px;
+  background-color: #313131;
+  background: #313131;
+  /* Old browsers */
 
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-/* -----------------
-VARIABLES
------------------- */
-/* green */
-/* used in gradients */
-/* fonts */
-/* boxes/cards */
-/* -----------------
-GENERAL
-------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-button,
-p,
-span,
-label {
-  font-family: "Lato";
-}
-h1 {
-  font-size: 3em;
-}
-body,
-html {
-  height: 100%;
-  background-color: #eee;
-}
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-}
-.jumbotron {
-  margin: 0;
-}
-.box {
-  padding: 20px 25px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  background-color: white;
-}
-/*  ----------------
-HEADER (relative)
------------------- */
-header {
-  position: relative;
-  height: 44px;
-  background-color: #313131;
+  background: -moz-linear-gradient(top, #313131 0%, #222222 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #313131), color-stop(100%, #222222));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #313131 0%, #222222 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #313131 0%, #222222 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #313131 0%, #222222 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #313131 0%, #222222 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top', endColorstr='@bottom', GradientType=0);
+  /* IE6-9 */
+
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
 }
 #logo {
   display: block;
   margin: 0 auto;
-  text-align: center;
 }
 #logo-image {
-  height: 22px;
-  margin-top: 10px;
+  height: 25px;
+  margin-top: 26px;
 }
 /* -----------------
 FOOTER
@@ -84,144 +106,7 @@ footer {
 /* ---------------------
 FUNCTIONS
 -----------------------*/
-/* ----------
-SLICK SLIDER
-------------*/
-.slick-slide {
-  height: auto;
-}
-.slick-slide:focus {
-  outline: none;
-}
-.slick-next:before,
-.slick-prev:before {
-  font-size: 40px;
-}
-.slick-next,
-.slick-prev {
-  width: 40px;
-  height: 40px;
-}
-/* -------------------
-SLIDER FOR SURVEY
----------------------*/
-.survey_slide {
-  border: 1px solid #dddddd;
-  margin: 5px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.survey_slide__header {
-  width: 100%;
-  padding: 20px 25px;
-  background-color: #ddd;
-  margin-top: 0px;
-  text-align: center;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border: 1px solid #bbbbbb;
-  border-bottom: none;
-}
-.survey_slide__header__title {
-  font-size: 1.8em;
-  font-weight: 700;
-  margin: 10px 0px 30px 0px;
-  text-align: center;
-}
-p.survey_slide__header__caption {
-  font-size: 1.1em;
-  font-weight: 200;
-  margin-bottom: 0px;
-  font-weight: 400;
-}
-/* -----------------
-VARIABLES
------------------- */
-/* green */
-/* used in gradients */
-/* fonts */
-/* boxes/cards */
-/* -----------------
-GENERAL
-------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-button,
-p,
-span,
-label {
-  font-family: "Lato";
-}
-h1 {
-  font-size: 3em;
-}
-body,
-html {
-  height: 100%;
-  background-color: #eee;
-}
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-}
-.jumbotron {
-  margin: 0;
-}
-.box {
-  padding: 20px 25px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  background-color: white;
-}
-/*  ----------------
-HEADER (relative)
------------------- */
-header {
-  position: relative;
-  height: 44px;
-  background-color: #313131;
-}
-#logo {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-#logo-image {
-  height: 22px;
-  margin-top: 10px;
-}
-/* -----------------
-FOOTER
------------------- */
-footer {
-  background-color: #313131;
-  padding: 15px;
-}
-.footer-link {
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-}
-.footer-link:hover {
-  color: white;
-  text-decoration: none;
-}
-/* ---------------------
-FUNCTIONS
------------------------*/
+/* @import "./common.less"; */
 /* checkbox */
 /* -------------
 GENERAL 
@@ -242,8 +127,10 @@ form {
   text-align: center;
 }
 p.form-caption {
-  font-size: 1.0em;
+  font-size: 1.5em;
   text-align: center;
+  font-weight: 600;
+  margin: 10px 0px 20px 0px;
 }
 /* --------------
 QUESTIONAIRE 
@@ -531,31 +418,46 @@ FUNCTIONS
 HERO SECTION
 ------------------*/
 #hero-section-jumbotron {
-  background: url("../images/background.jpg");
+  background: url("../images/background2.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position-y: -75px;
+  height: 800px;
+  z-index: -1;
 }
-#choice-slogan {
+#slogan-container {
+  padding: 15px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.choice-slogan {
   color: white;
-  font-size: 4em;
-  margin-bottom: 30px;
+  font-size: 3.4em;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 p.choice-description {
   color: white;
-  font-size: 1.5em;
-  font-weight: 400;
+  font-size: 1.7em;
+  font-weight: 300;
 }
 /* -----------------
 FORM
 ------------------*/
+#driver-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
+  padding: 25px;
+}
 /* -----------------
 WHY CHOICE
 ------------------*/
 .section-header {
   margin-bottom: 60px;
   text-align: center;
-  font-weight: 300;
+  font-weight: 800;
   font-size: 2.5em;
 }
 #why-choice-container img {
@@ -578,22 +480,8 @@ WHY CHOICE
 /* ---------------
 GETTING STARTED 
 ----------------*/
-#why-choice-container img {
-  display: block;
-  margin: 0px auto 20px auto;
-}
-#why-choice-container h3 {
-  font-weight: 600px;
-  color: #444444;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8em;
-}
-#why-choice-container p {
-  line-height: 1.7em;
-  font-size: 1.2em;
-  font-weight: 300;
-  text-align: center;
+#getting-started-container {
+  background-color: white;
 }
 #getting-started {
   text-align: center;
@@ -613,7 +501,7 @@ GETTING STARTED
   font-weight: 400;
   color: #444444;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0px 5px 0px;
   font-size: 1.6em;
 }
 #getting-started .getting-started__description {
