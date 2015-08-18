@@ -60,6 +60,10 @@ $(document).ready(function () {
 
 
 
+  var signup_form_context = {};
+  $(".signup-placeholder").html(Handlebars.templates.signup_form(signup_form_context));
+
+
   var getting_started_context = {};
   $('.getting-started-placeholder').html(Handlebars.templates.getting_started(getting_started_context));
 });
