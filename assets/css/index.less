@@ -1,29 +1,35 @@
 @import "./common.less";
-@import "./slider.less";
 @import "./form.less";
-
 
 
 /* -----------------
 HERO SECTION
 ------------------*/
 #hero-section-jumbotron {
-  background: url("../images/background.jpg");
+  background: url("../images/background2.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position-y: -75px;
+  height: 800px;
 }
 
-#choice-slogan {
+#slogan-container {
+  background-color: rgba(0,0,0,.35);
+  padding: 15px;
+  .border-radius(7px);
+  margin-bottom: 10px;
+}
+
+.choice-slogan {
   color: white;
-  font-size: 4em;
-  margin-bottom: 30px;
+  font-size: 2.8em;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 p.choice-description {
   color: white;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 
@@ -31,6 +37,9 @@ p.choice-description {
 FORM
 ------------------*/
 
+#driver-form {
+  background-color: rgba(255,255,255,.9);
+}
 
 
 
@@ -204,7 +213,6 @@ FAQ
 .answer {
   font-size: 1.2em;
 }
-
 
 
 

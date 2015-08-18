@@ -13,12 +13,13 @@ $(document).ready(function () {
   var worker_faq_context = {
     "question1" : "What is Choice",
     "answer1" : [
-      "Choice is a recruitment consultancy that matches workers with well-paying, flexible jobs throughout the Bay Area. We look at a worker’s availability, schedule, and interests to connect them with new jobs and make more money.",
+      "Choice was established by ex-Google and startup veterans passionate interest in helping workers maximize their income and earnings and take advantage of the different job opportunities with the advent of different on-demand and gig jobs.",
+      "We are focused on matching workers with well-paying jobs, first in the San Francisco Bay Area then throughout the United States. We look at a worker’s availability, schedule and interest and connect them with the most suitable new jobs to help them make more money and hit their financial goals",
       ],
 
-    "question2" : "What kinds of jobs does Choice match me with",
+    "question2" : "What kinds of jobs am I matched with",
     "answer2" : [
-      "Choice helps you find both full time and part time work in a variety of fields, such as deliveries, valet services, and warehouse operations. New jobs are added frequently, and we’re always looking to expand our available positions.",
+      "Choice helps you find full-time, part-time and contracting work in a variety of fields, such as deliveries, valet services, and operations. New jobs are added frequently, and we’re always expanding available positions that we advise workers on",
       ],
 
     "question3" : "How flexible are Choice jobs",
@@ -28,25 +29,25 @@ $(document).ready(function () {
 
     "question4" : "Would I be a contractor or an employee",
     "answer4" : [
-      "We have available positions for both 1099 contractors and W2 employees."
+      "Both 1099 contracting and W2 employee jobs are available through Choice."
       ],
 
     "question5" : "Would I need my own car",
     "answer5" : [
-      "Many of our jobs do require you to operate your own vehicle. Some of our partners require cars to be of a certain size or year, but others are more inclusive. If you don’t have a car, we can help provide one for you.", 
-      "We also have a few positions that do not require vehicles.",
+      "Many of our jobs do require you to operate your own vehicle. Some of our partners require cars to be of a certain size or year, but others are more inclusive. If you don’t have a car, we can help guide you to obtain one.", 
+      "There are also some positions that do not require vehicles.",
       ],
 
     "question6" : "What are some of the requirements to be qualified for Choice’s jobs",
     "answer6" : [
-      "We require all candidates to speak English (English as a second language is perfectly fine) and be comfortable working with or around people. Having customer service experience helps, but is not required.",
-      "A valid California Driver’s License is needed for all driving jobs. For jobs requiring you to operate your vehicle, we would also need vehicle registration information and car insurance documentation.",
+      "We require all candidates to speak English (English as a second language is perfectly fine) and be comfortable working with and around people. Having customer service experience helps, but is not required.",
+      "A valid California Driver’s License is needed for all driving jobs. For jobs requiring you to operate your vehicle, we would also need you to provide vehicle registration information and car insurance documentation.",
       "All of our workers must also undergo a background check.",
     ],
 
   "question7" : "Where are jobs typically located",
   "answer7" : [
-    "Most of our partners are located in San Francisco or along the peninsula, though some have openings elsewhere in the Bay Area. We are looking to expand to New York in the upcoming weeks.",
+    "Our current jobs are in the San Francisco Bay Area but we are looking at expanding soon.",
     ],
 
   "question8" : "How will I be compensated and how often",
