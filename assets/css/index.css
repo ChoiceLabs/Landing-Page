@@ -37,6 +37,7 @@ html {
 }
 .jumbotron {
   margin: 0;
+  padding: 65px 0px;
 }
 .box {
   padding: 20px 25px;
@@ -127,10 +128,10 @@ form {
   text-align: center;
 }
 p.form-caption {
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-align: center;
   font-weight: 600;
-  margin: 10px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
 }
 /* --------------
 QUESTIONAIRE 
@@ -421,7 +422,7 @@ HERO SECTION
   background: url("../images/background2.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 800px;
+  height: 500px;
   z-index: -1;
 }
 #slogan-container {
@@ -431,6 +432,7 @@ HERO SECTION
   border-radius: 7px;
   margin-bottom: 10px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .choice-slogan {
   color: white;
@@ -450,6 +452,7 @@ FORM
   background-color: rgba(255, 255, 255, 0.9);
   background-color: white;
   padding: 25px;
+  border: 3px solid #58b16e;
 }
 /* -----------------
 WHY CHOICE
@@ -546,6 +549,23 @@ HOW IT WORKS
 /* -----------
 FAQ
 ------------- */
+.panel-group {
+  border: 1px solid #313131;
+}
+.panel-group .panel {
+  margin-bottom: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #313131;
+  margin: 0;
+}
+.panel:last-child {
+  border-bottom: none;
+}
+.panel-group .panel + .panel {
+  margin: 0;
+}
 .panel-default > .panel-heading {
   background-image: none;
 }
@@ -554,8 +574,9 @@ FAQ
 }
 .panel-title {
   font-size: 1.3em;
-  color: #58b16e;
+  color: #313131;
   padding: 10px;
+  font-weight: 600;
   display: block;
   outline: none;
 }
@@ -563,12 +584,19 @@ FAQ
   text-decoration: none;
   color: #63bb79;
 }
-.answer {
-  font-size: 1.2em;
+.panel-body {
+  background-color: white;
+  padding: 0;
+}
+p.answer {
+  font-size: 1.3em;
+  padding: 10px 25px;
+  margin-bottom: 0px;
 }
 /* mobile media query */
 @media only screen and (max-device-width: 480px) {
   #hero-section-jumbotron {
+    height: auto;
     background-size: auto;
   }
 }
