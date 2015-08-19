@@ -83,6 +83,7 @@ $(document).ready(function() {
   $("#submit-button").click(function(evt) {
 
     var isValid = true;
+
     // show errors if form is not valid
     if ($("#driver-form")[0].checkValidity() === false) {      
       showValidationErrors();
@@ -91,29 +92,37 @@ $(document).ready(function() {
     }
 
     // if the data is validated,
-    // format data for firebase
-    // additional user data grabbed here
     if (isValid) {
 
-
+      // format data for firebase
+      // additional user data grabbed here
       var data = formatFirebaseData();
 
       // send data to firebase
       var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/landingPageSignups");
       firebaseRef.push(data, function(error) {
 
-        // if not successful, display error in thank you modal
+        // if firebase fails, display error message
+        // note: (if the modal doesn't exist, this will still work)
         if (error) {
           $(".thank-you-message").html("Whoops, there was an error. Please try again or contact us below");
           $(".form-error-message").html("Whoa, we had an error. Please contact us");
         }
+
+        else {
+
+          // show thank you messages
+          // $('#thank-you-modal').modal('toggle');  // don't show modal
+          $(".form-error-message").css("display", 'none');
+          $(".form-success-message").toggle();
+          $("#submit-button").attr("disabled", true);
+
+          // redirect to thank you page
+          window.location.href = "thanks.html";
+
+        }
       });
 
-      // show thank you messages
-      $('#thank-you-modal').modal('toggle');
-      $(".form-error-message").toggle();
-      $(".form-success-message").toggle();
-      $("#submit-button").attr("disabled", true);
     }
   
   });
