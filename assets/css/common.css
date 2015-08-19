@@ -104,12 +104,16 @@ BOX (for misc pages)
   -moz-border-radius: 7px;
   border-radius: 7px;
   background-color: white;
+  border: 1px solid #ccc;
 }
 .box__title {
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 .box__label {
   font-weight: 600;
+  margin-top: 15px;
 }
 /* -----------------
 FOOTER

@@ -4,14 +4,14 @@ $(document).ready(function () {
   // lead gen hero content
   var jobs_hero_context = {
     "slogan" : "Grab your keys and make more money",
-    "description" : "We offer free consultations to match you with well-paying, flexible driving jobs, including Uber, Lyft, Instacart, Postmates, Doordash, and dozens more.",
+    "description" : "We match you with flexible driving jobs, so you can work when you want and maximize your income. Work for Uber, Lyft, Instacart, and more when you can make the most money. No more downtime and wasting gas. Approval is fast, easy, and free.",
   }
   $(".jobs-hero").html(Handlebars.templates.jobs_hero(jobs_hero_context));
 
 
   // lead gen single-page form
   var single_slide_context = {
-    "heading" : "Enter your info",
+    "heading" : "Sign up to drive",
     "caption" : "Just a few questions and you're done!",
     'cities': [
       'SF',

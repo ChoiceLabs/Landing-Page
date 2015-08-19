@@ -38,8 +38,10 @@ $(document).ready(function () {
 
 
   driver_registration_thanks_context = {
+    "title" : "Thanks for signing up!",
+    "message" : "A member of our team will contact you shortly to schedule your free consultation. In the mean time, if you have any questions, feel free to reach out!",
     "email" : "chris@getchoice.io",
-    "phone" : "(123) 456-7890"
+    "phone" : "(123) 456-7890",
   }
   $('.thanks-placeholder').html(Handlebars.templates.driver_registration_thanks(driver_registration_thanks_context));
 

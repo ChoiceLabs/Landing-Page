@@ -83,7 +83,6 @@ $(document).ready(function() {
   $("#submit-button").click(function(evt) {
 
     var isValid = true;
-
     // show errors if form is not valid
     if ($("#driver-form")[0].checkValidity() === false) {      
       showValidationErrors();
