@@ -35,4 +35,14 @@ $(document).ready(function () {
   }
   $(".simple-contact-placeholder").html(Handlebars.templates.simple_contact(simple_contact_context));
 
+
+  var thanks_context = {
+    "title" : "Thanks for signing up!"
+    "message" : "A member of our team will contact you shortly to schedule your free consultation",
+    "email" : "chris@getchoice.io",
+    "phone" : "123-456-7890"
+  }
+  $(".thanks-placeholder").html(Handlebars.templates.thanks(thanks_context));
+
+
 });

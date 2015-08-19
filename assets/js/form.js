@@ -112,11 +112,10 @@ $(document).ready(function() {
     }
 
     // if the data is validated,
-    // format data for firebase
-    // additional user data grabbed here
     if (isValid) {
 
-
+      // format data for firebase
+      // additional user data grabbed here
       var data = formatFirebaseData();
 
       // send data to firebase
@@ -128,21 +127,25 @@ $(document).ready(function() {
           $(".thank-you-message").html("Whoops, there was an error. Please try again or contact us below");
           $(".form-error-message").html("Whoa, we had an error. Please contact us");
         }
+        else {
+
+          // show thank you messages
+          // $('#thank-you-modal').modal('toggle');  // don't show modal
+          $(".form-error-message").css("display", 'none');
+          $(".form-success-message").toggle();
+          $("#submit-button").attr("disabled", true);
+
+          // redirect to thank you page
+          window.location.href = "thanks.html";
+        }
       });
 
-      // show thank you messages
-      $('#thank-you-modal').modal('toggle');
-      $(".form-error-message").css("display", "none");
-      $(".form-success-message").css("display", "block");
-
-      // disable submit button
-      $("#submit-button").attr("disabled", true);
-      $("#submit-button").css("background-color", "#ccc");
-
       // clear fields
+      /*
       $("#driver-form")[0].reset();
       $("input.visited").removeClass("visited");
       $(".item-selected").removeClass("item-selected");
+      */
     }
   
   });
