@@ -30,12 +30,14 @@ $(document).ready(function () {
 
 
   var simple_contact_context = {
+    "title" : "Contact Us",
   	"email" : "chris@getchoice.io",
   	"phone" : "123-456-7890"
   }
   $(".simple-contact-placeholder").html(Handlebars.templates.simple_contact(simple_contact_context));
 
 
+<<<<<<< HEAD
 
   driver_registration_thanks_context = {
     "title" : "Thanks for signing up!",
@@ -44,6 +46,15 @@ $(document).ready(function () {
     "phone" : "(123) 456-7890",
   }
   $('.thanks-placeholder').html(Handlebars.templates.driver_registration_thanks(driver_registration_thanks_context));
+=======
+  var thanks_context = {
+    "title" : "Thanks for signing up!",
+    "message" : "A member of our team will contact you shortly to schedule your free consultation. In the mean time, if you have any questions, please feel free to contact us.",
+    "email" : "chris@getchoice.io",
+    "phone" : "123-456-7890"
+  }
+  $(".thanks-placeholder").html(Handlebars.templates.thanks(thanks_context));
+>>>>>>> neilsharma
 
 
 });
