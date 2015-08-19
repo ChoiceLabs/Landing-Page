@@ -91,6 +91,7 @@ header {
 @media only screen and (max-device-width: 480px) {
   header {
     height: 45px;
+    text-align: center;
   }
   #logo {
     display: inline-block;
