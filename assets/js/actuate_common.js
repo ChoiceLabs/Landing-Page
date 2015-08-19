@@ -30,6 +30,7 @@ $(document).ready(function () {
 
 
   var simple_contact_context = {
+    "title" : "Contact Us",
   	"email" : "chris@getchoice.io",
   	"phone" : "123-456-7890"
   }
@@ -37,8 +38,8 @@ $(document).ready(function () {
 
 
   var thanks_context = {
-    "title" : "Thanks for signing up!"
-    "message" : "A member of our team will contact you shortly to schedule your free consultation",
+    "title" : "Thanks for signing up!",
+    "message" : "A member of our team will contact you shortly to schedule your free consultation. In the mean time, if you have any questions, please feel free to contact us.",
     "email" : "chris@getchoice.io",
     "phone" : "123-456-7890"
   }
