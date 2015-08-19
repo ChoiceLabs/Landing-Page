@@ -128,7 +128,6 @@ $(document).ready(function() {
           $(".form-error-message").html("Whoa, we had an error. Please contact us");
         }
         else {
-<<<<<<< HEAD
           // show thank you messages
           //$('#thank-you-modal').modal('toggle');
           $(".form-error-message").css("display", 'none');
@@ -140,21 +139,7 @@ $(document).ready(function() {
           window.location.href = "thanks.html";
         }
       });
-
-=======
-
-          // show thank you messages
-          // $('#thank-you-modal').modal('toggle');  // don't show modal
-          $(".form-error-message").css("display", 'none');
-          $(".form-success-message").toggle();
-          $("#submit-button").attr("disabled", true);
-
-          // redirect to thank you page
-          window.location.href = "thanks.html";
-        }
-      });
-
->>>>>>> neilsharma
+      
       // clear fields
       /*
       $("#driver-form")[0].reset();
