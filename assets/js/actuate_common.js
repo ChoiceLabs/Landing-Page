@@ -35,4 +35,13 @@ $(document).ready(function () {
   }
   $(".simple-contact-placeholder").html(Handlebars.templates.simple_contact(simple_contact_context));
 
+
+
+  driver_registration_thanks_context = {
+    "email" : "chris@getchoice.io",
+    "phone" : "(123) 456-7890"
+  }
+  $('.thanks-placeholder').html(Handlebars.templates.driver_registration_thanks(driver_registration_thanks_context));
+
+
 });
