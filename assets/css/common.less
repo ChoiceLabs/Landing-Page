@@ -10,11 +10,9 @@ VARIABLES
 @active-green: #53a267;
 @dark-green: #2B8655; /* used in gradients */
 
-
-@dull-black: #313131;
-
-/* fonts */
+/* blacks */
 @black: #444;
+@dark-black: #313131;
 
 /* boxes/cards */
 @box-border-color: #bbb;
@@ -55,27 +53,50 @@ body, html {
 
 
 /*  ----------------
-HEADER (relative)
+HEADER
 ------------------ */
 
 header {
   position: relative;
   height: 85px;
-  background-color: @dull-black;
-  .linear-gradient(@dull-black, #222);
+  background-color: @dark-black;
+  .linear-gradient(@dark-black, #222);
   box-shadow: 0px 3px 5px 0px rgba(0,0,0, .3);
 }
 
 #logo {
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
 }
 
 #logo-image {
   height: 25px;
   margin-top: 26px;
+}
+
+
+
+/* mobile media query */
+@media only screen and (max-device-width: 480px) {
+
+  header {
+    height: 45px;
+    text-align: center;
+  }
+
+  #logo {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  #logo-image {
+    height: 25px;
+    margin-top: 10px;
+  }
 
 }
+
+
 
 
 
@@ -84,7 +105,7 @@ header {
 FOOTER
 ------------------ */
 footer {
-  background-color: @dull-black;
+  background-color: @dark-black;
   padding: 15px;
 }
 

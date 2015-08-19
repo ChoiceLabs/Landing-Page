@@ -1,14 +1,31 @@
 $(document).ready(function () {
 
   // Landing page content
+
+  // hero section
   var hero_context = {};
   $('.hero-placeholder').html(Handlebars.templates.hero(hero_context));
 
-  var how_it_works_context = {};
-  $('.how-it-works-placeholder').html(Handlebars.templates.how_it_works(how_it_works_context));
+  // signup form (entire section)
+  var signup_form_section_context = {};
+  $(".signup-section-placeholder").html(Handlebars.templates.signup_form_section(signup_form_section_context));
 
-  var why_choice_context = {};
-  $('.why-choice-placeholder').html(Handlebars.templates.why_choice(why_choice_context));
+
+  // signup form (just the form)
+  var signup_form_context = {};
+  $(".signup-form-placeholder").html(Handlebars.templates.signup_form(signup_form_context));
+
+
+
+  // How Choice Works
+  var how_choice_works_context = {};
+  $('.how-choice-works-placeholder').html(Handlebars.templates.getting_started(how_choice_works_context));
+
+  //var how_it_works_context = {};
+  //$('.how-it-works-placeholder').html(Handlebars.templates.how_it_works(how_it_works_context));
+
+  //var why_choice_context = {};
+  //$('.why-choice-placeholder').html(Handlebars.templates.why_choice(why_choice_context));
 
   var worker_faq_context = {
     "question1" : "What is Choice",
@@ -58,12 +75,4 @@ $(document).ready(function () {
 
   $('.worker-faq-placeholder').html(Handlebars.templates.worker_faq(worker_faq_context));
 
-
-
-  var signup_form_context = {};
-  $(".signup-placeholder").html(Handlebars.templates.signup_form(signup_form_context));
-
-
-  var getting_started_context = {};
-  $('.getting-started-placeholder').html(Handlebars.templates.getting_started(getting_started_context));
 });

@@ -6,13 +6,19 @@
 HERO SECTION
 ------------------*/
 #hero-section-jumbotron {
-  background: url("../images/background2.jpg");
+  background: url("../images/background4.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 500px;
-  z-index: -1;
+  height: 800px;
+  padding: 20px 0px;
 }
 
+#black-overlay {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  background-color: rgba(0,0,0,.5);
+}
 
 
 #slogan-container {
@@ -20,7 +26,6 @@ HERO SECTION
   .border-radius(7px);
   margin-bottom: 10px;
   text-align: center;
-  background-color: rgba(0,0,0,.5);
 }
 
 .choice-slogan {
@@ -28,6 +33,7 @@ HERO SECTION
   font-size: 3.4em;
   font-weight: 600;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 
 p.choice-description {
@@ -179,7 +185,7 @@ FAQ
 ------------- */
 
 .panel-group {
-  border: 1px solid @dull-black;
+  border: 1px solid @dark-black;
 }
 
 .panel-group .panel {
@@ -187,7 +193,7 @@ FAQ
   box-shadow: none;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid @dull-black;
+  border-bottom: 1px solid @dark-black;
   margin: 0;
   
 }
@@ -214,7 +220,7 @@ FAQ
 
 .panel-title {
   font-size: 1.3em;
-  color: @dull-black;
+  color: @dark-black;
   padding: 10px;
   font-weight: 600;
   display: block;

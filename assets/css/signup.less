@@ -1,11 +1,29 @@
 @import "./common.less";
 @import "./form.less";
 
+/* -------------
+HEADER (overwrite)
+---------------*/
+header {
+  height: 45px;
+}
+
+#logo {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+
+#logo-image {
+  height: 25px;
+  margin-top: 10px;
+}
+
 
 
 
 /* ----------------
-JUMBOTRON
+HERO JUMBOTRON
 ------------------*/
 #top-jumbotron {
   .linear-gradient(@green, @dark-green);
@@ -21,9 +39,8 @@ JUMBOTRON
 }
 
 #jobs-slogan {
-  margin-bottom: 30px;
+  margin: 25px 0px;
   font-size: 2.5em;
-  margin-top: 40px;
   color: white;
   text-align: center;
 }
@@ -35,7 +52,9 @@ JUMBOTRON
 }
 
 
-/* features */
+/* ----------
+FEATURES
+----------- */
 .feature-column {
   margin-top: 30px;
 }
@@ -57,12 +76,12 @@ p.feature-description {
 }
 
 
-/* questions */
-.desired-locations-error {
-  display: none;
-}
 
-/* who we are */
+
+
+/* ----------
+WHO WE ARE
+----------- */
 #who-we-are-container {
   .border-radius();
   background-color: white;
