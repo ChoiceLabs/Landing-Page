@@ -39,13 +39,6 @@ html {
   margin: 0;
   padding: 65px 0px;
 }
-.box {
-  padding: 20px 25px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  background-color: white;
-}
 /*  ----------------
 HEADER
 ------------------ */
@@ -102,6 +95,27 @@ header {
     margin-top: 10px;
   }
 }
+/* ----------------
+BOX
+------------------*/
+.box {
+  padding: 30px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+.box__title {
+  margin: 5px 0px 15px 0px;
+  text-align: center;
+}
+.box__message {
+  text-align: center;
+}
+.box__label {
+  font-weight: 600;
+}
 /* -----------------
 FOOTER
 ------------------ */
@@ -123,12 +137,21 @@ footer {
 FUNCTIONS
 -----------------------*/
 #terms p {
-  font-size: 1.0em;
+  font-size: 1.1em;
+}
+#terms li {
+  font-weight: 200;
 }
 #terms h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-align: center;
 }
 #terms h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+#terms h4 {
   font-size: 1.3em;
 }

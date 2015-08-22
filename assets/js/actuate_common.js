@@ -15,16 +15,12 @@ $(document).ready(function () {
 
 
 
-  var terms_context = {
-  	'terms' : "this is where the terms should go"
-  }
+  var terms_context = {}
   $('.terms-placeholder').html(Handlebars.templates.terms(terms_context));
 
 
 
-  var privacy_context = {
-  	"privacy" : "this is where the privacy text should go"
-  }
+  var privacy_context = {}
   $(".privacy-placeholder").html(Handlebars.templates.privacy(privacy_context));
 
 
