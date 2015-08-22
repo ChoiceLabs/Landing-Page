@@ -15,16 +15,12 @@ $(document).ready(function () {
 
 
 
-  var terms_context = {
-  	'terms' : "this is where the terms should go"
-  }
+  var terms_context = {}
   $('.terms-placeholder').html(Handlebars.templates.terms(terms_context));
 
 
 
-  var privacy_context = {
-  	"privacy" : "this is where the privacy text should go"
-  }
+  var privacy_context = {}
   $(".privacy-placeholder").html(Handlebars.templates.privacy(privacy_context));
 
 
@@ -32,7 +28,7 @@ $(document).ready(function () {
   var simple_contact_context = {
     "title" : "Contact Us",
   	"email" : "chris@getchoice.io",
-  	"phone" : "123-456-7890"
+  	"phone" : "(888) 720-7272"
   }
   $(".simple-contact-placeholder").html(Handlebars.templates.simple_contact(simple_contact_context));
 
@@ -41,7 +37,7 @@ $(document).ready(function () {
     "title" : "Thanks for signing up!",
     "message" : "A member of our team will contact you shortly to schedule your free consultation. In the mean time, if you have any questions, please feel free to contact us.",
     "email" : "chris@getchoice.io",
-    "phone" : "123-456-7890"
+    "phone" : "(888) 720-7272"
   }
   $(".thanks-placeholder").html(Handlebars.templates.thanks(thanks_context));
 

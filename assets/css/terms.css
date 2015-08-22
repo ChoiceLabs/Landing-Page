@@ -157,12 +157,21 @@ footer {
 FUNCTIONS
 -----------------------*/
 #terms p {
-  font-size: 1.0em;
+  font-size: 1.1em;
+}
+#terms li {
+  font-weight: 200;
 }
 #terms h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-align: center;
 }
 #terms h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+#terms h4 {
   font-size: 1.3em;
 }
