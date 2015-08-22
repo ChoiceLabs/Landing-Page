@@ -30,18 +30,17 @@ $(document).ready(function () {
   var worker_faq_context = {
     "question1" : "What is Choice",
     "answer1" : [
-      "Choice was established by ex-Google and startup veterans passionate interest in helping workers maximize their income and earnings and take advantage of the different job opportunities with the advent of different on-demand and gig jobs.",
-      "We are focused on matching workers with well-paying jobs, first in the San Francisco Bay Area then throughout the United States. We look at a worker’s availability, schedule and interest and connect them with the most suitable new jobs to help them make more money and hit their financial goals",
+      "Choice helps you maximize your income and earnings by matching you with well-paying, flexible jobs. Drivers share their availability, schedule and interest and Choice will connect you with the most suitable new jobs for you to choose from, to allow you to make more money and hit your financial goals."
       ],
 
     "question2" : "What kinds of jobs am I matched with",
     "answer2" : [
-      "Choice helps you find full-time, part-time and contracting work in a variety of fields, such as deliveries, valet services, and operations. New jobs are added frequently, and we’re always expanding available positions that we advise workers on",
+      "Choice helps you find full-time, part-time and contract work in a variety of fields, such as deliveries, valet services, and operations. New jobs are added frequently, and we’re always expanding available positions that we advise drivers on.",
       ],
 
     "question3" : "How flexible are Choice jobs",
     "answer3" : [
-      "Our selection of jobs are designed to be as accommodating as possible. Some of our jobs are completely on-demand -- work only when you want for as long or as little as you like. Others vary from part time (a few hours a day or a few days per week) to full time.",
+      "Our selection of jobs are designed to be as accommodating as possible. Some of our jobs are completely on-demand — work only when you want for as long or as little as you like. Others vary from part-time (a few hours a day or a few days per week) to full-time.",
       ],
 
     "question4" : "Would I be a contractor or an employee",
@@ -65,11 +64,6 @@ $(document).ready(function () {
   "question7" : "Where are jobs typically located",
   "answer7" : [
     "Our current jobs are in the San Francisco Bay Area but we are looking at expanding soon.",
-    ],
-
-  "question8" : "How will I be compensated and how often",
-  "answer8" : [
-    "Each of our partners has a different compensation policy. More information can be provided during the consultation.",
     ],
   }
 
