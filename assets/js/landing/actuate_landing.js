@@ -19,13 +19,7 @@ $(document).ready(function () {
 
   // How Choice Works
   var how_choice_works_context = {};
-  $('.how-choice-works-placeholder').html(Handlebars.templates.getting_started(how_choice_works_context));
-
-  //var how_it_works_context = {};
-  //$('.how-it-works-placeholder').html(Handlebars.templates.how_it_works(how_it_works_context));
-
-  //var why_choice_context = {};
-  //$('.why-choice-placeholder').html(Handlebars.templates.why_choice(why_choice_context));
+  $('.how-choice-works-placeholder').html(Handlebars.templates.how_choice_works(how_choice_works_context));
 
   var worker_faq_context = {
     "question1" : "What is Choice",

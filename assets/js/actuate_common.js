@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   var simple_contact_context = {
     "title" : "Contact Us",
-  	"email" : "chris@getchoice.io",
+  	"email" : "info@getchoice.io",
   	"phone" : "(888) 720-7272"
   }
   $(".simple-contact-placeholder").html(Handlebars.templates.simple_contact(simple_contact_context));
@@ -36,8 +36,7 @@ $(document).ready(function () {
   var thanks_context = {
     "title" : "Thanks for signing up!",
     "message" : "A member of our team will contact you shortly to schedule your free consultation. In the mean time, if you have any questions, please feel free to contact us.",
-    "email" : "chris@getchoice.io",
-    "phone" : "(888) 720-7272"
+    "email" : "info@getchoice.io"
   }
   $(".thanks-placeholder").html(Handlebars.templates.thanks(thanks_context));
 
