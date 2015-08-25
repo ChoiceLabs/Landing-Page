@@ -138,6 +138,7 @@ Firebase
 function formatFirebaseData() {
   data = {}
   data["name"] = $("#name-input").val() || "";
+  data["company"] = $("#company-input").val() || "";
   data["phone"] = $("#phone-input").val() || "";
   data["email"] = $("#email-input").val() ||"";
   return data;

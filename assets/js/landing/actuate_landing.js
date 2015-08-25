@@ -6,10 +6,6 @@ $(document).ready(function () {
   var hero_context = {};
   $('.hero-placeholder').html(Handlebars.templates.hero(hero_context));
 
-  // signup form (entire section)
-  var signup_form_section_context = {};
-  $(".signup-section-placeholder").html(Handlebars.templates.signup_form_section(signup_form_section_context));
-
 
   // signup form (just the form)
   var signup_form_context = {};
