@@ -49,8 +49,6 @@ templates['thanks'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function
     + alias3(((helper = (helper = helpers.message || (depth0 != null ? depth0.message : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"message","hash":{},"data":data}) : helper)))
     + " </p>\n          <h4 class=\"box__label\"> Email </h4>\n          <h4 class=\"box__label_content\"> "
     + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
-    + " </h4>\n          <h4 class=\"box__label\"> Phone </h4>\n          <h4 class=\"box__label_content\"> "
-    + alias3(((helper = (helper = helpers.phone || (depth0 != null ? depth0.phone : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"phone","hash":{},"data":data}) : helper)))
     + " </h4>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>";
 },"useData":true});
 templates['getting_started'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
