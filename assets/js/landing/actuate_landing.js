@@ -57,7 +57,7 @@ $(document).ready(function () {
 
   "question7" : "Where are jobs typically located",
   "answer7" : [
-    "Our current jobs are in the San Francisco Bay Area but we are looking at expanding soon.",
+    "Our current jobs are in the San Francisco Bay Area but we are expanding soon.",
     ],
   }
 
