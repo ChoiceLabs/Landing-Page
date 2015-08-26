@@ -58,4 +58,9 @@ $(document).ready(function () {
   }
   $('.partner-faq-placeholder').html(Handlebars.templates.partner_faq(partner_faq_context));
 
+
+
+  var navigation_placeholder_context = {}
+  $('.navigation-placeholder').html(Handlebars.templates.footer_navigation(navigation_placeholder_context));
+
 });

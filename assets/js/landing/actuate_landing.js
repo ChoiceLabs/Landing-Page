@@ -59,4 +59,11 @@ $(document).ready(function () {
 
   $('.worker-faq-placeholder').html(Handlebars.templates.worker_faq(worker_faq_context));
 
+
+
+  var navigation_placeholder_context = {}
+  $('.navigation-placeholder').html(Handlebars.templates.footer_navigation(navigation_placeholder_context));
+
 });
+
+

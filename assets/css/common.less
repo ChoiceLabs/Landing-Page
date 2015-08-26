@@ -10,6 +10,12 @@ VARIABLES
 @active-green: #53a267;
 @dark-green: #2B8655; /* used in gradients */
 
+/* orange */
+@orange: #58B16E;
+@hover-orange: #63bb79;
+@active-orange: #53a267;
+@dark-orange: #2B8655; /* used in gradients */
+
 /* blacks */
 @black: #444;
 @dark-black: #313131;
@@ -59,7 +65,7 @@ header {
 }
 
 #logo {
-  display: inline-block;
+  display: inline;
   height: 100%;
 }
 
@@ -86,6 +92,10 @@ ul.header-links {
     text-decoration: none;
 
   }
+}
+
+.mobile-header {
+  display: none;
 }
 
 
@@ -141,6 +151,54 @@ BOX
 /* -----------------
 FOOTER
 ------------------ */
+
+.primary-navigation-footer {
+  background-color: #444;
+}
+
+.primary-navigation-footer__description {
+  text-align: center;
+  color: white;
+}
+
+.primary-navigation-footer__link {
+  color: white;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 20px;
+}
+
+.primary-navigation-footer__link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.primary-navigation-footer__link--orange {
+  background-color: @orange;
+}
+.primary-navigation-footer__link--orange:hover {
+  background-color: @hover-orange;
+}
+.primary-navigation-footer__link--orange:active {
+  background-color: @active-orange;
+}
+
+.primary-navigation-footer__link--green {
+  background-color: @orange;
+}
+.primary-navigation-footer__link--green:hover {
+  background-color: @hover-green;
+}
+.primary-navigation-footer__link--green:active {
+  background-color: @active-green;
+}
+
+
+
+
 footer {
   background-color: @dark-black;
   padding: 15px;
@@ -212,4 +270,36 @@ FUNCTIONS
   background: -ms-linear-gradient(top,  @top 0%,@bottom 100%); /* IE10+ */
   background: linear-gradient(to bottom,  @top 0%,@bottom 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@top', endColorstr='@bottom',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* mobile media query */
+@media only screen and (max-device-width: 480px) {
+
+
+  .mobile-header {
+    display: block;
+    height: 85px;
+  }
+
+  .desktop-header {
+    //display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  ul.header-links {
+    margin: 20px auto 10px auto;
+    padding: 0;
+    float: none;
+
+    li > a {
+      float: none;
+
+    }
+  }
+
+
 }

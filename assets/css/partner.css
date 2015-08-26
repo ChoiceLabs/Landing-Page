@@ -151,17 +151,31 @@ FOOTER
   margin: 0 auto;
   display: block;
   width: 100%;
-  font-size: 1.4em;
+  text-align: center;
+  font-size: 1.1em;
   padding: 20px;
 }
-.primary-navigation-footer:hover {
+.primary-navigation-footer__link:hover {
   text-decoration: none;
+  color: white;
 }
 .primary-navigation-footer__link--orange {
   background-color: #58b16e;
 }
+.primary-navigation-footer__link--orange:hover {
+  background-color: #63bb79;
+}
+.primary-navigation-footer__link--orange:active {
+  background-color: #53a267;
+}
 .primary-navigation-footer__link--green {
   background-color: #58b16e;
+}
+.primary-navigation-footer__link--green:hover {
+  background-color: #63bb79;
+}
+.primary-navigation-footer__link--green:active {
+  background-color: #53a267;
 }
 footer {
   background-color: #313131;
@@ -510,7 +524,7 @@ FUNCTIONS
 HERO SECTION
 ------------------*/
 #hero-section-jumbotron {
-  background: url("../images/background4.jpg");
+  background: url("../images/background6.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 800px;
