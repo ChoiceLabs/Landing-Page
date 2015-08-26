@@ -1,5 +1,18 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['about'] = template({"1":function(depth0,helpers,partials,data) {
+    return "            <p> "
+    + this.escapeExpression(this.lambda(depth0, depth0))
+    + "</p>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"jumbotron\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-6 col-md-offset-3\">\n        <div class=\"box\">\n          <h2 class=\"box__title\"> About Choice </h2>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.about : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "          <h2 class=\"box__title\"> Team </h2>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.team : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "          <h2 class=\"box__title\"> Contact Us </h2>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>";
+},"useData":true});
 templates['driver_registration_thanks'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -54,7 +67,7 @@ templates['thanks'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function
     + " </h4>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>";
 },"useData":true});
 templates['footer_navigation'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"jumbotron primary-navigation-footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-4 col-md-offset-4\">\n        <h3 class=\"primary-navigation-footer__description\"> Need drivers? </h3> \n        <a class=\"primary-navigation-footer__link primary-navigation-footer__link--orange\" href=\"index.html\"> BECOME A MERCHANT PARTNER </a>\n      </div>\n    </div>\n  </div>\n</div>";
+    return "<div class=\"jumbotron primary-navigation-footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-4 col-md-offset-4\">\n        <h3 class=\"primary-navigation-footer__description\"> Need drivers? </h3> \n        <a class=\"primary-navigation-footer__link primary-navigation-footer__link--orange\" href=\"partners.html\"> BECOME A MERCHANT PARTNER </a>\n      </div>\n    </div>\n  </div>\n</div>";
 },"useData":true});
 templates['getting_started'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"jumbotron\" id=\"getting-started-container\">\n  <div class=\"container\">\n    <div class=\"row\">\n\n      <div class=\"col-md-12\">\n        <h2 class=\"section-header\"> How Choice Works </h2>\n      </div>\n\n    </div>\n\n    <div class=\"row\" id=\"getting-started\">\n      <div class=\"col-md-4\">\n        <img class=\"getting-started__image\" src=\"assets/images/call.png\">\n        \n        <p class=\"getting-started__title\"> 1. &nbsp Sign up for a free phone consultation </p>\n        <p class=\"getting-started__description\"> <a href=\"#signup-form-container\">Schedule a 30 minute informational call</a> to learn about your interests and availability. </p>\n      </div>\n      <div class=\"col-md-4\">\n        <img class=\"getting-started__image\" src=\"assets/images/connect.png\">\n        \n        <p class=\"getting-started__title\"> 2. &nbsp We'll find multiple jobs near you </p>\n        <p class=\"getting-started__description\"> Based on your information, we'll match you with suitable driving jobs and guide you through the application process. </p>\n      </div>\n      <div class=\"col-md-4\">\n        <img class=\"getting-started__image\" src=\"assets/images/choice-icon.png\">\n        <p class=\"getting-started__title\"> 3. &nbsp Download the Choice App for more flexible work</p>\n        <p class=\"getting-started__description\"> Use the Choice mobile app to find additional driving and on demand work from our hand-selected partners. </p>\n      </div>\n    </div>\n  </div>\n</div>";
