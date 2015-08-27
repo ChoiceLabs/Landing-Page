@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400);
 /* -----------------
 VARIABLES
 ------------------ */
@@ -11,21 +13,12 @@ VARIABLES
 /* -----------------
 GENERAL
 ------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-button,
-p,
-span,
-label {
-  font-family: "Lato";
-}
-h1 {
-  font-size: 3em;
+/* base size is 16px */
+p {
+  text-rendering: geometricPrecision;
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 1.25em;
 }
 body,
 html {
@@ -136,6 +129,15 @@ BOX
 .box__label {
   font-weight: 600;
 }
+/* ----------------
+SECTIONS
+------------------*/
+.section-header {
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.5em;
+}
 /* -----------------
 FOOTER
 ------------------ */
@@ -216,23 +218,4 @@ MOBILE
   ul.header-links li > a {
     float: none;
   }
-}
-#terms p {
-  font-size: 1.1em;
-}
-#terms li {
-  font-weight: 200;
-}
-#terms h2 {
-  font-size: 1.7em;
-  text-align: center;
-}
-#terms h3 {
-  font-size: 1.5em;
-  font-weight: 600;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-#terms h4 {
-  font-size: 1.3em;
 }

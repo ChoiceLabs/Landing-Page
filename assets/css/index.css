@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400);
 /* -----------------
 VARIABLES
 ------------------ */
@@ -11,21 +13,12 @@ VARIABLES
 /* -----------------
 GENERAL
 ------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-button,
-p,
-span,
-label {
-  font-family: "Lato";
-}
-h1 {
-  font-size: 3em;
+/* base size is 16px */
+p {
+  text-rendering: geometricPrecision;
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 1.25em;
 }
 body,
 html {
@@ -136,6 +129,15 @@ BOX
 .box__label {
   font-weight: 600;
 }
+/* ----------------
+SECTIONS
+------------------*/
+.section-header {
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.5em;
+}
 /* -----------------
 FOOTER
 ------------------ */
@@ -151,17 +153,34 @@ FOOTER
   margin: 0 auto;
   display: block;
   width: 100%;
-  font-size: 1.4em;
+  text-align: center;
+  font-size: 1.1em;
   padding: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
-.primary-navigation-footer:hover {
+.primary-navigation-footer__link:hover {
   text-decoration: none;
+  color: white;
 }
 .primary-navigation-footer__link--orange {
   background-color: #58b16e;
 }
+.primary-navigation-footer__link--orange:hover {
+  background-color: #63bb79;
+}
+.primary-navigation-footer__link--orange:active {
+  background-color: #53a267;
+}
 .primary-navigation-footer__link--green {
   background-color: #58b16e;
+}
+.primary-navigation-footer__link--green:hover {
+  background-color: #63bb79;
+}
+.primary-navigation-footer__link--green:active {
+  background-color: #53a267;
 }
 footer {
   background-color: #313131;
@@ -180,7 +199,9 @@ footer {
 /* ---------------------
 FUNCTIONS
 -----------------------*/
-/* mobile media query */
+/* -------------
+MOBILE
+--------------*/
 @media only screen and (max-device-width: 480px) {
   .mobile-header {
     display: block;
@@ -538,7 +559,6 @@ HERO SECTION
 }
 p.choice-description {
   color: white;
-  font-size: 1.7em;
   font-weight: 300;
 }
 /* -----------------
@@ -553,12 +573,6 @@ FORM
 /* -----------------
 WHY CHOICE
 ------------------*/
-.section-header {
-  margin-bottom: 60px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 2.5em;
-}
 #why-choice-container img {
   display: block;
   margin: 0px auto 20px auto;
@@ -601,46 +615,6 @@ GETTING STARTED
   color: #444444;
   text-align: center;
   margin: 20px 0px 5px 0px;
-  font-size: 1.6em;
-}
-#getting-started .getting-started__description {
-  line-height: 1.7em;
-  font-size: 1.2em;
-  font-weight: 300;
-  text-align: center;
-}
-/* -----------------
-HOW IT WORKS
------------------- */
-.phone-screenshot {
-  height: 500px;
-  width: 244px;
-}
-#how-it-works-container {
-  background-color: #DEDEDE;
-}
-#how-it-works-container img {
-  display: block;
-  margin: 0px auto 20px auto;
-}
-#how-it-works-container h3 {
-  font-weight: 600px;
-  color: #444444;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8em;
-}
-#how-it-works-container p {
-  line-height: 1.7em;
-  font-size: 1.4em;
-  font-weight: 300;
-  text-align: center;
-}
-#how-it-works-container .section-header {
-  margin-bottom: 60px;
-}
-#how-it-works-container .caption {
-  text-align: center;
 }
 /* -----------
 FAQ
@@ -669,7 +643,6 @@ FAQ
   background-color: #eee;
 }
 .panel-title {
-  font-size: 1.3em;
   color: #313131;
   padding: 10px;
   font-weight: 600;
@@ -682,12 +655,7 @@ FAQ
 }
 .panel-body {
   background-color: white;
-  padding: 0;
-}
-p.answer {
-  font-size: 1.3em;
-  padding: 10px 25px;
-  margin-bottom: 0px;
+  padding: 0px 25px;
 }
 /* ----------------
 MOBILE 
