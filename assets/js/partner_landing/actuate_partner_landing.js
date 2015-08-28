@@ -61,6 +61,6 @@ $(document).ready(function () {
 
 
   var navigation_placeholder_context = {}
-  $('.navigation-placeholder').html(Handlebars.templates.footer_navigation(navigation_placeholder_context));
+  $('.navigation-placeholder').html(Handlebars.templates.partner_footer_navigation(navigation_placeholder_context));
 
 });

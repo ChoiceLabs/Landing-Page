@@ -4,7 +4,7 @@ $(document).ready(function () {
   // lead gen hero content
   var jobs_hero_context = {
     "slogan" : "Make up to $35/hour",
-    "description" : "We match you with flexible driving jobs, so you can work when you want and maximize your income. Work for Uber, Lyft, Instacart, and more when you can make the most money. No more downtime and wasting gas. Approval is fast, easy, and free.",
+    "description" : "We match you with flexible driving jobs so you can work when you want and maximize your income. Work for Uber, Lyft, Instacart, and more when you can make the most money. No more downtime and wasting gas. Approval is fast, easy, and free.",
   }
   $(".jobs-hero").html(Handlebars.templates.jobs_hero(jobs_hero_context));
 

@@ -1,14 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400);
 /* -----------------
 VARIABLES
 ------------------ */
 /* green */
+/* used in gradients */
+/* orange */
 /* used in gradients */
 /* blacks */
 /* boxes/cards */
 /* -----------------
 GENERAL
 ------------------*/
+/* base size is 16px */
 h1,
 h2,
 h3,
@@ -20,15 +25,33 @@ button,
 p,
 span,
 label {
-  font-family: "Lato";
+  text-rendering: geometricPrecision;
+}
+p {
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1.6em;
+  font-weight: 500;
+}
+h2 {
+  font-weight: 500;
+  font-size: 2em;
 }
 h1 {
-  font-size: 3em;
+  font-weight: 600;
+  font-size: 2.5em;
 }
 body,
 html {
   height: 100%;
-  background-color: #eee;
+  background-color: white;
 }
 .wrapper {
   min-height: 100%;
@@ -38,12 +61,6 @@ html {
 .jumbotron {
   margin: 0;
   padding: 65px 0px;
-}
-.box {
-  padding: 20px 25px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
   background-color: white;
 }
 /*  ----------------
@@ -80,17 +97,36 @@ header {
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
 }
 #logo {
-  display: inline-block;
+  display: inline;
   height: 100%;
 }
 #logo-image {
   height: 25px;
   margin-top: 26px;
 }
+ul.header-links {
+  float: right;
+  display: block;
+  margin-top: 27px;
+}
+ul.header-links li {
+  display: inline;
+}
+ul.header-links li > a {
+  float: left;
+  margin: 0px 20px;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+}
+.mobile-header {
+  display: none;
+}
 /* mobile media query */
 @media only screen and (max-device-width: 480px) {
   header {
     height: 45px;
+    text-align: center;
   }
   #logo {
     display: inline-block;
@@ -101,9 +137,87 @@ header {
     margin-top: 10px;
   }
 }
+/* ----------------
+BOX
+------------------*/
+.box {
+  padding: 30px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: #eee;
+  border: 1px solid #bbb;
+}
+.box__title {
+  margin: 5px 0px 15px 0px;
+  text-align: center;
+}
+.box__message {
+  text-align: center;
+}
+/* ----------------
+SECTIONS
+------------------*/
+.section-header {
+  margin-bottom: 65px;
+  margin-top: 0px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.5em;
+}
 /* -----------------
 FOOTER
 ------------------ */
+.primary-navigation-footer {
+  background-color: #444;
+}
+.primary-navigation-footer__description {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+.primary-navigation-footer__link {
+  color: white;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.primary-navigation-footer__link:hover {
+  text-decoration: none;
+  color: white;
+}
+.primary-navigation-footer__link:active {
+  text-decoration: none;
+  color: white;
+}
+.primary-navigation-footer__link:focus {
+  text-decoration: none;
+  color: white;
+}
+.primary-navigation-footer__link--orange {
+  background-color: #58b16e;
+}
+.primary-navigation-footer__link--orange:hover {
+  background-color: #63bb79;
+}
+.primary-navigation-footer__link--orange:active {
+  background-color: #53a267;
+}
+.primary-navigation-footer__link--green {
+  background-color: #58b16e;
+}
+.primary-navigation-footer__link--green:hover {
+  background-color: #63bb79;
+}
+.primary-navigation-footer__link--green:active {
+  background-color: #53a267;
+}
 footer {
   background-color: #313131;
   padding: 15px;
@@ -121,6 +235,26 @@ footer {
 /* ---------------------
 FUNCTIONS
 -----------------------*/
+/* -------------
+MOBILE
+--------------*/
+@media only screen and (max-device-width: 480px) {
+  .mobile-header {
+    display: block;
+    height: 85px;
+  }
+  #logo {
+    display: inline;
+  }
+  ul.header-links {
+    margin: 20px auto 10px auto;
+    padding: 0;
+    float: none;
+  }
+  ul.header-links li > a {
+    float: none;
+  }
+}
 /* @import "./common.less"; */
 /* checkbox */
 /* -------------
@@ -136,13 +270,11 @@ form {
   border-radius: 7px;
 }
 .form-title {
-  font-size: 1.7em;
   font-weight: 700;
   margin: 10px 0px 20px 0px;
   text-align: center;
 }
 p.form-caption {
-  font-size: 1.8em;
   text-align: center;
   font-weight: 600;
   margin: 0px 0px 20px 0px;
@@ -372,7 +504,6 @@ ERROR
 p.form-error-message {
   display: none;
   color: #ef6868;
-  font-size: 1.1em;
   text-align: center;
   margin-top: 5px;
 }
@@ -380,52 +511,48 @@ p.form-success-message {
   color: #58b16e;
   display: none;
   font-weight: 400;
-  font-size: 1.1em;
   text-align: center;
   margin-top: 5px;
 }
 /* individual input error message */
 p.validation-error {
   color: #ef6868;
-  font-size: 1.1em;
   display: none;
   margin-bottom: 5px;
+  margin-top: 0px;
 }
 /* ---------------
 THANK YOU MODAL
------------------*/
+-----------------
 .modal-content {
-  -webkit-border-bottom-right-radius: 6px;
-  -webkit-border-bottom-left-radius: 6px;
-  -moz-border-radius-bottomright: 6px;
-  -moz-border-radius-bottomleft: 6px;
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
+  .bottom-border-radius(6px);
 }
+
 .modal-header {
   text-align: center;
-  background-color: #58b16e;
-  -webkit-border-top-left-radius: 6px;
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  -moz-border-radius-topright: 6px;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  background-color: @green;
+  .top-border-radius(6px);
 }
+
 .modal-title {
   font-weight: 600;
   font-size: 1.4em;
   color: white;
 }
+
 .modal-body {
   padding: 25px;
 }
+
 .bold {
   font-weight: 600;
 }
+
 .close-link {
   cursor: pointer;
 }
+
+*/
 /* ----------------
 FUNCTIONS 
 ------------------*/
@@ -481,13 +608,11 @@ HERO JUMBOTRON
 }
 #jobs-slogan {
   margin: 25px 0px;
-  font-size: 2.5em;
   color: white;
   text-align: center;
 }
 #jobs-description {
   color: white;
-  font-size: 1.4em;
   text-align: center;
 }
 /* ----------
@@ -502,11 +627,9 @@ FEATURES
 }
 .feature-title {
   text-align: center;
-  font-size: 1.8em;
 }
 p.feature-description {
   text-align: center;
-  font-size: 1.3em;
 }
 /* ----------
 WHO WE ARE

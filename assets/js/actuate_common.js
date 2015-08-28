@@ -44,7 +44,7 @@ $(document).ready(function () {
   var about_context = {
     "about"  : [
       "Choice is a marketplace for on-demand labor, providing merchants and workers with an easy option to optimize and organize flexible work.",
-      "Using a patent pending technology and process (including GPS, user preferences and demand of a worker’s skills), the ChoiceTM - developed platform matches workers with flexible job opportunities with an eye toward maximizing earnings. Workers choose jobs that accommodate their schedules and interests, while enabling merchants to dynamically increase their work demands with qualified contractors, during peak times."
+      "Using a patent pending technology and process (including GPS, user preferences and demand of a worker’s skills), the Choice - developed platform matches workers with flexible job opportunities with an eye toward maximizing earnings. Workers choose jobs that accommodate their schedules and interests, while enabling merchants to dynamically increase their work demands with qualified contractors, during peak times."
     ],
     "team" : [
       "Choice was started by a team of ex-Google and startup veterans, passionate about leveraging technology to dramatically increase the quality of life of workers in the on-demand economy. Choice make it easy to optimize flexible work in order to maximize worker earnings and minimize employer inefficiencies.",
