@@ -155,6 +155,9 @@ BOX
 .box__message {
   text-align: center;
 }
+.center {
+  text-align: center;
+}
 /* ----------------
 SECTIONS
 ------------------*/

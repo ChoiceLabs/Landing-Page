@@ -35,8 +35,7 @@ $(document).ready(function () {
 
   var thanks_context = {
     "title" : "Thanks for signing up!",
-    "message" : "A member of our team will contact you shortly to schedule your free consultation. In the mean time, if you have any questions, please feel free to contact us.",
-    "email" : "info@getchoice.io"
+    "message" : "A member of our team will contact you shortly to schedule your free consultation. In the mean time, if you have any questions, please feel free to contact us at info@getchoice.io"
   }
   $(".thanks-placeholder").html(Handlebars.templates.thanks(thanks_context));
 

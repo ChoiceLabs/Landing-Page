@@ -119,7 +119,8 @@ $(document).ready(function() {
       var data = formatFirebaseData();
 
       // send data to firebase
-      var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
+      //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/workers");
       firebaseRef.push(data, function(error) {
 
         // if not successful, display error in thank you modal
@@ -161,8 +162,6 @@ Firebase
 function formatFirebaseData() {
   data = {}
   data["name"] = $("#name-input").val() || "";
-  //data["firstName"] = $("#first-name-input").val() || "";
-  //data["lastName"] = $("#last-name-input").val() || "";
   data["phone"] = $("#phone-input").val() || "";
   data["email"] = $("#email-input").val() ||"";
 

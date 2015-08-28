@@ -270,13 +270,11 @@ form {
   border-radius: 7px;
 }
 .form-title {
-  font-size: 1.7em;
   font-weight: 700;
   margin: 10px 0px 20px 0px;
   text-align: center;
 }
 p.form-caption {
-  font-size: 1.8em;
   text-align: center;
   font-weight: 600;
   margin: 0px 0px 20px 0px;
@@ -504,62 +502,60 @@ ERROR
 ----------------- */
 /* cumulative error message */
 p.form-error-message {
+  font-size: 1em;
   display: none;
   color: #ef6868;
-  font-size: 1.1em;
   text-align: center;
   margin-top: 5px;
 }
 p.form-success-message {
+  font-size: 1em;
   color: #58b16e;
   display: none;
   font-weight: 400;
-  font-size: 1.1em;
   text-align: center;
   margin-top: 5px;
 }
 /* individual input error message */
 p.validation-error {
+  font-size: 1em;
   color: #ef6868;
-  font-size: 1.1em;
   display: none;
   margin-bottom: 5px;
+  margin-top: 0px;
 }
 /* ---------------
 THANK YOU MODAL
------------------*/
+-----------------
 .modal-content {
-  -webkit-border-bottom-right-radius: 6px;
-  -webkit-border-bottom-left-radius: 6px;
-  -moz-border-radius-bottomright: 6px;
-  -moz-border-radius-bottomleft: 6px;
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
+  .bottom-border-radius(6px);
 }
+
 .modal-header {
   text-align: center;
-  background-color: #58b16e;
-  -webkit-border-top-left-radius: 6px;
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  -moz-border-radius-topright: 6px;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  background-color: @green;
+  .top-border-radius(6px);
 }
+
 .modal-title {
   font-weight: 600;
   font-size: 1.4em;
   color: white;
 }
+
 .modal-body {
   padding: 25px;
 }
+
 .bold {
   font-weight: 600;
 }
+
 .close-link {
   cursor: pointer;
 }
+
+*/
 /* ----------------
 FUNCTIONS 
 ------------------*/

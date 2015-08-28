@@ -155,6 +155,9 @@ BOX
 .box__message {
   text-align: center;
 }
+.center {
+  text-align: center;
+}
 /* ----------------
 SECTIONS
 ------------------*/
@@ -502,12 +505,15 @@ ERROR
 ----------------- */
 /* cumulative error message */
 p.form-error-message {
+  font-size: 1em;
   display: none;
   color: #ef6868;
   text-align: center;
   margin-top: 5px;
+  margin-bottom: 0px;
 }
 p.form-success-message {
+  font-size: 1em;
   color: #58b16e;
   display: none;
   font-weight: 400;
@@ -516,6 +522,7 @@ p.form-success-message {
 }
 /* individual input error message */
 p.validation-error {
+  font-size: 1em;
   color: #ef6868;
   display: none;
   margin-bottom: 5px;

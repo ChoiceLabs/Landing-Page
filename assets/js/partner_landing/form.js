@@ -99,7 +99,8 @@ $(document).ready(function() {
       var data = formatFirebaseData();
 
       // send data to firebase
-      var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/partnerLandingSignups");
+      //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/partnerLandingSignups");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/partners");
       firebaseRef.push(data, function(error) {
 
         // if firebase fails, display error message
