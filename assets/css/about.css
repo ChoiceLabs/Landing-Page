@@ -14,16 +14,44 @@ VARIABLES
 GENERAL
 ------------------*/
 /* base size is 16px */
-p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+p,
+span,
+label {
   text-rendering: geometricPrecision;
+}
+p {
   line-height: 1.5;
   font-weight: 300;
   font-size: 1.25em;
 }
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.6em;
+  font-weight: 500;
+}
+h2 {
+  font-weight: 500;
+  font-size: 2em;
+}
+h1 {
+  font-weight: 600;
+  font-size: 2.5em;
+}
 body,
 html {
   height: 100%;
-  background-color: #eee;
+  background-color: white;
 }
 .wrapper {
   min-height: 100%;
@@ -33,6 +61,7 @@ html {
 .jumbotron {
   margin: 0;
   padding: 65px 0px;
+  background-color: white;
 }
 /*  ----------------
 HEADER
@@ -116,8 +145,8 @@ BOX
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #eee;
+  border: 1px solid #bbb;
 }
 .box__title {
   margin: 5px 0px 15px 0px;
@@ -126,14 +155,12 @@ BOX
 .box__message {
   text-align: center;
 }
-.box__label {
-  font-weight: 600;
-}
 /* ----------------
 SECTIONS
 ------------------*/
 .section-header {
-  margin-bottom: 60px;
+  margin-bottom: 65px;
+  margin-top: 0px;
   text-align: center;
   font-weight: 800;
   font-size: 2.5em;
@@ -147,6 +174,7 @@ FOOTER
 .primary-navigation-footer__description {
   text-align: center;
   color: white;
+  margin-top: 0;
 }
 .primary-navigation-footer__link {
   color: white;
@@ -161,6 +189,14 @@ FOOTER
   border-radius: 3px;
 }
 .primary-navigation-footer__link:hover {
+  text-decoration: none;
+  color: white;
+}
+.primary-navigation-footer__link:active {
+  text-decoration: none;
+  color: white;
+}
+.primary-navigation-footer__link:focus {
   text-decoration: none;
   color: white;
 }

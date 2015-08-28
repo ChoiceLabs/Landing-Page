@@ -145,8 +145,8 @@ BOX
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #eee;
+  border: 1px solid #bbb;
 }
 .box__title {
   margin: 5px 0px 15px 0px;
@@ -154,9 +154,6 @@ BOX
 }
 .box__message {
   text-align: center;
-}
-.box__label {
-  font-weight: 600;
 }
 /* ----------------
 SECTIONS
