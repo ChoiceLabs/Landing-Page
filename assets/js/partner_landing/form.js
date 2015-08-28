@@ -83,6 +83,7 @@ $(document).ready(function() {
   $("#submit-button").click(function(evt) {
 
     var isValid = true;
+
     // show errors if form is not valid
     if ($("#driver-form")[0].checkValidity() === false) {      
       showValidationErrors();
@@ -98,8 +99,8 @@ $(document).ready(function() {
       var data = formatFirebaseData();
 
       // send data to firebase
-      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/homePageWorkers");
-      //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/landingPageSignups");
+      //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/partnerLandingSignups");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/partners");
       firebaseRef.push(data, function(error) {
 
         // if firebase fails, display error message
@@ -138,6 +139,7 @@ Firebase
 function formatFirebaseData() {
   data = {}
   data["name"] = $("#name-input").val() || "";
+  data["company"] = $("#company-input").val() || "";
   data["phone"] = $("#phone-input").val() || "";
   data["email"] = $("#email-input").val() ||"";
   return data;

@@ -1,14 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400);
 /* -----------------
 VARIABLES
 ------------------ */
 /* green */
+/* used in gradients */
+/* orange */
 /* used in gradients */
 /* blacks */
 /* boxes/cards */
 /* -----------------
 GENERAL
 ------------------*/
+/* base size is 16px */
 h1,
 h2,
 h3,
@@ -20,15 +25,33 @@ button,
 p,
 span,
 label {
-  font-family: "Lato";
+  text-rendering: geometricPrecision;
+}
+p {
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1.6em;
+  font-weight: 500;
+}
+h2 {
+  font-weight: 500;
+  font-size: 2em;
 }
 h1 {
-  font-size: 3em;
+  font-weight: 600;
+  font-size: 2.5em;
 }
 body,
 html {
   height: 100%;
-  background-color: #eee;
+  background-color: white;
 }
 .wrapper {
   min-height: 100%;
@@ -38,6 +61,7 @@ html {
 .jumbotron {
   margin: 0;
   padding: 65px 0px;
+  background-color: white;
 }
 /*  ----------------
 HEADER
@@ -73,12 +97,30 @@ header {
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
 }
 #logo {
-  display: inline-block;
+  display: inline;
   height: 100%;
 }
 #logo-image {
   height: 25px;
   margin-top: 26px;
+}
+ul.header-links {
+  float: right;
+  display: block;
+  margin-top: 27px;
+}
+ul.header-links li {
+  display: inline;
+}
+ul.header-links li > a {
+  float: left;
+  margin: 0px 20px;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+}
+.mobile-header {
+  display: none;
 }
 /* mobile media query */
 @media only screen and (max-device-width: 480px) {
@@ -103,8 +145,8 @@ BOX
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #eee;
+  border: 1px solid #bbb;
 }
 .box__title {
   margin: 5px 0px 15px 0px;
@@ -113,10 +155,11 @@ BOX
 .box__message {
   text-align: center;
 }
-.box__label {
-  font-weight: 600;
+.center {
+  text-align: center;
 }
 /* ----------------
+<<<<<<< HEAD
 BOX (for misc pages)
 ------------------ */
 .box {
@@ -136,9 +179,69 @@ BOX (for misc pages)
   font-weight: 600;
   margin-top: 15px;
 }
+/*
+SECTIONS
+*/
+.section-header {
+  margin-bottom: 65px;
+  margin-top: 0px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.5em;
+}
 /* -----------------
 FOOTER
 ------------------ */
+.primary-navigation-footer {
+  background-color: #444;
+}
+.primary-navigation-footer__description {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+.primary-navigation-footer__link {
+  color: white;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.primary-navigation-footer__link:hover {
+  text-decoration: none;
+  color: white;
+}
+.primary-navigation-footer__link:active {
+  text-decoration: none;
+  color: white;
+}
+.primary-navigation-footer__link:focus {
+  text-decoration: none;
+  color: white;
+}
+.primary-navigation-footer__link--orange {
+  background-color: #58b16e;
+}
+.primary-navigation-footer__link--orange:hover {
+  background-color: #63bb79;
+}
+.primary-navigation-footer__link--orange:active {
+  background-color: #53a267;
+}
+.primary-navigation-footer__link--green {
+  background-color: #58b16e;
+}
+.primary-navigation-footer__link--green:hover {
+  background-color: #63bb79;
+}
+.primary-navigation-footer__link--green:active {
+  background-color: #53a267;
+}
 footer {
   background-color: #313131;
   padding: 15px;
@@ -156,22 +259,33 @@ footer {
 /* ---------------------
 FUNCTIONS
 -----------------------*/
-#terms p {
-  font-size: 1.1em;
+/* -------------
+MOBILE
+--------------*/
+@media only screen and (max-device-width: 480px) {
+  .mobile-header {
+    display: block;
+    height: 85px;
+  }
+  #logo {
+    display: inline;
+  }
+  ul.header-links {
+    margin: 20px auto 10px auto;
+    padding: 0;
+    float: none;
+  }
+  ul.header-links li > a {
+    float: none;
+  }
 }
 #terms li {
   font-weight: 200;
 }
 #terms h2 {
-  font-size: 1.7em;
   text-align: center;
 }
 #terms h3 {
-  font-size: 1.5em;
-  font-weight: 600;
   margin-bottom: 20px;
   margin-top: 30px;
-}
-#terms h4 {
-  font-size: 1.3em;
 }

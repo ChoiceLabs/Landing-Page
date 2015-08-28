@@ -6,10 +6,6 @@ $(document).ready(function () {
   var hero_context = {};
   $('.hero-placeholder').html(Handlebars.templates.hero(hero_context));
 
-  // signup form (entire section)
-  var signup_form_section_context = {};
-  $(".signup-section-placeholder").html(Handlebars.templates.signup_form_section(signup_form_section_context));
-
 
   // signup form (just the form)
   var signup_form_context = {};
@@ -24,7 +20,7 @@ $(document).ready(function () {
   var worker_faq_context = {
     "question1" : "What is Choice",
     "answer1" : [
-      "Choice helps you maximize your income and earnings by matching you with well-paying, flexible jobs. Drivers share their availability, schedule and interest and Choice will connect you with the most suitable new jobs for you to choose from, to allow you to make more money and hit your financial goals."
+      "Choice helps drivers maximize their income and earnings by matching them with well-paying, flexible jobs. Drivers share their availability, schedule and interest and Choice will connect them with the suitable new jobs to choose from, allowing them to make more money and achieve financial goals."
       ],
 
     "question2" : "What kinds of jobs am I matched with",
@@ -44,7 +40,7 @@ $(document).ready(function () {
 
     "question5" : "Would I need my own car",
     "answer5" : [
-      "Many of our jobs do require you to operate your own vehicle. Some of our partners require cars to be of a certain size or year, but others are more inclusive. If you don’t have a car, we can help guide you to obtain one.", 
+      "Many of our jobs do require you to operate your own vehicle. Some of our partners require cars to be of a certain size or year, but others are more accepting. If you don’t have a car, we can help you obtain one.", 
       "There are also some positions that do not require vehicles.",
       ],
 
@@ -57,10 +53,17 @@ $(document).ready(function () {
 
   "question7" : "Where are jobs typically located",
   "answer7" : [
-    "Our current jobs are in the San Francisco Bay Area but we are expanding soon.",
+    "Our current jobs are in the San Francisco Bay Area, but we are expanding soon.",
     ],
   }
 
   $('.worker-faq-placeholder').html(Handlebars.templates.worker_faq(worker_faq_context));
 
+
+
+  var navigation_placeholder_context = {}
+  $('.navigation-placeholder').html(Handlebars.templates.footer_navigation(navigation_placeholder_context));
+
 });
+
+
