@@ -14,30 +14,19 @@ HERO SECTION
   padding: 20px 0px;
 }
 
-#black-overlay {
-  width: 100%;
-  height: 800px;
-  position: absolute;
-  background-color: rgba(0,0,0,.5);
-}
-
 #slogan-container {
-  padding: 15px 0px;
-  .border-radius(7px);
-  margin-bottom: 10px;
+  margin: 25px 0px;
 }
 
 .choice-slogan {
   color: white;
   font-size: 3.4em;
-  font-weight: 600;
   margin-bottom: 20px;
   margin-top: 0;
 }
 
-p.choice-description {
+.choice-description {
   color: white;
-  font-weight: 300;
 }
 
 
@@ -49,35 +38,7 @@ FORM
   background-color: rgba(255,255,255,.9);
   background-color: white;
   padding: 25px;
-  border: 3px solid @green;
-}
-
-
-/* -----------------
-WHY CHOICE
-------------------*/
-
-
-#why-choice-container {
-  img {
-    display: block;
-    margin: 0px auto 20px auto;
-  }
-
-  h3 {
-    font-weight: 600px;
-    color: @black;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-  }
-
-  p {
-    line-height: 1.7em;
-    font-size: 1.2em;
-    font-weight: 300;
-    text-align: center;
-  }
+  border: 7px solid @green;
 }
 
 
@@ -96,28 +57,19 @@ GETTING STARTED
   .getting-started__image {
     width: 100px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
   }
-
-  .getting-started__step {
-    font-weight: 300px;
-    color: @black;
-    text-align: center;
-    font-size: 1.2em;
-  }
-
-  .getting-started__title {
-    font-weight: 400;
-    color: @black;
-    text-align: center;
-    margin: 20px 0px 5px 0px;
-  }
+  
 }
 
 
 /* -----------
 FAQ
 ------------- */
+
+#faq-container {
+  background-color: #dedede;
+}
 
 .panel-group {
   border: 1px solid @dark-black;
@@ -149,11 +101,8 @@ FAQ
 }
 
 .panel-title {
-  color: @dark-black;
   padding: 10px;
-  font-weight: 600;
-  display: block;
-  outline: none;
+  font-size: 1.25em;
 }
 
 .panel-title:hover {
