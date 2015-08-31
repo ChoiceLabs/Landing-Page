@@ -139,8 +139,15 @@ Firebase
 function formatFirebaseData() {
   data = {}
   data["name"] = $("#name-input").val() || "";
+  data["date"] = Date();
   data["company"] = $("#company-input").val() || "";
-  data["phone"] = $("#phone-input").val() || "";
+
+  var phone = $("#phone-input").val().replace(/\D/g,'');
+  if (phone.length == 10) {
+    phone = 1 + phone;
+  }
+  data["phone"] = phone || "";
+  
   data["email"] = $("#email-input").val() ||"";
   return data;
 }
