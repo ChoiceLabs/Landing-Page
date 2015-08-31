@@ -162,7 +162,14 @@ Firebase
 function formatFirebaseData() {
   data = {}
   data["name"] = $("#name-input").val() || "";
-  data["phone"] = $("#phone-input").val() || "";
+  data["date"] = Date();
+  
+  var phone = $("#phone-input").val().replace(/\D/g,'');
+  if (phone.length == 10) {
+    phone = 1 + phone;
+  }
+  data["phone"] = phone || "";
+
   data["email"] = $("#email-input").val() ||"";
 
   var desiredLocations =  $("input[name=desired-location]:checked").map(function() {
