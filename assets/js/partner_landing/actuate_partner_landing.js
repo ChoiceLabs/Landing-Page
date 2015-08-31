@@ -16,7 +16,7 @@ $(document).ready(function () {
   $('.how-choice-works-placeholder').html(Handlebars.templates.partner_how_choice_works(how_choice_works_context));
 
   var partner_faq_context = {
-    "question1" : "What is Choice",
+    "question1" : "What is Choice?",
     "answer1" : [
       "Choice is a marketplace for on-demand labor, providing merchants and workers an easy way to optimize delivery of flexible work. For merchants, we help you meet customer demand by supplying a workforce through our API or our jobs portal only when you need it. For certain partners we can directly offer pre-qualified leads to help build your base of workers. Please contact our partnerships team at info@getchoice.io for more information"
       ],
