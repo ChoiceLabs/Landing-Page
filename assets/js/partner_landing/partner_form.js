@@ -99,7 +99,8 @@ $(document).ready(function() {
       var data = formatFirebaseData();
 
       // send data to firebase
-      var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/landingPageSignups");
+      //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/partnerLandingSignups");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/partners");
       firebaseRef.push(data, function(error) {
 
         // if firebase fails, display error message
@@ -130,17 +131,44 @@ $(document).ready(function() {
 });
 
 
+/* ----------
+QUERY PARAMETERS
+------------*/
+
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+
+// last parameter sometimes has an appended trailing slash
+function stripTrailingSlash(str) {
+  if (str != null) {
+    if(str.substr(-1) === '/') {
+        return str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+}
+
+
+
 
 /* -----------
 Firebase
 ----------- */
 
 function formatFirebaseData() {
-  data = {}
-  data["gclid"] = location.search.split("gclid")[1] || "";
+  data = {};
+  data["gclid"] = stripTrailingSlash(getURLParameter("gclid")) || "";
   data["name"] = $("#name-input").val() || "";
+  data["date"] = Date();
   data["company"] = $("#company-input").val() || "";
-  data["phone"] = $("#phone-input").val() || "";
+
+  var phone = $("#phone-input").val().replace(/\D/g,'');
+  if (phone.length == 10) {
+    phone = 1 + phone;
+  }
+  data["phone"] = phone || "";
+  
   data["email"] = $("#email-input").val() ||"";
   return data;
 }
