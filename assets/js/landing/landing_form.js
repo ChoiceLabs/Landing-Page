@@ -137,7 +137,8 @@ Firebase
 ----------- */
 
 function formatFirebaseData() {
-  data = {}
+  data = {};
+  data["gclid"] = location.search.split("gclid")[1] || "";
   data["date"] = Date();
   data["name"] = $("#name-input").val() || "";
   var phone = $("#phone-input").val().replace(/\D/g,'');
