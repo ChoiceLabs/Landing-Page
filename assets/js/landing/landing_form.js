@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  // save GCLID cookie
+  var gclid = stripTrailingSlash(getURLParameter("gclid"));
+  if (gclid) {
+    document.cookie = "choice_gclid:" + gclid;
+  }
+
 
   /* ----------
   Validation
