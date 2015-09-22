@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  // save GCLID cookie
+  var gclid = stripTrailingSlash(getURLParameter("gclid"));
+  if (gclid) {
+    document.cookie = "choice_gclid:" + gclid;
+  }
+
 
   /* ----------
   Validation
@@ -130,14 +136,33 @@ $(document).ready(function() {
 });
 
 
+/* ----------
+QUERY PARAMETERS
+------------*/
+
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+
+// last parameter sometimes has an appended trailing slash
+function stripTrailingSlash(str) {
+  if (str != null) {
+    if(str.substr(-1) === '/') {
+        return str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+}
+
 
 /* -----------
 Firebase
 ----------- */
 
+
 function formatFirebaseData() {
   data = {};
-  data["gclid"] = location.search.split("gclid")[1] || "";
+  data["gclid"] = stripTrailingSlash(getURLParameter("gclid")) || "";
   data["date"] = Date();
   data["name"] = $("#name-input").val() || "";
   var phone = $("#phone-input").val().replace(/\D/g,'');
