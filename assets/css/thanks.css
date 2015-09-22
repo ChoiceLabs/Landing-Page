@@ -1,0 +1,11 @@
+#scheduler-container {
+  margin-bottom: 30px;
+}
+#scheduler-wrapper {
+  border: 1px solid #ddd;
+}
+#scheduler-directions {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 300;
+}
