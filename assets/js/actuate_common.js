@@ -37,8 +37,8 @@ $(document).ready(function () {
 
 
   var thanks_context = {
-    "title" : "Thanks for signing up!",
-    "message" : "A member of our team will contact you shortly to schedule your free consultation. In the mean time, if you have any questions, please feel free to contact us at info@getchoice.io"
+    "title" : "Next Step: Employment Application",
+    "message" : "Thanks for choosing Choice for your free job consultation. To begin, please complete the 5-minute application."
   }
   $(".thanks-placeholder").html(Handlebars.templates.thanks(thanks_context));
 
