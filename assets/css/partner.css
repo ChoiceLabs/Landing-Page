@@ -825,7 +825,7 @@ FUNCTIONS
 HERO SECTION
 ------------------*/
 #hero-section-jumbotron {
-  background: url("../images/background3.jpg");
+  background: url("../images/background7.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 850px;
@@ -866,6 +866,17 @@ HOW CHOICE WORKS
   width: 100px;
   display: block;
   margin: 0 auto 10px auto;
+}
+/* ----------
+SUCCEED TOGETHER
+------------ */
+#succeed_header {
+  font-weight: 100;
+  font-size: 3.0em;
+}
+#succeed_description {
+  font-weight: 300;
+  font-size: 2.0em;
 }
 /* -----------
 FAQ

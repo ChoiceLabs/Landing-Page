@@ -11,7 +11,11 @@ $(document).ready(function () {
   var signup_form_context = {};
   $(".signup-form-placeholder").html(Handlebars.templates.signup_form(signup_form_context));
 
+  var partner_context = {};
+  $(".partner-placeholder").html(Handlebars.templates.partner(partner_context));
 
+  var mentor_context = {};
+  $(".mentor-placeholder").html(Handlebars.templates.mentor(mentor_context));
 
   // How Choice Works
   var how_choice_works_context = {};

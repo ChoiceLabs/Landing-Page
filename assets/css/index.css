@@ -72,7 +72,7 @@ HEADER
 ------------------ */
 header {
   position: relative;
-  height: 85px;
+  height: 65px;
   background-color: #313131;
   background: #313131;
   /* Old browsers */
@@ -106,7 +106,7 @@ header {
 }
 #logo-image {
   height: 25px;
-  margin-top: 26px;
+  margin-top: 16px;
 }
 ul.header-links {
   float: right;
@@ -165,11 +165,11 @@ BOX
 SECTIONS
 ------------------*/
 .section-header {
-  margin-bottom: 65px;
+  margin-bottom: 45px;
   margin-top: 0px;
   text-align: center;
   font-weight: 800;
-  font-size: 2.5em;
+  font-size: 2.8em;
 }
 /* -----------------
 FOOTER
@@ -328,7 +328,7 @@ HEADER
 ------------------ */
 header {
   position: relative;
-  height: 85px;
+  height: 65px;
   background-color: #313131;
   background: #313131;
   /* Old browsers */
@@ -362,7 +362,7 @@ header {
 }
 #logo-image {
   height: 25px;
-  margin-top: 26px;
+  margin-top: 16px;
 }
 ul.header-links {
   float: right;
@@ -421,11 +421,11 @@ BOX
 SECTIONS
 ------------------*/
 .section-header {
-  margin-bottom: 65px;
+  margin-bottom: 45px;
   margin-top: 0px;
   text-align: center;
   font-weight: 800;
-  font-size: 2.5em;
+  font-size: 2.8em;
 }
 /* -----------------
 FOOTER
@@ -566,26 +566,27 @@ QUESTIONAIRE
 /* -------------
 CHECK BOXES 
 ------------- */
-/* set the checkbox/radio button location */
-input[type="checkbox"],
-input[type="radio"] {
+/* set the checkbox/radio button location
+/* disable default checkbox and radio images
+/* new checkbox and radio button image position and size
+input[type="checkbox"], input[type="radio"] {
   position: relative;
   top: 0px;
   margin: 0px 5px;
 }
-/* disable default checkbox and radio images */
-input[type="checkbox"],
-input[type="radio"] {
+
+input[type="checkbox"], input[type="radio"] {
   display: none;
 }
-/* new checkbox and radio button image position and size */
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+
+input[type="checkbox"] + label, input[type="radio"] + label {
   width: 16px;
   height: 16px;
   float: left;
   margin: 3px 7px 0px 2px;
 }
+*/
+/*
 input[type="checkbox"] + label {
   background: url('../images/checkbox-unchecked.png') 0 0px no-repeat;
 }
@@ -598,6 +599,7 @@ input[type="checkbox"]:checked + label {
 input[type="radio"]:checked + label {
   background: url('../images/radio-checked.png') 0 0px no-repeat;
 }
+*/
 .checkbox-item,
 .radio-item {
   -webkit-border-radius: 3px;
@@ -715,7 +717,7 @@ BUTTON
 -------------------*/
 .button {
   display: block;
-  padding: 20px 10px;
+  padding: 15px 10px;
   outline: none;
   margin: 0 auto;
   text-decoration: none;
@@ -843,6 +845,7 @@ HERO SECTION
 }
 .choice-description {
   color: white;
+  font-weight: 300;
 }
 /* -----------------
 FORM
@@ -852,6 +855,54 @@ FORM
   background-color: white;
   padding: 25px;
   border: 7px solid #58b16e;
+}
+.user-type-button {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  width: 32%;
+  padding: 10px 5px;
+  height: 45px;
+}
+.user-type-button input {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.item-selected {
+  background-color: #808080;
+  border: 1px solid #727272;
+  -webkit-box-shadow: inset 2px 2px 2px 2px #797979;
+  box-shadow: inset 2px 2px 2px 2px #797979;
+  color: white;
+}
+/* ---------------
+PARTNER 
+----------------*/
+#partner-container {
+  background-color: white;
+}
+.partner-slogan {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 3em;
+}
+#partner-text {
+  font-weight: 100;
+}
+/* ---------------
+MENTOR
+----------------*/
+#mentor-container {
+  background-color: #222;
+  color: white;
+}
+#mentor-header {
+  color: white;
+}
+#mentor-text {
+  font-weight: 100;
+  color: white;
 }
 /* ---------------
 HOW CHOICE WORKS

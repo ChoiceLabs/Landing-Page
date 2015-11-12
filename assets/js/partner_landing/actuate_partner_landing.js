@@ -63,4 +63,8 @@ $(document).ready(function () {
   var navigation_placeholder_context = {}
   $('.navigation-placeholder').html(Handlebars.templates.partner_footer_navigation(navigation_placeholder_context));
 
+
+  var succeed_together_context = {}
+  $('.succeed-together-placeholder').html(Handlebars.templates.succeed_together(succeed_together_context));
+
 });
