@@ -7,6 +7,29 @@ $(document).ready(function() {
   }
 
 
+
+
+  /* ---------
+  radio and checkbox button functionality 
+  -----------*/
+  $("input[type=checkbox], input[type=radio]").on("click", function(){
+
+    // if input is a radio item
+    if ( $(this).attr("type") === "radio" ) {
+      $(this).parent().siblings().removeClass("item-selected");
+      $("input[name='user-type']").parent().removeClass("item-selected");
+      $(this).parent().addClass("item-selected");
+    }
+
+    // if input is a checkbox
+    else {
+      $(this).parent().toggleClass("item-selected");
+    }
+  });
+
+
+
+
   /* ----------
   Validation
   ------------ */
@@ -104,7 +127,7 @@ $(document).ready(function() {
       var data = formatFirebaseData();
 
       // send data to firebase
-      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/homePageWorkers");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/skillTraining");
       //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/landingPageSignups");
       firebaseRef.push(data, function(error) {
 
@@ -169,6 +192,7 @@ function formatFirebaseData() {
   if (phone.length == 10) {
     phone = 1 + phone;
   }
+  data["user-type"] = $("input[name=user-type]:checked").val() || "";
   data["phone"] = phone || "";
   data["email"] = $("#email-input").val() ||"";
   return data;

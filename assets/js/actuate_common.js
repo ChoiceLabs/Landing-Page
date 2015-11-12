@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 
   var header_context = {
-    'logo_file': 'assets/images/choice_logo2.png'
+    'logo_file': 'assets/images/choice_logo3.png'
   };
   $('.header-placeholder').html(Handlebars.templates.header(header_context));
 
@@ -45,11 +45,14 @@ $(document).ready(function () {
 
   var about_context = {
     "about"  : [
-      "Choice is a marketplace for on-demand labor, providing merchants and workers with an easy option to optimize and organize flexible work.",
-      "Using a patent pending technology and process (including GPS, user preferences and demand of a worker’s skills), the Choice - developed platform matches workers with flexible job opportunities with an eye toward maximizing earnings. Workers choose jobs that accommodate their schedules and interests, while enabling merchants to dynamically increase their work demands with qualified contractors, during peak times."
+      "Choice's mission was to help on-demand workers make more money. Our first product helped candidates optimize their earnings and placed them in on-demand companies looking to find qualified workers.",
+
+      "After working with a few hundred workers, we realized impactful and sustainable increases in earnings can only be achieved by augmenting skills and unlocking job opportunities.",
+
+      "We are partnering with companies in growing sectors of the economy to help them fill internships and jobs openings. Our learning and development platform assesses and trains workers in skills required to succeed in today's economy. Through personalized educational content, live mentoring from one of our specialists, and hands-on apprenticeships, talented workers can grow faster in their current jobs or transition to new careers",
     ],
     "team" : [
-      "Choice was started by a team of ex-Google and startup veterans, passionate about leveraging technology to dramatically increase the quality of life of workers in the on-demand economy. Choice make it easy to optimize flexible work in order to maximize worker earnings and minimize employer inefficiencies.",
+      "Choice was started by a team of ex-Google and startup veterans passionate about leveraging technology to dramatically expand the quality of life of workers in the on-demand economy. Choice trains workers in skilled tasks, setting them on a new career with a higher income.",
       "Our team include engineers and business graduates from the University of California, Berkeley, University of Southern California, Columbia University, Cornell University and the University of Sydney."
     ],
   }

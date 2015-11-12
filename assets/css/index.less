@@ -1,6 +1,7 @@
 @import "./common.less";
 @import "./form.less";
 
+
 /* -----------------
 HERO SECTION
 ------------------*/
@@ -26,7 +27,9 @@ HERO SECTION
 
 .choice-description {
   color: white;
+  font-weight: 300;
 }
+
 
 
 /* -----------------
@@ -39,6 +42,67 @@ FORM
   padding: 25px;
   border: 7px solid @green;
 }
+
+.user-type-button {
+  .border-radius();
+  border: 1px solid #ccc;
+  width: 32%;
+  padding: 10px 5px;
+  height: 45px;
+
+  input {
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+}
+
+.item-selected {
+  background-color: @selected-item;
+  border: 1px solid #727272;
+  .box-shadow-inset(#797979, 2px, 2px, 2px, 2px);
+  color: white;
+}
+
+
+/* ---------------
+PARTNER 
+----------------*/
+
+#partner-container {
+  background-color: white;
+}
+
+.partner-slogan {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 3em;
+}
+
+#partner-text {
+  font-weight: 100;
+}
+
+
+
+
+/* ---------------
+MENTOR
+----------------*/
+
+#mentor-container {
+  background-color: #222;
+  color: white;
+}
+
+#mentor-header {
+  color: white;
+}
+
+#mentor-text {
+  font-weight: 100;
+  color: white;
+}
+
 
 
 /* ---------------
