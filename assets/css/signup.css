@@ -907,18 +907,19 @@ HERO JUMBOTRON
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top', endColorstr='@bottom', GradientType=0);
   /* IE6-9 */
 
-  height: 650px;
+  height: 750px;
 }
 #content-jumbotron {
   background-color: #eee;
 }
 #content-container {
-  margin-top: -700px;
+  margin-top: -800px;
 }
 #jobs-slogan {
   margin: 25px 0px;
   color: white;
   text-align: center;
+  font-size: 2.3em;
 }
 #jobs-description {
   color: white;

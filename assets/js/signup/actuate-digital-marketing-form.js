@@ -5,8 +5,8 @@ $(document).ready(function () {
   THE DIGITAL MARKETING SIGNUP FORM PAGE 
   ------- */
   var digital_marketing_hero_context = {
-    "slogan" : "Get a Career in Digital Marketing in 12 Weeks.",
-    "description" : "The Choice Digital Marketing Training Program helps you land a paid job without any prior experience. Our program is centered around an apprenticeship, where you can work on resume-building projects and get mentored by one of our top-notch employers -- many of whom used to work at Google.",
+    "slogan" : "Jumpstart your career with our 12-week Digital Marketing Program",
+    "description" : "The Choice Digital Marketing Training Program helps you land a paid job in this field. Our program is centered around an apprenticeship, where you can work on resume-building projects and get mentored by one of our top-notch employers -- many of whom used to work at Google.",
   }
   $(".digital-marketing-hero").html(Handlebars.templates.jobs_hero(digital_marketing_hero_context));
 
