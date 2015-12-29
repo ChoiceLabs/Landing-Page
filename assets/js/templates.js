@@ -206,6 +206,8 @@ templates['jobs_hero'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":funct
     + alias3(((helper = (helper = helpers.slogan || (depth0 != null ? depth0.slogan : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"slogan","hash":{},"data":data}) : helper)))
     + " </h1>\n    <p id=\"jobs-description\"> "
     + alias3(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"description","hash":{},"data":data}) : helper)))
+    + " </p>\n    <p id=\"jobs-description\"> "
+    + alias3(((helper = (helper = helpers.description2 || (depth0 != null ? depth0.description2 : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"description2","hash":{},"data":data}) : helper)))
     + " </p>\n  </div>\n</div>\n\n\n\n";
 },"useData":true});
 templates['single_slide'] = template({"1":function(depth0,helpers,partials,data) {
