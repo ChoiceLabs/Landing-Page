@@ -921,6 +921,16 @@ FORM
   color: white;
 }
 /* ---------------
+STUDENT
+----------------*/
+#student-container {
+  background-color: #fafafa;
+}
+#learn-more-link:hover {
+  text-decoration: none;
+  color: white;
+}
+/* ---------------
 PARTNER 
 ----------------*/
 #partner-container {
@@ -938,7 +948,7 @@ PARTNER
 MENTOR
 ----------------*/
 #mentor-container {
-  background-color: #222;
+  background-color: #444;
   color: white;
 }
 #mentor-header {

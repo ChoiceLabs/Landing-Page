@@ -45,7 +45,7 @@ $(document).ready(function () {
 
   var about_context = {
     "about"  : [
-      "Choice's mission is to help on-demand workers make more money. Our first product helped candidates optimize their earnings and placed them in on-demand jobs at companies looking to find qualified workers.",
+      "Choice's mission is to help workers make more money. Our first product helped candidates optimize their earnings and placed them in on-demand jobs at companies looking to find qualified workers.",
 
       "After working with a few hundred workers, we realized impactful and sustainable increases in earnings can only be achieved by augmenting skills and unlocking job opportunities.",
 
