@@ -29,15 +29,8 @@
 
 
       <div class="question form-group">
-        <label class="question_label">When can you start the Choice Digital Marketing program?</label>
-        <section class="two-column-section">
-          {{#each start-dates}}
-            <label class="checkbox-item">
-              <input name="start-dates" type="checkbox" value="{{this}}"/> {{this}}
-              <label></label>
-            </label>
-          {{/each}}
-        </section>
+        <label class="question_label">What date can you start the Digital Marketing program?</label>
+        <input name="start_date" type="text" class="form-control" id="start-date-input" maxlength="40">
       </div>
 
 

@@ -199,13 +199,16 @@ function formatFirebaseData() {
   }
   data["phone"] = phone || "";
 
+  data["start-dates"] = $("#start-date-input").val() ||"";
 
+  /*
   var start_dates =  $("input[name=start-dates]:checked").map(function() {
     return $(this).val();
   }).get();
   if (start_dates.length != 0) {
     data["start-dates"] = start_dates;
   }
+  */
 
   var US_eligible = $("input[name=US-eligible]:checked").val();
   if (US_eligible != null) {
