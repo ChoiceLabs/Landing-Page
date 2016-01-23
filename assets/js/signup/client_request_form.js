@@ -1,10 +1,26 @@
 $(document).ready(function() {
 
-  // save GCLID cookie
-  var gclid = stripTrailingSlash(getURLParameter("gclid"));
-  if (gclid) {
-    document.cookie = "choice_gclid:" + gclid;
-  }
+
+
+
+  /* ---------
+  radio and checkbox button functionality 
+  -----------*/
+  $("input[type=checkbox], input[type=radio]").on("click", function(){
+
+    // if input is a radio item
+    if ( $(this).attr("type") === "radio" ) {
+      $(this).parent().siblings().removeClass("item-selected");
+      $(this).parent().addClass("item-selected");
+    }
+
+    // if input is a checkbox
+    else {
+      $(this).parent().toggleClass("item-selected");
+    }
+  });
+
+
 
 
   /* ----------
@@ -54,7 +70,7 @@ $(document).ready(function() {
   function showValidationErrors() {
 
     // show validation errors on each field
-    $("input[required").each(function() {
+    $("input[required]").each(function() {
       if (this.checkValidity() == false) {
         $(this).addClass("visited");
         showElementErrorMessage(this);
@@ -89,7 +105,6 @@ $(document).ready(function() {
   $("#submit-button").click(function(evt) {
 
     var isValid = true;
-
     // show errors if form is not valid
     if ($("#driver-form")[0].checkValidity() === false) {      
       showValidationErrors();
@@ -105,36 +120,40 @@ $(document).ready(function() {
       var data = formatFirebaseData();
 
       // send data to firebase
-      //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/partnerLandingSignups");
-      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/partners");
+      //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/workers");
       firebaseRef.push(data, function(error) {
 
-        // if firebase fails, display error message
-        // note: (if the modal doesn't exist, this will still work)
+        // if not successful, display error in thank you modal
         if (error) {
           $(".thank-you-message").html("Whoops, there was an error. Please try again or contact us below");
           $(".form-error-message").html("Whoa, we had an error. Please contact us");
         }
-
         else {
-
           // show thank you messages
-          // $('#thank-you-modal').modal('toggle');  // don't show modal
+          //$('#thank-you-modal').modal('toggle');
           $(".form-error-message").css("display", 'none');
           $(".form-success-message").toggle();
+
+          // disable submit button
           $("#submit-button").attr("disabled", true);
-
-          // redirect to thank you page
+          $("#submit-button").css("background-color", "#ccc");
           window.location.href = "thanks.html";
-
         }
       });
-
+      
+      // clear fields
+      /*
+      $("#driver-form")[0].reset();
+      $("input.visited").removeClass("visited");
+      $(".item-selected").removeClass("item-selected");
+      */
     }
   
   });
 
 });
+
 
 
 /* ----------
@@ -157,25 +176,55 @@ function stripTrailingSlash(str) {
 
 
 
-
 /* -----------
 Firebase
 ----------- */
 
 function formatFirebaseData() {
-  data = {};
+  data = {}
   data["gclid"] = stripTrailingSlash(getURLParameter("gclid")) || "";
   data["name"] = $("#name-input").val() || "";
   data["date"] = Date();
-  data["company"] = $("#company-input").val() || "";
-
+  
   var phone = $("#phone-input").val().replace(/\D/g,'');
   if (phone.length == 10) {
     phone = 1 + phone;
   }
   data["phone"] = phone || "";
-  
+
   data["email"] = $("#email-input").val() ||"";
+
+  var desiredLocations =  $("input[name=desired-location]:checked").map(function() {
+    return $(this).val();
+  }).get();
+  if (desiredLocations.length != 0) {
+    data["desiredLocations"] = desiredLocations;
+  }
+  
+  var hoursPerWeek = $("input[name=available-hours]:checked").val();
+  if (hoursPerWeek != null) {
+    data["hoursPerWeek"] = hoursPerWeek;
+  }
+
+  var hasLicense = $("input[name=valid-license]:checked").val();
+  if (hasLicense != null) {
+    data["hasLicense"] = hasLicense;
+  }
+
+  var backgroundCheck = $("input[name=background-check]:checked").val();
+  if (backgroundCheck != null) {
+    data["canDoBackgroundCheck"] = backgroundCheck;
+  }
+
+  var contactTimes = $("input[name=time-to-call]:checked").map(function() {
+    return $(this).val();
+  }).get();
+  if (contactTimes != null) {
+    data["contactTimes"] = contactTimes
+  }
+
   return data;
+
 }
+
 

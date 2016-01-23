@@ -4,16 +4,16 @@ $(document).ready(function () {
   $('.tag-manager').html(Handlebars.templates.tag_manager(tag_manager_context));
 
 
-  var header_context = {};
+  var header_context = {
+    "logo-src" : "assets/images/choice-logo.png"
+  };
   $('.header-placeholder').html(Handlebars.templates.header(header_context));
-
 
 
   var footer_context = {
     'copyright':'&copy; Choice 2015 All rights reserved.'
   };
   $('.footer-placeholder').html(Handlebars.templates.footer(footer_context));
-
 
 
   var terms_context = {}
