@@ -1,12 +1,10 @@
 $(document).ready(function () {
 
-  var tag_manager_context = {}
+  var tag_manager_context = {};
   $('.tag-manager').html(Handlebars.templates.tag_manager(tag_manager_context));
 
 
-  var header_context = {
-    'logo_file': 'assets/images/choice_logo3.png'
-  };
+  var header_context = {};
   $('.header-placeholder').html(Handlebars.templates.header(header_context));
 
 

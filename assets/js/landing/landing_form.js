@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+$(window).on('scroll', function() {
+    var header = $("header");
+    if ($(this).scrollTop() < 500) {
+      $("header").css("border", "none")
+                 .css("box-shadow", "none");
+      $("#header--get-started-button").css("display","none");
+    }
+    else if ($(this).scrollTop() >= 500) {
+      $("header").css("border-bottom", "1px solid #f3f3f3");
+      $("header").css("box-shadow", "0px 2px 8px 0px rgba(0,0,0, .05)");
+      $("#header--get-started-button").css("display","block");
+    }
+});
+
+
+
   // save GCLID cookie
   var gclid = stripTrailingSlash(getURLParameter("gclid"));
   if (gclid) {

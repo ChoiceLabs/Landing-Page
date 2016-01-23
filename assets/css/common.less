@@ -77,29 +77,35 @@ body, html {
 HEADER
 ------------------ */
 
+/* this is edited in js on scroll */
 header {
   position: relative;
-  height: 65px;
-  background-color: @dark-black;
-  .linear-gradient(@dark-black, #222);
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0, .3);
+  height: 95px;
+  background-color: white;
+}
+
+
+#logo-icon {
+  height: 25px;
+  margin-top: 26px;
 }
 
 #logo {
-  display: inline;
-  height: 100%;
+  font-family: "Lato";
+  font-weight: 100;
+  font-size: 2.2em;
+  color: #444;
+  display: inline-block;
+  margin-top: 23px;
+  text-decoration: none;
 }
 
-#logo-image {
-  height: 25px;
-  margin-top: 16px;
-}
+
 
 ul.header-links {
-
   float:right;
   display: block;
-  margin-top: 27px;
+  margin-top: 37px;
 
   li{
     display: inline;
@@ -108,8 +114,8 @@ ul.header-links {
   li > a {
     float: left;
     margin: 0px 20px;
-    font-size: 1.3em;
-    color: white;
+    font-size: .9em;
+    color: #555;
     text-decoration: none;
   }
 }
