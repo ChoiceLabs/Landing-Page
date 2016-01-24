@@ -61,6 +61,7 @@ html {
   min-height: 100%;
   height: auto !important;
   height: 100%;
+  margin-top: 100px;
 }
 .jumbotron {
   margin: 0;
@@ -178,7 +179,7 @@ SECTIONS
   margin-top: 0px;
   text-align: center;
   font-weight: 800;
-  font-size: 2.8em;
+  font-size: 2.5em;
 }
 /* -----------------
 FOOTER
@@ -326,6 +327,7 @@ html {
   min-height: 100%;
   height: auto !important;
   height: 100%;
+  margin-top: 100px;
 }
 .jumbotron {
   margin: 0;
@@ -443,7 +445,7 @@ SECTIONS
   margin-top: 0px;
   text-align: center;
   font-weight: 800;
-  font-size: 2.8em;
+  font-size: 2.5em;
 }
 /* -----------------
 FOOTER
@@ -836,7 +838,7 @@ FORM
 }
 */
 /* ---------------
-STUDENT
+OFFERINGS
 ----------------*/
 #student-container {
   background-color: #fafafa;
@@ -846,21 +848,39 @@ STUDENT
   color: white;
 }
 /* ---------------
-PARTNER 
+ OUR NETWORK
 ----------------*/
-#partner-container {
+#our-network-container {
+  background-color: #f7f7f7;
+}
+.marketer-profile {
+  border: 1px solid #bbbbbb;
   background-color: white;
+  padding: 25px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0px 10px;
 }
-.partner-slogan {
+.slick-slide {
+  height: auto;
+}
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  margin: 0 auto;
+}
+.profile-name {
   text-align: center;
-  margin-bottom: 50px;
-  font-weight: 3em;
-}
-#partner-text {
-  font-weight: 100;
+  font-weight: 300px;
 }
 /* ---------------
-MENTOR
+HOW IT WORKS
 ----------------*/
 #mentor-container {
   background-color: #444;
