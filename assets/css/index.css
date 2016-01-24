@@ -12,7 +12,8 @@ VARIABLES
 /* used in gradients */
 /* orange */
 /* used in gradients */
-/* blacks */
+/* blacks (not fonts) */
+/* font colors */
 /* boxes/cards */
 /* -----------------
 GENERAL
@@ -35,22 +36,27 @@ p {
   line-height: 1.5;
   font-weight: 300;
   font-size: 1.25em;
+  color: #444444;
 }
 h4 {
   font-size: 1.35em;
   font-weight: 500;
+  color: #444444;
 }
 h3 {
   font-size: 1.4em;
-  font-weight: 500;
+  font-weight: 400;
+  color: #444444;
 }
 h2 {
   font-weight: 500;
   font-size: 1.8em;
+  color: #444444;
 }
 h1 {
   font-weight: 600;
   font-size: 2.5em;
+  color: #444444;
 }
 body,
 html {
@@ -74,7 +80,7 @@ HEADER
 /* this is edited in js on scroll */
 header {
   position: relative;
-  height: 95px;
+  height: 90px;
   background-color: white;
 }
 #logo-link {
@@ -82,7 +88,7 @@ header {
   display: inline-block;
 }
 #logo-container {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 #logo-image {
   height: 40px;
@@ -90,7 +96,7 @@ header {
 #logo-text {
   font-family: "Lato";
   position: relative;
-  top: 10px;
+  top: 8px;
   margin-left: 15px;
   font-weight: 100;
   font-size: 2.2em;
@@ -111,6 +117,9 @@ ul.header-links li > a {
   font-size: .9em;
   color: #555;
   text-decoration: none;
+}
+ul.header-links li > a:hover {
+  color: #58b16e;
 }
 .mobile-header {
   display: none;
@@ -175,11 +184,29 @@ BOX (for misc pages)
 SECTIONS
 */
 .section-header {
-  margin-bottom: 45px;
+  margin-bottom: 75px;
   margin-top: 0px;
+  color: #444444;
   text-align: center;
   font-weight: 800;
-  font-size: 2.5em;
+  font-size: 2.4em;
+}
+.section-title {
+  margin-bottom: 0px;
+  color: #444444;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 800;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.section-caption {
+  font-weight: 100;
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: 75px;
+  margin-top: 5px;
 }
 /* -----------------
 FOOTER
@@ -235,7 +262,7 @@ FOOTER
   background-color: #53a267;
 }
 footer {
-  background-color: #313131;
+  background-color: #444444;
   padding: 15px;
 }
 .footer-link {
@@ -278,7 +305,8 @@ VARIABLES
 /* used in gradients */
 /* orange */
 /* used in gradients */
-/* blacks */
+/* blacks (not fonts) */
+/* font colors */
 /* boxes/cards */
 /* -----------------
 GENERAL
@@ -301,22 +329,27 @@ p {
   line-height: 1.5;
   font-weight: 300;
   font-size: 1.25em;
+  color: #444444;
 }
 h4 {
   font-size: 1.35em;
   font-weight: 500;
+  color: #444444;
 }
 h3 {
   font-size: 1.4em;
-  font-weight: 500;
+  font-weight: 400;
+  color: #444444;
 }
 h2 {
   font-weight: 500;
   font-size: 1.8em;
+  color: #444444;
 }
 h1 {
   font-weight: 600;
   font-size: 2.5em;
+  color: #444444;
 }
 body,
 html {
@@ -340,7 +373,7 @@ HEADER
 /* this is edited in js on scroll */
 header {
   position: relative;
-  height: 95px;
+  height: 90px;
   background-color: white;
 }
 #logo-link {
@@ -348,7 +381,7 @@ header {
   display: inline-block;
 }
 #logo-container {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 #logo-image {
   height: 40px;
@@ -356,7 +389,7 @@ header {
 #logo-text {
   font-family: "Lato";
   position: relative;
-  top: 10px;
+  top: 8px;
   margin-left: 15px;
   font-weight: 100;
   font-size: 2.2em;
@@ -377,6 +410,9 @@ ul.header-links li > a {
   font-size: .9em;
   color: #555;
   text-decoration: none;
+}
+ul.header-links li > a:hover {
+  color: #58b16e;
 }
 .mobile-header {
   display: none;
@@ -441,11 +477,29 @@ BOX (for misc pages)
 SECTIONS
 */
 .section-header {
-  margin-bottom: 45px;
+  margin-bottom: 75px;
   margin-top: 0px;
+  color: #444444;
   text-align: center;
   font-weight: 800;
-  font-size: 2.5em;
+  font-size: 2.4em;
+}
+.section-title {
+  margin-bottom: 0px;
+  color: #444444;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 800;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.section-caption {
+  font-weight: 100;
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: 75px;
+  margin-top: 5px;
 }
 /* -----------------
 FOOTER
@@ -501,7 +555,7 @@ FOOTER
   background-color: #53a267;
 }
 footer {
-  background-color: #313131;
+  background-color: #444444;
   padding: 15px;
 }
 .footer-link {
@@ -551,14 +605,13 @@ form {
   border-radius: 7px;
 }
 .form-title {
-  font-weight: 700;
-  margin: 10px 0px 20px 0px;
+  font-weight: 400;
+  margin: 10px 0px 0px 0px;
   text-align: center;
 }
 p.form-caption {
-  text-align: center;
-  font-weight: 600;
-  margin: 0px 0px 20px 0px;
+  color: #666666;
+  margin: 10px 0px 30px 0px;
 }
 /* --------------
 QUESTIONAIRE 
@@ -578,7 +631,7 @@ QUESTIONAIRE
   border: none;
 }
 .question_label {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.1em;
   width: 100%;
   margin: 0px 0px 2px 0px;
@@ -703,7 +756,7 @@ BUTTON
 -------------------*/
 .button {
   display: block;
-  padding: 15px 10px;
+  padding: 15px 25px;
   outline: none;
   margin: 0 auto;
   text-decoration: none;
@@ -724,11 +777,18 @@ BUTTON
 }
 .button--green:hover {
   background-color: #63bb79;
-  outline: none;
+  color: white;
+  text-decoration: none;
 }
 .button--green:active {
   background-color: #53a267;
-  outline: none;
+  color: white;
+  text-decoration: none;
+}
+.button--green:focus {
+  background-color: #53a767;
+  color: white;
+  text-decoration: none;
 }
 /* ---------------
 TERMS OF SERVICE
@@ -806,47 +866,9 @@ HERO SECTION
   text-align: center;
   font-weight: 300;
 }
-/* -----------------
-FORM
-------------------
-
-#driver-form {
-  background-color: rgba(255,255,255,.9);
-  background-color: white;
-  padding: 25px;
-  border: 7px solid @green;
-}
-
-.user-type-button {
-  .border-radius();
-  border: 1px solid #ccc;
-  margin: 1% 2% 1% 0%;
-  padding: 10px 5px;
-  height: 45px;
-
-  input {
-    margin-left: 3px;
-    margin-right: 1px;
-  }
-}
-
-.item-selected {
-  background-color: @selected-item;
-  border: 1px solid #727272;
-  .box-shadow-inset(#797979, 2px, 2px, 2px, 2px);
-  color: white;
-}
-*/
 /* ---------------
 OFFERINGS
 ----------------*/
-#student-container {
-  background-color: #fafafa;
-}
-#learn-more-link:hover {
-  text-decoration: none;
-  color: white;
-}
 /* ---------------
  OUR NETWORK
 ----------------*/
@@ -854,20 +876,22 @@ OFFERINGS
   background-color: #f7f7f7;
 }
 .marketer-profile {
-  border: 1px solid #bbbbbb;
+  -webkit-box-shadow: 0px 4px 4px 0px #dddddd;
+  box-shadow: 0px 4px 4px 0px #dddddd;
   background-color: white;
   padding: 25px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  margin: 0px 10px;
+  margin: 10px;
+  outline: none;
 }
 .slick-slide {
   height: auto;
 }
 .profile-pic {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -877,21 +901,16 @@ OFFERINGS
 }
 .profile-name {
   text-align: center;
-  font-weight: 300px;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 5px 0px;
 }
-/* ---------------
-HOW IT WORKS
-----------------*/
-#mentor-container {
-  background-color: #444;
-  color: white;
-}
-#mentor-header {
-  color: white;
-}
-#mentor-text {
-  font-weight: 100;
-  color: white;
+.profile-short-description {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.0em;
+  margin: 0px 0px 10px 0px;
+  font-style: italic;
 }
 /* ---------------
 HOW CHOICE WORKS
@@ -906,6 +925,18 @@ HOW CHOICE WORKS
   width: 100px;
   display: block;
   margin: 0 auto 10px auto;
+}
+/* ---------------
+BOTTOM HERO
+----------------*/
+#bottom-hero-container {
+  background-color: #eee;
+}
+#bottom-hero-message {
+  font-weight: 600;
+  margin-top: 0px;
+  text-align: center;
+  color: #444444;
 }
 /* ----------------
 MOBILE 

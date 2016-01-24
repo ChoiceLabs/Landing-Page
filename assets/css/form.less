@@ -21,15 +21,14 @@ form {
 }
 
 .form-title {
-  font-weight: 700;
-  margin: 10px 0px 20px 0px;
+  font-weight: 400;
+  margin: 10px 0px 0px 0px;
   text-align: center;
 }
 
 p.form-caption {
-  text-align: center;
-  font-weight: 600;
-  margin: 0px 0px 20px 0px;
+  color: @medium-font;
+  margin: 10px 0px 30px 0px;
 }
 
 
@@ -58,7 +57,7 @@ QUESTIONAIRE
 }
 
 .question_label {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.1em;
   width: 100%;
   margin: 0px 0px 2px 0px;
@@ -101,8 +100,6 @@ CHECK BOXES
   width: 48%;
 }
 
-
-
 input.visited:not(:focus):invalid {
   border: 2px solid @error-red;
 }
@@ -124,7 +121,7 @@ input[type=text], select, input[type=tel], input[type=email], .toggle-button, te
   height: 45px;
   width: 100%;
   font-weight: 400;
-  color: @black;
+  color: @dark-font;
   letter-spacing: 1px;
 }
 
@@ -171,7 +168,7 @@ BUTTON
 
 .button {
   display: block;
-  padding: 15px 10px;
+  padding: 15px 25px;
   outline: none;
   margin: 0 auto;
   text-decoration: none;
@@ -188,19 +185,26 @@ BUTTON
   }
 }
 
-
 .button--green {
   background-color: @green;
 }
 
 .button--green:hover {
   background-color: @hover-green;
-  outline: none;
+  color: white;
+  text-decoration: none;
 }
 
 .button--green:active {
   background-color: @active-green;
-  outline: none;
+  color: white;
+  text-decoration: none;
+}
+
+.button--green:focus {
+  background-color: @focus-green;
+  color: white;
+  text-decoration: none;
 }
 
 

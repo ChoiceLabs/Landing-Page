@@ -7,8 +7,8 @@ $(document).ready(function () {
   $('.hero-placeholder').html(Handlebars.templates.hero(hero_context));
 
   // offerings
-  var offerings_context = {};
-  $('.offerings-placeholder').html(Handlebars.templates.offerings(offerings_context));
+  var services_context = {};
+  $('.services-placeholder').html(Handlebars.templates.services(services_context));
   
   // our network
   var our_network_context = {}
@@ -17,6 +17,10 @@ $(document).ready(function () {
   // How Choice Works
   var how_choice_works_context = {};
   $('.how-choice-works-placeholder').html(Handlebars.templates.how_choice_works(how_choice_works_context));
+
+  var getting_started_footer_context = {}
+  $('.get-started-placeholder').html(Handlebars.templates.getting_started_footer(getting_started_footer_context));
+
 
   // footer
   var navigation_placeholder_context = {}
