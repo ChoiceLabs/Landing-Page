@@ -100,7 +100,8 @@ CHECK BOXES
   width: 48%;
 }
 
-input.visited:not(:focus):invalid {
+input.visited:not(:focus):invalid, 
+textarea.visited:not(:focus):invalid {
   border: 2px solid @error-red;
 }
 
@@ -162,6 +163,7 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
 
 
 
+
 /* ------------------
 BUTTON
 -------------------*/
@@ -207,6 +209,10 @@ BUTTON
   text-decoration: none;
 }
 
+.button--full-width {
+  width: 100%;
+}
+
 
 /* ---------------
 TERMS OF SERVICE
@@ -225,6 +231,8 @@ TERMS OF SERVICE
 input[type=checkbox]#terms-checkbox {
   display: inline-block;
 }
+
+
 
 
 

@@ -4,19 +4,17 @@
 
     <form id="client-request-form">
 
-      <h2 class="form-title">{{heading}}</h2>
-      <p class="form-caption">{{description}}</p>
+      <h3 class="form-title">{{heading}}</h3>
 
 
       <div class="question form-group">
-        <label class="question_label">Name*</label>
-        <input name="name" type="text" class="form-control" id="name-input" required>
+        <label class="question_label">Name</label>
+        <input name="name" type="text" class="form-control" id="name-input">
       </div>
 
       <div class="question form-group">
-        <label class="question_label">Phone Number*</label>
-        <input name="phone" type="tel" class="form-control" id="phone-input" minlength="10" placeholder="(xxx) xxx-xxxx"required>
-        <p class="validation-error" id="phone-error"> Please input a valid phone number, including your area code </p>
+        <label class="question_label">Phone Number</label>
+        <input name="phone" type="tel" class="form-control" id="phone-input" placeholder="(xxx) xxx-xxxx">
       </div>
 
       <div class="question form-group">
@@ -25,9 +23,10 @@
         <p class="validation-error" id="email-error"> Please input a valid email address </p>
       </div>
 
+
       <div class="question form-group">
-        <label class="question_label">Link to your resume or LinkedIn?</label>
-        <input name="start_date" type="text" class="form-control" id="resume" maxlength="40">
+        <label class="question_label">What is your budget?</label>
+        <input name="budget" type="text" class="form-control" id="budget-input">
       </div>
 
       <div class="question form-group">
@@ -36,12 +35,12 @@
       </div>
 
       <div class="question form-group">
-        <label class="question_label">Tell us more</label>
-        <input name="start_date" type="text" class="form-control" id="start-date-input" maxlength="40">
+        <label class="question_label">Anything details you'd like to tell us?</label>
+        <textarea name="details" class="form-control" id="details-input">
       </div>
 
 
-      <button type="button" class="button button--green" id="submit-button"> Join us </button>
+      <button type="button" class="button button--green" id="submit-button"> Get a quote and consultation </button>
       <p class="form-error-message">Looks like some fields are invalid. Please correct them and try again.</p>
 
       <p class="form-success-message">Thanks! We'll contact you shortly. </p>

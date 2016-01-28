@@ -1,38 +1,29 @@
 $(document).ready(function () {
 
+  // Tag manager
   var tag_manager_context = {};
   $('.tag-manager').html(Handlebars.templates.tag_manager(tag_manager_context));
 
-
+  // header
   var header_context = {
     "logo-src" : "assets/images/choice-logo.png"
   };
   $('.header-placeholder').html(Handlebars.templates.header(header_context));
 
-
+  // footer
   var footer_context = {
     'copyright':'&copy; Choice 2015 All rights reserved.'
   };
   $('.footer-placeholder').html(Handlebars.templates.footer(footer_context));
 
-
+  // terms
   var terms_context = {}
   $('.terms-placeholder').html(Handlebars.templates.terms(terms_context));
 
-
-
+  // privacy
   var privacy_context = {}
   $(".privacy-placeholder").html(Handlebars.templates.privacy(privacy_context));
-
-
-
-  var simple_contact_context = {
-    "title" : "Contact Us",
-  	"email" : "info@getchoice.io",
-  	"phone" : "(888) 720-7272"
-  }
-  $(".simple-contact-placeholder").html(Handlebars.templates.simple_contact(simple_contact_context));
-
+  
 
   var thanks_context = {
     "title" : "Next Step: Employment Application",

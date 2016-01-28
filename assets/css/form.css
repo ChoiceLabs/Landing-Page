@@ -32,22 +32,27 @@ p {
   line-height: 1.5;
   font-weight: 300;
   font-size: 1.25em;
+  color: #444444;
 }
 h4 {
-  font-size: 1.35em;
+  font-size: 1.2em;
   font-weight: 500;
+  color: #444444;
 }
 h3 {
   font-size: 1.4em;
-  font-weight: 500;
+  font-weight: 400;
+  color: #444444;
 }
 h2 {
   font-weight: 500;
   font-size: 1.8em;
+  color: #444444;
 }
 h1 {
   font-weight: 600;
   font-size: 2.5em;
+  color: #444444;
 }
 body,
 html {
@@ -71,15 +76,18 @@ HEADER
 /* this is edited in js on scroll */
 header {
   position: relative;
-  height: 95px;
+  height: 90px;
   background-color: white;
+}
+.mobile-header {
+  display: none;
 }
 #logo-link {
   text-decoration: none;
   display: inline-block;
 }
 #logo-container {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 #logo-image {
   height: 40px;
@@ -87,7 +95,7 @@ header {
 #logo-text {
   font-family: "Lato";
   position: relative;
-  top: 10px;
+  top: 8px;
   margin-left: 15px;
   font-weight: 100;
   font-size: 2.2em;
@@ -114,21 +122,6 @@ ul.header-links li > a:hover {
 }
 .mobile-header {
   display: none;
-}
-/* mobile media query */
-@media only screen and (max-device-width: 480px) {
-  header {
-    height: 45px;
-    text-align: center;
-  }
-  #logo {
-    display: inline-block;
-    margin: 0 auto;
-  }
-  #logo-image {
-    height: 25px;
-    margin-top: 10px;
-  }
 }
 /* ----------------
 BOX
@@ -175,11 +168,29 @@ BOX (for misc pages)
 SECTIONS
 */
 .section-header {
-  margin-bottom: 45px;
+  margin-bottom: 75px;
   margin-top: 0px;
+  color: #444444;
   text-align: center;
   font-weight: 800;
-  font-size: 2.5em;
+  font-size: 2.4em;
+}
+.section-title {
+  margin-bottom: 0px;
+  color: #444444;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 800;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.section-caption {
+  font-weight: 100;
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: 75px;
+  margin-top: 5px;
 }
 /* -----------------
 FOOTER
@@ -235,7 +246,7 @@ FOOTER
   background-color: #53a267;
 }
 footer {
-  background-color: #313131;
+  background-color: #444444;
   padding: 15px;
 }
 .footer-link {
@@ -255,20 +266,19 @@ FUNCTIONS
 MOBILE
 --------------*/
 @media only screen and (max-device-width: 480px) {
-  .mobile-header {
+  header.mobile-header {
     display: block;
-    height: 85px;
+    text-align: center;
   }
-  #logo {
-    display: inline;
+  .header-links {
+    font-size: .9em;
+    padding: 0px;
   }
-  ul.header-links {
-    margin: 20px auto 10px auto;
-    padding: 0;
-    float: none;
+  .wrapper {
+    margin-top: 0px;
   }
-  ul.header-links li > a {
-    float: none;
+  header.desktop-header {
+    display: none;
   }
 }
 /* checkbox */
@@ -351,7 +361,8 @@ CHECK BOXES
   float: right;
   width: 48%;
 }
-input.visited:not(:focus):invalid {
+input.visited:not(:focus):invalid,
+textarea.visited:not(:focus):invalid {
   border: 2px solid #ef6868;
 }
 .text-input-error {
@@ -469,6 +480,9 @@ BUTTON
   background-color: #53a767;
   color: white;
   text-decoration: none;
+}
+.button--full-width {
+  width: 100%;
 }
 /* ---------------
 TERMS OF SERVICE

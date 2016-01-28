@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+
+    <form id="contact-form">
+
+      <h3 class="form-title">{{title}}</h3>
+      <p class="form-caption">{{description}}</p>
+
+
+      <div class="question form-group">
+        <label class="question_label">Name</label>
+        <input name="name" type="text" class="form-control" id="name-input">
+      </div>
+
+      <div class="question form-group">
+        <label class="question_label">Email*</label>
+        <input name="email" type="email" class="form-control" minlength="5" id="email-input" required>
+        <p class="validation-error" id="email-error"> Please input a valid email address </p>
+      </div>
+
+      <div class="question form-group">
+        <label class="question_label">Message*</label>
+        <textarea minlength="1" name="message" class="form-control" id="messsage-input" required></textarea>
+        <p class="validation-error" id="message-error"> Please add a message </p>
+      </div>
+
+
+      <button type="button" class="button button--green button--full-width" id="submit-button"> Send Message </button>
+
+      <p class="form-error-message">Looks like some fields are invalid. Please correct them and try again.</p>
+
+      <p class="form-success-message">Thanks! We'll get back to you shortly! </p>
+
+    </form>
+
+
+  </div>
+</div> 

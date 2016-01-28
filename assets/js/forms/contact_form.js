@@ -1,28 +1,6 @@
 $(document).ready(function() {
 
 
-
-
-  /* ---------
-  radio and checkbox button functionality 
-  -----------*/
-  $("input[type=checkbox], input[type=radio]").on("click", function(){
-
-    // if input is a radio item
-    if ( $(this).attr("type") === "radio" ) {
-      $(this).parent().siblings().removeClass("item-selected");
-      $(this).parent().addClass("item-selected");
-    }
-
-    // if input is a checkbox
-    else {
-      $(this).parent().toggleClass("item-selected");
-    }
-  });
-
-
-
-
   /* ----------
   Validation
   ------------ */
@@ -39,7 +17,7 @@ $(document).ready(function() {
     // the field is not focused (error messages are annoying)
     // the field is invalid (duh)
 
-  $('input[required], textarea][required]').blur(function() {
+  $('input,textarea,select').filter('[required]:visible').blur(function() {
 
     if (this.checkValidity() == false) {;
       showElementErrorMessage(this);
@@ -49,7 +27,7 @@ $(document).ready(function() {
     }
   });
 
-  $('input[required], textarea[required]').keyup(function(event) {
+  $('input,textarea,select').filter('[required]:visible').keyup(function(event) {
     if (this.checkValidity() == true) {;
       hideElementErrorMessage(this);
     }
@@ -70,7 +48,7 @@ $(document).ready(function() {
   function showValidationErrors() {
 
     // show validation errors on each field
-    $("input[required]").each(function() {
+    $('input,textarea,select').filter('[required]').each(function() {
       if (this.checkValidity() == false) {
         $(this).addClass("visited");
         showElementErrorMessage(this);
@@ -81,21 +59,6 @@ $(document).ready(function() {
     $(".form-error-message").css('display', 'block');
   }
 
-  // code specific to terms agreement
-  $("input[name=terms]").click(function() {
-    if ($(this).prop("checked")) {
-      $("#terms-error").css("display", "none");
-      $("#terms-link").css("color", "white");
-    }
-    else {
-      $("#terms-error").css("display", "block")
-       $("#terms-link").css("color", "#333");
-    }
-
-  });
-
-
-
 
 
   /* -----------
@@ -105,8 +68,9 @@ $(document).ready(function() {
   $("#submit-button").click(function(evt) {
 
     var isValid = true;
+
     // show errors if form is not valid
-    if ($("#driver-form")[0].checkValidity() === false) {      
+    if ($("#contact-form")[0].checkValidity() === false) {      
       showValidationErrors();
       evt.preventDefault();
       isValid = false;
@@ -121,17 +85,16 @@ $(document).ready(function() {
 
       // send data to firebase
       //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
-      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/workers");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/contact");
       firebaseRef.push(data, function(error) {
 
         // if not successful, display error in thank you modal
         if (error) {
           $(".thank-you-message").html("Whoops, there was an error. Please try again or contact us below");
-          $(".form-error-message").html("Whoa, we had an error. Please contact us");
+          $(".form-error-message").html("Whoa, we had an error. Please contact us at info@getchoice.io");
         }
         else {
-          // show thank you messages
-          //$('#thank-you-modal').modal('toggle');
+
           $(".form-error-message").css("display", 'none');
           $(".form-success-message").toggle();
 
@@ -155,73 +118,18 @@ $(document).ready(function() {
 });
 
 
-
-/* ----------
-QUERY PARAMETERS
-------------*/
-
-function getURLParameter(name) {
-  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
-}
-
-// last parameter sometimes has an appended trailing slash
-function stripTrailingSlash(str) {
-  if (str != null) {
-    if(str.substr(-1) === '/') {
-        return str.substr(0, str.length - 1);
-    }
-    return str;
-  }
-}
-
-
-
 /* -----------
 Firebase
 ----------- */
 
 function formatFirebaseData() {
+
+  // get the data
   data = {}
-  data["gclid"] = stripTrailingSlash(getURLParameter("gclid")) || "";
   data["name"] = $("#name-input").val() || "";
-  data["date"] = Date();
-  
-  var phone = $("#phone-input").val().replace(/\D/g,'');
-  if (phone.length == 10) {
-    phone = 1 + phone;
-  }
-  data["phone"] = phone || "";
-
+  data["date"] = Date();  
   data["email"] = $("#email-input").val() ||"";
-
-  var desiredLocations =  $("input[name=desired-location]:checked").map(function() {
-    return $(this).val();
-  }).get();
-  if (desiredLocations.length != 0) {
-    data["desiredLocations"] = desiredLocations;
-  }
-  
-  var hoursPerWeek = $("input[name=available-hours]:checked").val();
-  if (hoursPerWeek != null) {
-    data["hoursPerWeek"] = hoursPerWeek;
-  }
-
-  var hasLicense = $("input[name=valid-license]:checked").val();
-  if (hasLicense != null) {
-    data["hasLicense"] = hasLicense;
-  }
-
-  var backgroundCheck = $("input[name=background-check]:checked").val();
-  if (backgroundCheck != null) {
-    data["canDoBackgroundCheck"] = backgroundCheck;
-  }
-
-  var contactTimes = $("input[name=time-to-call]:checked").map(function() {
-    return $(this).val();
-  }).get();
-  if (contactTimes != null) {
-    data["contactTimes"] = contactTimes
-  }
+  data["message"] = $("#message-input").val() || "";
 
   return data;
 

@@ -83,6 +83,9 @@ header {
   height: 90px;
   background-color: white;
 }
+.mobile-header {
+  display: none;
+}
 #logo-link {
   text-decoration: none;
   display: inline-block;
@@ -123,21 +126,6 @@ ul.header-links li > a:hover {
 }
 .mobile-header {
   display: none;
-}
-/* mobile media query */
-@media only screen and (max-device-width: 480px) {
-  header {
-    height: 45px;
-    text-align: center;
-  }
-  #logo {
-    display: inline-block;
-    margin: 0 auto;
-  }
-  #logo-image {
-    height: 25px;
-    margin-top: 10px;
-  }
 }
 /* ----------------
 BOX
@@ -282,20 +270,19 @@ FUNCTIONS
 MOBILE
 --------------*/
 @media only screen and (max-device-width: 480px) {
-  .mobile-header {
+  header.mobile-header {
     display: block;
-    height: 85px;
+    text-align: center;
   }
-  #logo {
-    display: inline;
+  .header-links {
+    font-size: .9em;
+    padding: 0px;
   }
-  ul.header-links {
-    margin: 20px auto 10px auto;
-    padding: 0;
-    float: none;
+  .wrapper {
+    margin-top: 0px;
   }
-  ul.header-links li > a {
-    float: none;
+  header.desktop-header {
+    display: none;
   }
 }
 /* -----------------
@@ -376,6 +363,9 @@ header {
   height: 90px;
   background-color: white;
 }
+.mobile-header {
+  display: none;
+}
 #logo-link {
   text-decoration: none;
   display: inline-block;
@@ -416,21 +406,6 @@ ul.header-links li > a:hover {
 }
 .mobile-header {
   display: none;
-}
-/* mobile media query */
-@media only screen and (max-device-width: 480px) {
-  header {
-    height: 45px;
-    text-align: center;
-  }
-  #logo {
-    display: inline-block;
-    margin: 0 auto;
-  }
-  #logo-image {
-    height: 25px;
-    margin-top: 10px;
-  }
 }
 /* ----------------
 BOX
@@ -575,20 +550,19 @@ FUNCTIONS
 MOBILE
 --------------*/
 @media only screen and (max-device-width: 480px) {
-  .mobile-header {
+  header.mobile-header {
     display: block;
-    height: 85px;
+    text-align: center;
   }
-  #logo {
-    display: inline;
+  .header-links {
+    font-size: .9em;
+    padding: 0px;
   }
-  ul.header-links {
-    margin: 20px auto 10px auto;
-    padding: 0;
-    float: none;
+  .wrapper {
+    margin-top: 0px;
   }
-  ul.header-links li > a {
-    float: none;
+  header.desktop-header {
+    display: none;
   }
 }
 /* checkbox */
@@ -840,10 +814,10 @@ FUNCTIONS
 HERO SECTION
 ------------------*/
 #hero-section-jumbotron {
-  background: url("../images/stock1.jpg");
+  background: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 625px;
+  height: 575px;
   margin-top: 75px;
   padding: 20px 0px;
 }
@@ -914,7 +888,7 @@ WHY CHOICE
 .profile-short-description {
   text-align: center;
   font-weight: 400;
-  font-size: 1.0em;
+  font-size: .8em;
   margin: 0px 0px 10px 0px;
   font-style: italic;
 }

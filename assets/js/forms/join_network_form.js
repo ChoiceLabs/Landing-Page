@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  // save GCLID cookie
+  var gclid = stripTrailingSlash(getURLParameter("gclid"));
+  if (gclid) {
+    document.cookie = "choice_gclid:" + gclid;
+  }
 
 
 
@@ -29,7 +34,7 @@ $(document).ready(function() {
 
 
   // real-time validation styling on visited inputs fields
-  $("input[type=text], input[type=tel], input[type=email], textarea[required]").focus(function() {
+  $("input[type=text], input[type=tel], input[type=email]").focus(function() {
     $(this).addClass('visited');
   });
 
@@ -39,7 +44,7 @@ $(document).ready(function() {
     // the field is not focused (error messages are annoying)
     // the field is invalid (duh)
 
-  $('input[required], textarea][required]').blur(function() {
+  $('input[required]').blur(function() {
 
     if (this.checkValidity() == false) {;
       showElementErrorMessage(this);
@@ -49,7 +54,7 @@ $(document).ready(function() {
     }
   });
 
-  $('input[required], textarea[required]').keyup(function(event) {
+  $('input[required]').keyup(function(event) {
     if (this.checkValidity() == true) {;
       hideElementErrorMessage(this);
     }
@@ -106,7 +111,7 @@ $(document).ready(function() {
 
     var isValid = true;
     // show errors if form is not valid
-    if ($("#driver-form")[0].checkValidity() === false) {      
+    if ($("#digital-marketing-form")[0].checkValidity() === false) {      
       showValidationErrors();
       evt.preventDefault();
       isValid = false;
@@ -121,7 +126,7 @@ $(document).ready(function() {
 
       // send data to firebase
       //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
-      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/workers");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/digital_marketing_student_signups");
       firebaseRef.push(data, function(error) {
 
         // if not successful, display error in thank you modal
@@ -182,9 +187,11 @@ Firebase
 
 function formatFirebaseData() {
   data = {}
+
   data["gclid"] = stripTrailingSlash(getURLParameter("gclid")) || "";
   data["name"] = $("#name-input").val() || "";
   data["date"] = Date();
+  data["email"] = $("#email-input").val() ||"";
   
   var phone = $("#phone-input").val().replace(/\D/g,'');
   if (phone.length == 10) {
@@ -192,35 +199,20 @@ function formatFirebaseData() {
   }
   data["phone"] = phone || "";
 
-  data["email"] = $("#email-input").val() ||"";
+  data["start-dates"] = $("#start-date-input").val() ||"";
 
-  var desiredLocations =  $("input[name=desired-location]:checked").map(function() {
+  /*
+  var start_dates =  $("input[name=start-dates]:checked").map(function() {
     return $(this).val();
   }).get();
-  if (desiredLocations.length != 0) {
-    data["desiredLocations"] = desiredLocations;
+  if (start_dates.length != 0) {
+    data["start-dates"] = start_dates;
   }
-  
-  var hoursPerWeek = $("input[name=available-hours]:checked").val();
-  if (hoursPerWeek != null) {
-    data["hoursPerWeek"] = hoursPerWeek;
-  }
+  */
 
-  var hasLicense = $("input[name=valid-license]:checked").val();
-  if (hasLicense != null) {
-    data["hasLicense"] = hasLicense;
-  }
-
-  var backgroundCheck = $("input[name=background-check]:checked").val();
-  if (backgroundCheck != null) {
-    data["canDoBackgroundCheck"] = backgroundCheck;
-  }
-
-  var contactTimes = $("input[name=time-to-call]:checked").map(function() {
-    return $(this).val();
-  }).get();
-  if (contactTimes != null) {
-    data["contactTimes"] = contactTimes
+  var US_eligible = $("input[name=US-eligible]:checked").val();
+  if (US_eligible != null) {
+    data["US_eligible"] = US_eligible;
   }
 
   return data;

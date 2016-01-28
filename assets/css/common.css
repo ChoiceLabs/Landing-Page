@@ -79,6 +79,9 @@ header {
   height: 90px;
   background-color: white;
 }
+.mobile-header {
+  display: none;
+}
 #logo-link {
   text-decoration: none;
   display: inline-block;
@@ -119,21 +122,6 @@ ul.header-links li > a:hover {
 }
 .mobile-header {
   display: none;
-}
-/* mobile media query */
-@media only screen and (max-device-width: 480px) {
-  header {
-    height: 45px;
-    text-align: center;
-  }
-  #logo {
-    display: inline-block;
-    margin: 0 auto;
-  }
-  #logo-image {
-    height: 25px;
-    margin-top: 10px;
-  }
 }
 /* ----------------
 BOX
@@ -278,19 +266,18 @@ FUNCTIONS
 MOBILE
 --------------*/
 @media only screen and (max-device-width: 480px) {
-  .mobile-header {
+  header.mobile-header {
     display: block;
-    height: 85px;
+    text-align: center;
   }
-  #logo {
-    display: inline;
+  .header-links {
+    font-size: .9em;
+    padding: 0px;
   }
-  ul.header-links {
-    margin: 20px auto 10px auto;
-    padding: 0;
-    float: none;
+  .wrapper {
+    margin-top: 0px;
   }
-  ul.header-links li > a {
-    float: none;
+  header.desktop-header {
+    display: none;
   }
 }
