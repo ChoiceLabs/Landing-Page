@@ -33,16 +33,14 @@ $(document).ready(function () {
 
 
   var about_context = {
+
     "about"  : [
-      "Choice's mission is to help workers make more money. Our first product helped candidates optimize their earnings and placed them in on-demand jobs at companies looking to find qualified workers.",
-
-      "After working with a few hundred workers, we realized impactful and sustainable increases in earnings can only be achieved by augmenting skills and unlocking job opportunities.",
-
-      "We are partnering with companies in growing sectors of the economy to help them fill internships and jobs openings. Our learning and development platform assesses and trains workers in skills required to succeed in today's economy. Through personalized educational content, live mentoring from one of our specialists, and hands-on apprenticeships, talented workers can grow faster in their current jobs or transition to new careers",
+      "Hiring is tough, and it's especially hard online. Concerns whether the potential hire has the communication ability, talent, and work ethics make choosing a freelancer a gamble of not just your time and money, but your company as a whole.",
+      "At the same time, getting recognized as a skilled, dedicated worker online is increasingly difficult in a web full of noise. Competing with global talent might mean lowering your rates below sunstainability, and silly things like a single mediocre review might end your online career for good.",
+      "At Choice, we are adding confidence and trust back into the hiring process. We do this by thoroughly vetting every consultant we work with and hand-match you with the right professionals based on your needs. Each professional has years of experience at the top companies and can hit the ground running."
     ],
     "team" : [
-      "Choice was started by a team of ex-Google and startup veterans passionate about leveraging technology to dramatically expand the quality of life of workers in the on-demand economy. Choice trains workers in skilled tasks, setting them on a new career with a higher income.",
-      "Our team include engineers and business graduates from the University of California, Berkeley, University of Southern California, Columbia University, Cornell University and the University of Sydney."
+      "Choice was started by a team of ex-Google and startup veterans passionate about leveraging technology to better match talent with opportunity."
     ],
   }
 

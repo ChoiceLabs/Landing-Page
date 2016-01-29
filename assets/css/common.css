@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700,800);
 /* -----------------
 VARIABLES
 ------------------ */
@@ -26,11 +26,11 @@ button,
 p,
 span,
 label {
-  text-rendering: geometricPrecision;
+  font-family: "Source Sans Pro";
 }
 p {
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.25em;
   color: #444444;
 }
@@ -246,17 +246,19 @@ FOOTER
   background-color: #53a267;
 }
 footer {
-  background-color: #444444;
+  background-color: rgba(0, 0, 0, 0);
   padding: 15px;
 }
-.footer-link {
-  color: white;
-  text-decoration: none;
+#footer-links {
   text-align: center;
-  display: block;
 }
-.footer-link:hover {
-  color: white;
+a.footer-link {
+  color: #777;
+  text-decoration: none;
+  font-size: .7em;
+}
+a.footer-link:hover {
+  color: #58b16e;
   text-decoration: none;
 }
 /* ---------------------

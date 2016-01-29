@@ -5,8 +5,8 @@ $(document).ready(function () {
   Client quote form
   ------- */
   var join_network_form_context = {
-    "heading" : "Join us, we pay.",
-    "description" : "We will reject you if you aren't good enough because we are elitist.",
+    "heading" : "Join our network of digital marketers",
+    "description" : "Fill out the form and we'll reach out shortly.",
   }
   $(".join-network-form-placeholder").html(Handlebars.templates.join_network(join_network_form_context));
 

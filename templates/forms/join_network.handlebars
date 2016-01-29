@@ -2,15 +2,15 @@
   <div class="col-md-6 col-md-offset-3">
 
 
-    <form id="client-request-form">
+    <form id="join-network-form">
 
       <h2 class="form-title">{{heading}}</h2>
       <p class="form-caption">{{description}}</p>
 
 
       <div class="question form-group">
-        <label class="question_label">Name*</label>
-        <input name="name" type="text" class="form-control" id="name-input" required>
+        <label class="question_label">Name</label>
+        <input name="name" type="text" class="form-control" id="name-input">
       </div>
 
       <div class="question form-group">
@@ -21,16 +21,17 @@
 
       <div class="question form-group">
         <label class="question_label">Link to your resume or LinkedIn*</label>
-        <input name="resume" type="text" class="form-control" id="resume" required>
+        <input name="resume" type="text" class="form-control" id="resume-input" required>
+        <p class="validation-error" id="resume-error"> Please provide a link </p>
       </div>
 
       <div class="question form-group">
-        <label class="question_label">Would you like to tell us anything else?</label>
-        <textarea name="extra-information" class="form-control" id="extra-information"></textarea>
+        <label class="question_label">Anything else you'd like to tell us?</label>
+        <textarea name="details" class="form-control" id="details-input"></textarea>
       </div>
 
 
-      <button type="button" class="button button--green button--full-width" id="submit-button"> Join us </button>
+      <button type="button" class="button button--green button--full-width" id="submit-button">Send </button>
       <p class="form-error-message">Looks like some fields are invalid. Please correct them and try again.</p>
 
       <p class="form-success-message">Thanks! We'll contact you shortly. </p>

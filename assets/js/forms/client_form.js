@@ -20,9 +20,6 @@ $(document).ready(function() {
     }
   });
 
-
-
-
   /* ----------
   Validation
   ------------ */
@@ -39,7 +36,7 @@ $(document).ready(function() {
     // the field is not focused (error messages are annoying)
     // the field is invalid (duh)
 
-  $('input[required], textarea][required]').blur(function() {
+  $('input[required], textarea[required]').blur(function() {
 
     if (this.checkValidity() == false) {;
       showElementErrorMessage(this);
@@ -81,7 +78,9 @@ $(document).ready(function() {
     $(".form-error-message").css('display', 'block');
   }
 
-  // code specific to terms agreement
+
+
+  /* code specific to terms agreement
   $("input[name=terms]").click(function() {
     if ($(this).prop("checked")) {
       $("#terms-error").css("display", "none");
@@ -93,6 +92,7 @@ $(document).ready(function() {
     }
 
   });
+  */
 
 
 
@@ -106,7 +106,7 @@ $(document).ready(function() {
 
     var isValid = true;
     // show errors if form is not valid
-    if ($("#driver-form")[0].checkValidity() === false) {      
+    if ($("#client-request-form")[0].checkValidity() === false) {      
       showValidationErrors();
       evt.preventDefault();
       isValid = false;
@@ -121,13 +121,13 @@ $(document).ready(function() {
 
       // send data to firebase
       //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
-      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/workers");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/new_clients");
       firebaseRef.push(data, function(error) {
 
         // if not successful, display error in thank you modal
         if (error) {
           $(".thank-you-message").html("Whoops, there was an error. Please try again or contact us below");
-          $(".form-error-message").html("Whoa, we had an error. Please contact us");
+          $(".form-error-message").html("We had an error. Please contact us.");
         }
         else {
           // show thank you messages
@@ -182,46 +182,35 @@ Firebase
 
 function formatFirebaseData() {
   data = {}
-  data["gclid"] = stripTrailingSlash(getURLParameter("gclid")) || "";
-  data["name"] = $("#name-input").val() || "";
-  data["date"] = Date();
   
+  data["date"] = Date();
+
+  data["name"] = $("#name-input").val() || "";
+
+  /*
   var phone = $("#phone-input").val().replace(/\D/g,'');
   if (phone.length == 10) {
     phone = 1 + phone;
   }
   data["phone"] = phone || "";
+  */
 
   data["email"] = $("#email-input").val() ||"";
 
-  var desiredLocations =  $("input[name=desired-location]:checked").map(function() {
+  data["website"] = $("#website-input").val() || "";
+
+  data["goals"] = $("#goals-input").val() || "";
+
+  data["budget"] = $("#budget-input").val() || "";
+
+  var desired_skills =  $("input[name=skill]:checked").map(function() {
     return $(this).val();
   }).get();
-  if (desiredLocations.length != 0) {
-    data["desiredLocations"] = desiredLocations;
-  }
-  
-  var hoursPerWeek = $("input[name=available-hours]:checked").val();
-  if (hoursPerWeek != null) {
-    data["hoursPerWeek"] = hoursPerWeek;
+  if (desired_skills.length != 0) {
+    data["skills"] = desired_skills;
   }
 
-  var hasLicense = $("input[name=valid-license]:checked").val();
-  if (hasLicense != null) {
-    data["hasLicense"] = hasLicense;
-  }
-
-  var backgroundCheck = $("input[name=background-check]:checked").val();
-  if (backgroundCheck != null) {
-    data["canDoBackgroundCheck"] = backgroundCheck;
-  }
-
-  var contactTimes = $("input[name=time-to-call]:checked").map(function() {
-    return $(this).val();
-  }).get();
-  if (contactTimes != null) {
-    data["contactTimes"] = contactTimes
-  }
+  data["details"] = $("#details-input").val() || "";
 
   return data;
 

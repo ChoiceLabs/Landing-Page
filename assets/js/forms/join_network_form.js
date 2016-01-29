@@ -1,31 +1,5 @@
 $(document).ready(function() {
 
-  // save GCLID cookie
-  var gclid = stripTrailingSlash(getURLParameter("gclid"));
-  if (gclid) {
-    document.cookie = "choice_gclid:" + gclid;
-  }
-
-
-
-  /* ---------
-  radio and checkbox button functionality 
-  -----------*/
-  $("input[type=checkbox], input[type=radio]").on("click", function(){
-
-    // if input is a radio item
-    if ( $(this).attr("type") === "radio" ) {
-      $(this).parent().siblings().removeClass("item-selected");
-      $(this).parent().addClass("item-selected");
-    }
-
-    // if input is a checkbox
-    else {
-      $(this).parent().toggleClass("item-selected");
-    }
-  });
-
-
 
 
   /* ----------
@@ -34,7 +8,7 @@ $(document).ready(function() {
 
 
   // real-time validation styling on visited inputs fields
-  $("input[type=text], input[type=tel], input[type=email]").focus(function() {
+  $("input[type=text], input[type=tel], input[type=email], textarea[required]").focus(function() {
     $(this).addClass('visited');
   });
 
@@ -44,7 +18,7 @@ $(document).ready(function() {
     // the field is not focused (error messages are annoying)
     // the field is invalid (duh)
 
-  $('input[required]').blur(function() {
+  $('input[required], textarea[required]').blur(function() {
 
     if (this.checkValidity() == false) {;
       showElementErrorMessage(this);
@@ -54,7 +28,7 @@ $(document).ready(function() {
     }
   });
 
-  $('input[required]').keyup(function(event) {
+  $('input[required], textarea[required]').keyup(function(event) {
     if (this.checkValidity() == true) {;
       hideElementErrorMessage(this);
     }
@@ -75,7 +49,7 @@ $(document).ready(function() {
   function showValidationErrors() {
 
     // show validation errors on each field
-    $("input[required]").each(function() {
+    $("input[required], textarea[required]").each(function() {
       if (this.checkValidity() == false) {
         $(this).addClass("visited");
         showElementErrorMessage(this);
@@ -85,20 +59,6 @@ $(document).ready(function() {
     // show general validation error
     $(".form-error-message").css('display', 'block');
   }
-
-  // code specific to terms agreement
-  $("input[name=terms]").click(function() {
-    if ($(this).prop("checked")) {
-      $("#terms-error").css("display", "none");
-      $("#terms-link").css("color", "white");
-    }
-    else {
-      $("#terms-error").css("display", "block")
-       $("#terms-link").css("color", "#333");
-    }
-
-  });
-
 
 
 
@@ -111,7 +71,7 @@ $(document).ready(function() {
 
     var isValid = true;
     // show errors if form is not valid
-    if ($("#digital-marketing-form")[0].checkValidity() === false) {      
+    if ($("#join-network-form")[0].checkValidity() === false) {      
       showValidationErrors();
       evt.preventDefault();
       isValid = false;
@@ -126,13 +86,13 @@ $(document).ready(function() {
 
       // send data to firebase
       //var firebaseRef = new Firebase("https://driverformsignups.firebaseio.com/workerSignups");
-      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/digital_marketing_student_signups");
+      var firebaseRef = new Firebase("https://choicesignups.firebaseio.com/new_digital_marketers");
       firebaseRef.push(data, function(error) {
 
         // if not successful, display error in thank you modal
         if (error) {
           $(".thank-you-message").html("Whoops, there was an error. Please try again or contact us below");
-          $(".form-error-message").html("Whoa, we had an error. Please contact us");
+          $(".form-error-message").html("We had an error. Please contact us");
         }
         else {
           // show thank you messages
@@ -188,33 +148,12 @@ Firebase
 function formatFirebaseData() {
   data = {}
 
-  data["gclid"] = stripTrailingSlash(getURLParameter("gclid")) || "";
   data["name"] = $("#name-input").val() || "";
   data["date"] = Date();
-  data["email"] = $("#email-input").val() ||"";
+  data["email"] = $("#email-input").val() || "";
+  data["resume"] = $("#resume-input").val() || "";
+  data["details"] = $("#details-input").val() || "";
   
-  var phone = $("#phone-input").val().replace(/\D/g,'');
-  if (phone.length == 10) {
-    phone = 1 + phone;
-  }
-  data["phone"] = phone || "";
-
-  data["start-dates"] = $("#start-date-input").val() ||"";
-
-  /*
-  var start_dates =  $("input[name=start-dates]:checked").map(function() {
-    return $(this).val();
-  }).get();
-  if (start_dates.length != 0) {
-    data["start-dates"] = start_dates;
-  }
-  */
-
-  var US_eligible = $("input[name=US-eligible]:checked").val();
-  if (US_eligible != null) {
-    data["US_eligible"] = US_eligible;
-  }
-
   return data;
 
 }

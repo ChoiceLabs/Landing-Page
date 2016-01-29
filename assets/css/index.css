@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900);
 
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900);
 /* -----------------
 VARIABLES
 ------------------ */
@@ -30,6 +30,7 @@ button,
 p,
 span,
 label {
+  font-family: "Source Sans Pro";
   text-rendering: geometricPrecision;
 }
 p {
@@ -250,17 +251,19 @@ FOOTER
   background-color: #53a267;
 }
 footer {
-  background-color: #444444;
+  background-color: rgba(0, 0, 0, 0);
   padding: 15px;
 }
-.footer-link {
-  color: white;
-  text-decoration: none;
+#footer-links {
   text-align: center;
-  display: block;
 }
-.footer-link:hover {
-  color: white;
+a.footer-link {
+  color: #777;
+  text-decoration: none;
+  font-size: .7em;
+}
+a.footer-link:hover {
+  color: #58b16e;
   text-decoration: none;
 }
 /* ---------------------
@@ -310,6 +313,7 @@ button,
 p,
 span,
 label {
+  font-family: "Source Sans Pro";
   text-rendering: geometricPrecision;
 }
 p {
@@ -530,17 +534,19 @@ FOOTER
   background-color: #53a267;
 }
 footer {
-  background-color: #444444;
+  background-color: rgba(0, 0, 0, 0);
   padding: 15px;
 }
-.footer-link {
-  color: white;
-  text-decoration: none;
+#footer-links {
   text-align: center;
-  display: block;
 }
-.footer-link:hover {
-  color: white;
+a.footer-link {
+  color: #777;
+  text-decoration: none;
+  font-size: .7em;
+}
+a.footer-link:hover {
+  color: #58b16e;
   text-decoration: none;
 }
 /* ---------------------
@@ -572,7 +578,7 @@ GENERAL
 form {
   padding: 15px;
   background: white;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   border: none;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -586,6 +592,7 @@ form {
 p.form-caption {
   color: #666666;
   margin: 10px 0px 30px 0px;
+  text-align: center;
 }
 /* --------------
 QUESTIONAIRE 
@@ -608,7 +615,7 @@ QUESTIONAIRE
   font-weight: 500;
   font-size: 1.1em;
   width: 100%;
-  margin: 0px 0px 2px 0px;
+  margin: 5px 0px 2px 0px;
 }
 /* -------------
 CHECK BOXES 
@@ -621,7 +628,6 @@ CHECK BOXES
   width: 100%;
   padding: 10px;
   display: block;
-  font-family: "Lato";
   cursor: pointer;
   font-weight: 400;
   font-size: 1.0em;
@@ -645,16 +651,25 @@ CHECK BOXES
   float: right;
   width: 48%;
 }
-input.visited:not(:focus):invalid {
+input.visited:not(:focus):invalid,
+textarea.visited:not(:focus):invalid {
   border: 2px solid #ef6868;
 }
 .text-input-error {
   border: 2px solid #ef6868;
 }
+input[type="checkbox"] {
+  margin-right: 5px;
+}
 /* ------------------
 INPUT TEXT
 TEXTAREA 
 -------------------*/
+textarea.form-control:focus {
+  outline: none;
+  border: 1px solid #58b16e;
+  box-shadow: none;
+}
 input[type=text],
 select,
 input[type=tel],
@@ -683,7 +698,6 @@ textarea::-webkit-input-placeholder {
   font-size: 0.8em;
   padding-top: .1em;
   font-weight: 300;
-  font-family: "Lato";
 }
 input::-moz-placeholder,
 textarea::-moz-placeholder {
@@ -691,7 +705,6 @@ textarea::-moz-placeholder {
   font-size: 0.8em;
   padding-top: .1em;
   font-weight: 300;
-  font-family: "Lato";
 }
 input::-moz-placeholder,
 textarea::-moz-placeholder {
@@ -699,7 +712,6 @@ textarea::-moz-placeholder {
   font-size: 0.8em;
   padding-top: .1em;
   font-weight: 300;
-  font-family: "Lato";
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
@@ -707,7 +719,6 @@ textarea:-ms-input-placeholder {
   font-size: 0.8em;
   padding-top: .1em;
   font-weight: 300;
-  font-family: "Lato";
 }
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
@@ -732,7 +743,7 @@ BUTTON
   display: block;
   padding: 15px 25px;
   outline: none;
-  margin: 0 auto;
+  margin: 20px auto 0px auto;
   text-decoration: none;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -763,6 +774,9 @@ BUTTON
   background-color: #53a767;
   color: white;
   text-decoration: none;
+}
+.button--full-width {
+  width: 100%;
 }
 /* ---------------
 TERMS OF SERVICE
@@ -828,6 +842,7 @@ HERO SECTION
   margin: 25px 0px;
 }
 .choice-slogan {
+  font-family: "Lato";
   color: #444444;
   font-size: 3.4em;
   margin-bottom: 20px;

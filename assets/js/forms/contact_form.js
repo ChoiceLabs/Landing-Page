@@ -6,6 +6,7 @@ $(document).ready(function() {
   ------------ */
 
 
+
   // real-time validation styling on visited inputs fields
   $("input[type=text], input[type=tel], input[type=email], textarea[required]").focus(function() {
     $(this).addClass('visited');
@@ -17,7 +18,7 @@ $(document).ready(function() {
     // the field is not focused (error messages are annoying)
     // the field is invalid (duh)
 
-  $('input,textarea,select').filter('[required]:visible').blur(function() {
+  $('input[required], textarea[required]').blur(function() {
 
     if (this.checkValidity() == false) {;
       showElementErrorMessage(this);
@@ -27,7 +28,7 @@ $(document).ready(function() {
     }
   });
 
-  $('input,textarea,select').filter('[required]:visible').keyup(function(event) {
+  $('input[required], textarea[required]').keyup(function(event) {
     if (this.checkValidity() == true) {;
       hideElementErrorMessage(this);
     }
@@ -45,10 +46,10 @@ $(document).ready(function() {
     $(elem_error_message_id).css("display", "none"); 
   }
 
-  function showValidationErrors() {
+   function showValidationErrors() {
 
     // show validation errors on each field
-    $('input,textarea,select').filter('[required]').each(function() {
+    $("input[required], textarea[required]").each(function() {
       if (this.checkValidity() == false) {
         $(this).addClass("visited");
         showElementErrorMessage(this);

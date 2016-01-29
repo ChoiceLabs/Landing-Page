@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700,800);
 /* -----------------
 VARIABLES
 ------------------ */
@@ -37,13 +37,13 @@ GENERAL
 
 /* base size is 16px */
 h1, h2, h3, h4, h5, h6, a, button, p, span, label {
-  //font-family: "Source Sans Pro";
-  text-rendering: geometricPrecision;
+  font-family: "Source Sans Pro";
+  //text-rendering: geometricPrecision;
 }
 
 p {
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.25em;
   color: @dark-font;
 }
@@ -301,21 +301,26 @@ FOOTER
 
 
 footer {
-  background-color: @dark-black-background;
+  background-color: rgba(0,0,0,0);
   padding: 15px;
 }
 
-.footer-link {
-	color: white;
-	text-decoration: none;
-	text-align: center;
-	display: block;
+#footer-links {
+  text-align: center;
 }
 
-.footer-link:hover {
-	color: white;
-	text-decoration: none;
+a.footer-link {
+  color: #777;
+  text-decoration: none;
+  font-size: .7em;
 }
+
+a.footer-link:hover {
+  color: @green;
+  text-decoration: none;
+}
+
+
 
 
 
