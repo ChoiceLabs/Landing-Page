@@ -35,12 +35,12 @@ $(document).ready(function () {
   var about_context = {
 
     "about"  : [
-      "Hiring is tough, and it's especially hard online. Concerns whether the potential hire has the communication ability, talent, and work ethics make choosing a freelancer a gamble of not just your time and money, but your company as a whole.",
-      "At the same time, getting recognized as a skilled, dedicated worker online is increasingly difficult in a web full of noise. Competing with global talent might mean lowering your rates below sustainability, and silly things like a single mediocre review could end your online career for good.",
-      "At Choice, we are adding confidence and trust back into the hiring process. We do this by thoroughly vetting every consultant we work with and hand-match you with the right professionals based on your needs. Each professional has years of experience at the top companies and can hit the ground running."
+      "Hiring is tough, and it's especially hard online. Concerns whether the potential hire has the communication ability, talent, and work ethic make choosing a freelancer a risk of not just your time and money, but also your reputation within your company.",
+      "At the same time, getting recognized as a skilled, dedicated worker online is increasingly difficult in a web full of noise where quality and results are hard to evaluate.",
+      "At Choice, we are adding confidence and trust back into the hiring process. We do this by thoroughly vetting every consultant we work with and carefully match you with the right professional based on your needs. Each professional has years of experience at top companies and can hit the ground running."
     ],
     "team" : [
-      "Choice was started by a team of ex-Google and startup veterans passionate about leveraging technology to better match talent with opportunity."
+      "Choice was started by a team of ex-Google and startup veterans passionate about leveraging technology to better match talent with opportunity. We are dedicated to reducing the friction of matching employers looking to hire with professionals looking for work."
     ],
   }
 
