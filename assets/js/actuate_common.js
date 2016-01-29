@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     "about"  : [
       "Hiring is tough, and it's especially hard online. Concerns whether the potential hire has the communication ability, talent, and work ethics make choosing a freelancer a gamble of not just your time and money, but your company as a whole.",
-      "At the same time, getting recognized as a skilled, dedicated worker online is increasingly difficult in a web full of noise. Competing with global talent might mean lowering your rates below sunstainability, and silly things like a single mediocre review might end your online career for good.",
+      "At the same time, getting recognized as a skilled, dedicated worker online is increasingly difficult in a web full of noise. Competing with global talent might mean lowering your rates below sustainability, and silly things like a single mediocre review might end your online career for good.",
       "At Choice, we are adding confidence and trust back into the hiring process. We do this by thoroughly vetting every consultant we work with and hand-match you with the right professionals based on your needs. Each professional has years of experience at the top companies and can hit the ground running."
     ],
     "team" : [
@@ -45,6 +45,10 @@ $(document).ready(function () {
   }
 
   $(".about-placeholder").html(Handlebars.templates.about(about_context));
+
+  digital_marketing_training_program_context = {}
+  $(".digital-marketing-training-program-placeholder").html(Handlebars.templates.digital_marketing_training_program(digital_marketing_training_program_context));
+
 
 
 });
