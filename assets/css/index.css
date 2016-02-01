@@ -886,15 +886,6 @@ HERO SECTION
   font-weight: 300;
 }
 /* ---------------
-WHY CHOICE
-----------------*/
-#why-choice-container {
-  background-color: white;
-}
-.reason {
-  font-weight: bold;
-}
-/* ---------------
  OUR NETWORK
 ----------------*/
 #our-network-container {
@@ -903,14 +894,14 @@ WHY CHOICE
 .marketer-profile {
   -webkit-box-shadow: 0px 4px 4px 0px #dddddd;
   box-shadow: 0px 4px 4px 0px #dddddd;
-  background-color: white;
+  background-color: #fbfbfb;
   padding: 25px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin: 20px;
   outline: none;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
 }
 .slick-slide {
   height: auto;
@@ -958,15 +949,16 @@ SERVICES
   margin: 0;
   padding: 8px;
   font-size: 1.2em;
-  background-color: #eee;
+  background-color: #ddd;
 }
 .service-wrapper {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #eeeeee;
+  border: 1px solid #ddd;
   padding-bottom: 15px;
   min-height: 200px;
+  background-color: white;
 }
 .service {
   text-align: center;
@@ -984,6 +976,15 @@ SERVICES
   font-size: .9em;
 }
 /* ---------------
+WHY CHOICE
+----------------*/
+#why-choice-container {
+  background-color: white;
+}
+.reason {
+  font-weight: bold;
+}
+/* ---------------
 HOW CHOICE WORKS
 ----------------*/
 #how-choice-works-container {
@@ -993,7 +994,7 @@ HOW CHOICE WORKS
   text-align: center;
 }
 #how-choice-works .how-choice-works__image {
-  width: 100px;
+  width: 75px;
   display: block;
   margin: 0 auto 10px auto;
 }
@@ -1001,7 +1002,7 @@ HOW CHOICE WORKS
 BOTTOM HERO
 ----------------*/
 #bottom-hero-container {
-  background-color: #eee;
+  background-color: white;
 }
 #bottom-hero-message {
   font-weight: 600;
