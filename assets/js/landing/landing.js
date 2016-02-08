@@ -25,8 +25,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
   /* Slick Slider */
   $(document).ready(function(){
   $('#profiles-slider').slick({
-    autoplay : true,
-    autoplaySpeed : 5000,
+    autoplay : false,
     swipeToSlide : true,
     dots : true,
   });
